@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://middleeastnexus.co.uk/sitemap.xml
