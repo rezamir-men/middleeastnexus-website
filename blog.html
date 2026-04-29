@@ -1153,6 +1153,11 @@ function updateShareLinks(title, url) {
   if (label) label.textContent = currentLang === 'ar' ? 'مشاركة' : 'Share';
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('lang') === 'ar') setLang('ar');
+});
+
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
 </script>
 </body>
