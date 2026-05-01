@@ -1073,12 +1073,14 @@ function openModal(id) {
   document.getElementById('modal-body').innerHTML = art.body[currentLang];
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
-  updateShareLinks(art.title[currentLang], 'https://middleeastnexus.co.uk/blog.html');
+  updateShareLinks(art.title[currentLang], 'https://middleeastnexus.co.uk/blog.html#' + id);
+  history.pushState({articleId: id}, '', '#' + id);
 }
 
 function closeModal() {
   document.getElementById('modal-overlay').classList.remove('open');
   document.body.style.overflow = '';
+  history.pushState({}, '', window.location.pathname + (new URLSearchParams(window.location.search).toString() ? '?' + new URLSearchParams(window.location.search).toString() : ''));
 }
 
 function closeModalOutside(e) {
@@ -1156,6 +1158,12 @@ function updateShareLinks(title, url) {
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   if (params.get('lang') === 'ar') setLang('ar');
+  
+  // Auto-open article from URL hash
+  const hash = window.location.hash.replace('#', '');
+  if (hash && articles[hash]) {
+    setTimeout(() => openModal(hash), 300);
+  }
 });
 
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
