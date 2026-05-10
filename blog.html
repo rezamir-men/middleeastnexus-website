@@ -1175,13 +1175,43 @@ function subscribeNL() {
   const email = document.getElementById('nl-email').value;
   if (!email) return;
   const btn = document.querySelector('.newsletter-btn');
-  btn.textContent = currentLang === 'ar' ? 'تم الاشتراك ✓' : 'Subscribed ✓';
-  btn.style.background = '#4a7c59';
-  setTimeout(() => {
-    btn.textContent = currentLang === 'ar' ? 'اشترك' : 'Subscribe';
-    btn.style.background = '';
-    document.getElementById('nl-email').value = '';
-  }, 3000);
+  btn.textContent = currentLang === 'ar' ? '...' : '...';
+  btn.disabled = true;
+
+  fetch('https://emailoctopus.com/api/2.0/lists/c860339c-4cbd-11f1-86b9-e799bd163cb8/contacts', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      api_key: 'eo_d58c3511daa3b2e1525601a6860954de823edc66258a8a0f585965048cc64ebc',
+      email_address: email,
+      status: 'SUBSCRIBED'
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.error) {
+      btn.textContent = currentLang === 'ar' ? 'حاول مجدداً' : 'Try again';
+      btn.style.background = '#c0392b';
+    } else {
+      btn.textContent = currentLang === 'ar' ? 'تم الاشتراك ✓' : 'Subscribed ✓';
+      btn.style.background = '#4a7c59';
+      document.getElementById('nl-email').value = '';
+    }
+    btn.disabled = false;
+    setTimeout(() => {
+      btn.textContent = currentLang === 'ar' ? 'اشترك' : 'Subscribe';
+      btn.style.background = '';
+    }, 3000);
+  })
+  .catch(() => {
+    btn.textContent = currentLang === 'ar' ? 'حاول مجدداً' : 'Try again';
+    btn.style.background = '#c0392b';
+    btn.disabled = false;
+    setTimeout(() => {
+      btn.textContent = currentLang === 'ar' ? 'اشترك' : 'Subscribe';
+      btn.style.background = '';
+    }, 3000);
+  });
 }
 
 function setLang(lang) {
