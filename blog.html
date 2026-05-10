@@ -1175,27 +1175,23 @@ function subscribeNL() {
   const email = document.getElementById('nl-email').value;
   if (!email) return;
   const btn = document.querySelector('.newsletter-btn');
-  btn.textContent = currentLang === 'ar' ? '...' : '...';
+  btn.textContent = '...';
   btn.disabled = true;
 
-  fetch('https://emailoctopus.com/api/2.0/lists/c860339c-4cbd-11f1-86b9-e799bd163cb8/contacts', {
+  fetch('https://formspree.io/f/xzdoypkj', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      api_key: 'eo_d58c3511daa3b2e1525601a6860954de823edc66258a8a0f585965048cc64ebc',
-      email_address: email,
-      status: 'SUBSCRIBED'
-    })
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ email: email })
   })
   .then(res => res.json())
   .then(data => {
-    if (data.error) {
-      btn.textContent = currentLang === 'ar' ? 'حاول مجدداً' : 'Try again';
-      btn.style.background = '#c0392b';
-    } else {
+    if (data.ok) {
       btn.textContent = currentLang === 'ar' ? 'تم الاشتراك ✓' : 'Subscribed ✓';
       btn.style.background = '#4a7c59';
       document.getElementById('nl-email').value = '';
+    } else {
+      btn.textContent = currentLang === 'ar' ? 'حاول مجدداً' : 'Try again';
+      btn.style.background = '#c0392b';
     }
     btn.disabled = false;
     setTimeout(() => {
