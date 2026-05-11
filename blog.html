@@ -672,6 +672,19 @@
     <span class="article-read" data-en="Read Story" data-ar="اقرأ القصة">Read Story</span>
   </div>
 
+  <div class="article-card" data-cat="story" onclick="openArticle('art14')">
+    <div class="article-visual" style="height:200px;overflow:hidden;">
+      <img src="baghdad-breakfast.jpg" alt="Baghdad Breakfast Table" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.85);">
+    </div>
+    <span class="article-tag" data-en="Culture & Travel" data-ar="ثقافة وسفر">Culture & Travel</span>
+    <span class="article-date" data-en="2026 — Baghdad" data-ar="2026 — بغداد">2026 — Baghdad</span>
+    <h2 class="article-title" data-en="Breakfast in Baghdad — The Most Magical Morning Table You May Have Ever Seen" data-ar="صبحانه در بغداد — جادویی‌ترین میز صبحگاهی که شاید تا به حال دیده باشید">Breakfast in Baghdad — The Most Magical Morning Table You May Have Ever Seen</h2>
+    <p class="article-excerpt" data-en="You may have had breakfast in many cities around the world — London, Tehran, Dubai, Istanbul. But none of them will surprise and excite you quite like breakfast in Baghdad." data-ar="شاید در شهرهای زیادی در دنیا صبحانه خورده باشید — لندن، تهران، دبی، استانبول. اما هیچ‌کدام مثل صبحانه‌های بغداد شما را غافلگیر و هیجان‌زده نخواهد کرد.">
+      You may have had breakfast in many cities around the world — London, Tehran, Dubai, Istanbul. But none of them will surprise and excite you quite like breakfast in Baghdad.
+    </p>
+    <span class="article-read" data-en="Read Article" data-ar="اقرأ المقال">Read Article</span>
+  </div>
+
 </div>
 
 
@@ -950,6 +963,34 @@ const articles = {
 <p>كانت النجاة من هذه المحنة لا تختلف كثيراً عن المعجزة. علّمتني هذه التجربة درسين لا يُقدَّران: أولاً، حتى لو كنت أحمل سلاحاً، فإنني لم أكن أملك القدرة على استخدامه، فقررت التخلي عنه نهائياً. وثانياً، هذه المخاطر، مهما تكررت، لم تزعزع عزمي على مواصلة الطريق الذي اخترته.</p>
 <p><em>يتبع…</em></p>
 <p style="margin-top:12px;font-size:0.75rem;color:var(--gray);">#FromTehranToBaghdad #PersonalJourney #EntrepreneurshipInConflict #BaghdadStories #Resilience #MiddleEastExperience #OvercomingChallenges #Leadership #InspirationalJourney #CourageUnderFire</p>`
+    }
+  }
+  ,
+  art14: {
+    tag: { en:"Culture & Travel", ar:"ثقافة وسفر" },
+    date: { en:"2026 — Baghdad, Iraq", ar:"2026 — بغداد، العراق" },
+    title: { en:"Breakfast in Baghdad — The Most Magical Morning Table You May Have Ever Seen", ar:"صبحانه در بغداد — جادویی‌ترین میز صبحگاهی که شاید تا به حال دیده باشید" },
+    body: {
+      en:`<img src="baghdad-breakfast.jpg" alt="Baghdad Breakfast Table" style="width:100%;height:340px;object-fit:cover;margin-bottom:28px;display:block;">
+<p>You may have had breakfast in many cities around the world — London, Tehran, Dubai, Istanbul. But none of them will surprise and excite you quite like breakfast in Baghdad.</p>
+<p>Imagine sitting at an old wooden table. In the centre, a large copper tray with traditional engravings — and an intricately carved copper teapot at its heart. Around the tray, dozens of small bowls wait for you.</p>
+<p>Golden <em>gaimar</em> with honey. Green and black olives. Fresh cheese. Pink beetroot pickles. Apricot jam. Hummus with olive oil. Hot falafel. Fresh bread. Walnuts. Vegetables. And fragrant Iraqi tea in small glasses, carrying the scent of cardamom.</p>
+<p>This is not just breakfast — this is an experience you will never forget.</p>
+<p>Baghdad is a city the world has always known through its crises. But if you sit at this breakfast table even once, you will see the true soul of this city — warm, abundant, and full of life.</p>
+<p>And here is something worth knowing: the name <strong>"Baghdad"</strong> is Persian in origin. In ancient Persian, <em>bagh</em> means "God" and <em>dad</em> means "given" — together, "Gift of God." A name given thousands of years ago by people who never saw Iran and Iraq as two separate lands.</p>
+<p>Iranians and Iraqis were intertwined for thousands of years — in culture, language, poetry, and at the table. Until the day politics drew a border and separated them. But when you sit at a breakfast table in Baghdad, it feels as though that border never existed.</p>
+<p>Baghdad is waiting for you.</p>
+<p style="margin-top:24px;font-size:0.85rem;color:var(--gray);">— Reza Mir, Baghdad, 2026</p>`,
+      ar:`<img src="baghdad-breakfast.jpg" alt="مائدة الإفطار في بغداد" style="width:100%;height:340px;object-fit:cover;margin-bottom:28px;display:block;">
+<p>شاید در شهرهای زیادی در دنیا صبحانه خورده باشید — لندن، تهران، دبی، استانبول. اما هیچ‌کدام مثل صبحانه‌های بغداد شما را غافلگیر و هیجان‌زده نخواهد کرد.</p>
+<p>تصور کنید پشت یک میز چوبی قدیمی می‌نشینید. در مرکز میز، یک سینی مسی بزرگ با نقوش سنتی — و یک قوری مسی حکاکی‌شده در میانش. دور تا دور سینی، ده‌ها کاسه کوچک منتظر شماست.</p>
+<p>قیمر طلایی با عسل. زیتون سبز و سیاه. پنیر تازه. ترشی چغندر صورتی. مربای زردآلو. حمص با روغن زیتون. فلافل داغ. نان تازه. گردو. سبزیجات. و چای عراقی معطر در استکان‌های کوچک که عطر هل از آن‌ها بلند می‌شود.</p>
+<p>این فقط صبحانه نیست — این یک تجربه است که هرگز فراموش نخواهید کرد.</p>
+<p>بغداد شهری است که دنیا همیشه از بحران‌هایش شنیده. اما اگر یک بار پشت این میز صبحانه بنشینید، روح واقعی این شهر را خواهید دید — گرم، سرشار و لبریز از زندگی.</p>
+<p>و جالب است بدانید که «بغداد» یک نام ایرانی است. در فارسی باستان «بغ» به معنای خدا و «داد» به معنای داده‌شده است — یعنی «عطای خداوند». نامی که هزاران سال پیش، مردمانی گذاشتند که ایران و عراق را دو سرزمین جدا نمی‌دیدند.</p>
+<p>ایرانیان و عراقیان هزاران سال در هم تنیده بودند — در فرهنگ، زبان، شعر و سفره. تا روزی که سیاست مرزی کشید و آن‌ها را از هم جدا کرد. اما وقتی پشت یک میز صبحانه در بغداد می‌نشینید، انگار آن مرز هرگز وجود نداشته.</p>
+<p>بغداد منتظر شماست.</p>
+<p style="margin-top:24px;font-size:0.85rem;color:var(--gray);">— رضا میر، بغداد، ۲۰۲۶</p>`
     }
   }
   ,
@@ -1248,6 +1289,7 @@ const articlePageMap = {
   art11: 'blog-zeidi.html',
   art12: 'blog-tehran-baghdad-3.html',
   art13: 'blog-tehran-baghdad-4.html',
+  art14: 'blog-baghdad-breakfast.html',
 };
 
 function updateShareLinks(title, url) {
