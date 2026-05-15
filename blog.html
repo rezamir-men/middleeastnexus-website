@@ -1355,9 +1355,14 @@ const articlePageMap = {
   art15: 'blog-zaidi-government.html',
 };
 
+const articlePageMapAr = {
+  art15: 'blog-zaidi-government-ar.html',
+};
+
 function updateShareLinks(title, url) {
   const hash = url.split('#')[1] || '';
-  const articleFile = articlePageMap[hash] || 'blog.html';
+  const arFile = currentLang === 'ar' && articlePageMapAr[hash];
+  const articleFile = arFile || articlePageMap[hash] || 'blog.html';
   const pageUrl = encodeURIComponent('https://middleeastnexus.co.uk/' + articleFile);
   const text = encodeURIComponent(title + ' — Middle East Nexus LTD');
   
