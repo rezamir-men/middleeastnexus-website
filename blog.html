@@ -480,6 +480,19 @@
 <div class="blog-grid" id="blog-grid">
 
   <!-- ARTICLE 11 - Latest Featured -->
+  <div class="article-card featured" data-cat="market" onclick="openModal('art17')">
+    <div class="article-visual" style="height:200px;overflow:hidden;">
+      <img src="iraq-financial-crisis.jpg" loading="lazy" alt="Iraq Basra bridge infrastructure" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75);">
+    </div>
+    <span class="article-tag" data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</span>
+    <span class="article-date" data-en="25 May 2026" data-ar="٢٥ مايو ٢٠٢٦">25 May 2026</span>
+    <h2 class="article-title" data-en="Iraq's Financial Crisis: Risk or Opportunity?" data-ar="الأزمة المالية في العراق: خطر أم فرصة؟">Iraq's Financial Crisis: Risk or Opportunity?</h2>
+    <p class="article-excerpt" data-en="Military tensions between the US, Israel and Iran have sent shockwaves through Iraq's economy — halting religious tourism, collapsing oil revenues, and tightening liquidity. But inside this crisis, a window has opened that smart international capital cannot afford to ignore." data-ar="أحدثت التوترات العسكرية بين الولايات المتحدة وإسرائيل وإيران موجات صدمة عنيفة في الاقتصاد العراقي — أوقفت السياحة الدينية، وأسقطت عائدات النفط، وضيّقت السيولة. لكن في قلب هذه الأزمة، انفتحت نافذة لا يمكن للرأسمال الدولي الذكي أن يغفل عنها.">
+      Military tensions between the US, Israel and Iran have sent shockwaves through Iraq's economy — halting religious tourism, collapsing oil revenues, and tightening liquidity. But inside this crisis, a window has opened that smart international capital cannot afford to ignore.
+    </p>
+    <span class="article-read" data-en="Read Analysis" data-ar="اقرأ التحليل">Read Analysis</span>
+  </div>
+
   <div class="article-card featured" data-cat="market" onclick="openModal('art15')">
     <div class="article-visual" style="height:200px;overflow:hidden;">
       <img src="iraq-politics-2.jpg" loading="lazy" alt="Iraq politics" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75);">
@@ -998,6 +1011,41 @@ const articles = {
     }
   }
   ,
+  art17: {
+    tag: { en:"Market Analysis", ar:"تحليل السوق" },
+    date: { en:"25 May 2026 — London", ar:"٢٥ مايو ٢٠٢٦ — لندن" },
+    title: { en:"Iraq's Financial Crisis: Risk or Opportunity?", ar:"الأزمة المالية في العراق: خطر أم فرصة؟" },
+    body: {
+      en:`<img src="iraq-financial-crisis.jpg" loading="lazy" alt="Basra bridge Iraq infrastructure" style="width:100%;height:320px;object-fit:cover;margin-bottom:28px;display:block;filter:brightness(0.8);">
+<p>The military confrontation between the United States, Israel and the Islamic Republic of Iran has rapidly transmitted a wave of economic consequences to the heart of Iraq. A country that had been on a path toward stability now faces a combination of revenue pressures, a collapse in religious tourism, and a severe liquidity crunch. Yet within this crisis lie opportunities that intelligent international companies cannot afford to miss.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">Religious Tourism Halted — and the Numbers Are Real</h3>
+<p>Iraq receives millions of Shia pilgrims every year from across the world. The cities of Najaf, Karbala, Samarra and Kadhimiya would fill their hotels months in advance during major religious occasions. This time, at the peak of the pilgrimage season, many of those hotels stood empty. Revenue that once funded a significant share of these cities' economies was cut off overnight. The vacuum has placed compounding pressure on local businesses that relied almost entirely on the steady flow of pilgrims for their cash flow.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">Oil Revenue Collapse — A Strike at the Budget's Core</h3>
+<p>Tensions in the Arabian Gulf and the threat of closing the Strait of Hormuz sent energy markets into convulsions. Iraq, which derives more than 90 per cent of its government revenues from oil, has faced an unprecedented income shock. This reduction directly impairs the state's capacity to finance infrastructure projects, pay the salaries of government employees, and execute development programmes.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">The Opportunity the Crisis Has Built</h3>
+<p>This very crisis has opened a door that was previously shut. The Iraqi government is showing considerably greater willingness to offer sovereign guarantees and long-term contracts in order to attract foreign capital. International financial firms that can enter under these conditions will find terms that were simply unavailable during periods of prosperity.</p>
+<p>In this environment, China is the lightest and most agile player in the field. Chinese companies move faster than their Western or regional rivals — both in financing and in project execution. They have maintained a presence in Iraq for years, built government relationships, and are now eyeing this crisis opportunistically as a window to accelerate their penetration of key sectors. Any international company that delays will likely find itself in the position of a Chinese subcontractor rather than an independent partner.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">Housing — A Market Where Demand Never Ends</h3>
+<p>Iraq faces a shortfall of more than three million housing units — and with one of the highest population growth rates in the region, that number grows larger every year. This demand is structural, not cyclical. A young population, high marriage rates and rapid urbanisation guarantee this market for decades to come. Township development around Baghdad, Basra and Erbil continues at a growing pace, but is chronically underfunded. The gap between supply and demand is precisely the space where foreign capital can play a decisive role.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">Conclusion: A Window That Is Open — But Not Forever</h3>
+<p>Iraq's financial crisis is real, but it is temporary. The country's infrastructure has urgent investment needs, the government is prepared to negotiate, and the competitive landscape has not yet become crowded. But the Chinese are closing contracts faster than anyone else. For companies that can absorb short-term risk, that have local networks, and that can make decisions quickly — this moment is a strategic opportunity, not a risk to be avoided.</p>
+<p style="margin-top:24px;font-size:0.85rem;color:var(--gray);">— Reza Mir, London, 25 May 2026</p>`,
+      ar:`<img src="iraq-financial-crisis.jpg" loading="lazy" alt="جسر البصرة البنية التحتية في العراق" style="width:100%;height:320px;object-fit:cover;margin-bottom:28px;display:block;filter:brightness(0.8);">
+<p>أرسل التصعيد العسكري بين الولايات المتحدة وإسرائيل والجمهورية الإسلامية الإيرانية موجةً من التداعيات الاقتصادية إلى قلب العراق بسرعة مذهلة. فالبلد الذي كان سائراً نحو الاستقرار بات يواجه اليوم مزيجاً من ضغوط الإيرادات، وانهيار السياحة الدينية، وشُح حاد في السيولة. غير أنه في خضم هذه الأزمة تكمن فرص لا ينبغي للشركات الدولية الذكية أن تفوّتها.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">توقف السياحة الدينية — وخسارة لها أرقام</h3>
+<p>يستقبل العراق ملايين الحجاج الشيعة سنوياً من أصقاع العالم. كانت مدن النجف وكربلاء وسامراء والكاظمية تمتلئ فنادقها قبل أشهر من المناسبات الدينية الكبرى. هذه المرة، وفي ذروة موسم الزيارة، بقيت كثير من تلك الفنادق خاليةً من النزلاء. وقُطعت فجأةً عائداتٌ كانت تُموّل شريحة معتبرة من اقتصاديات هذه المدن. وقد أوجد هذا الفراغ ضغطاً مضاعفاً على الأعمال المحلية التي اعتمدت في معظمها على تدفق مستمر من حجاج الزيارة لتغذية سيولتها النقدية.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">انهيار عائدات النفط — ضربة في صميم الميزانية</h3>
+<p>أربكت التوترات في الخليج العربي والتهديد بإغلاق مضيق هرمز أسواق الطاقة. والعراق الذي يستمد أكثر من تسعين بالمئة من إيراداته الحكومية من النفط يعاني صدمةً دخلية غير مسبوقة. وهذا التراجع يمسّ مباشرةً قدرة الدولة على تمويل مشاريع البنية التحتية، وصرف رواتب موظفيها، وتنفيذ برامج التنمية.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">الفرصة التي صنعتها الأزمة</h3>
+<p>فتحت هذه الأزمة بالذات باباً كان موصداً من قبل. إذ تُبدي الحكومة العراقية استعداداً أكبر بكثير لتقديم ضمانات سيادية وعقود طويلة الأمد بهدف استقطاب رأس المال الأجنبي. والشركات المالية الدولية القادرة على الدخول في هذه الظروف ستجد شروطاً لم تكن متاحةً في أوقات الرخاء قط.</p>
+<p>في هذه الأثناء، تُعدّ الصين أخفّ اللاعبين وأكثرهم رشاقةً في الميدان. تتحرك الشركات الصينية بوتيرة تفوق منافسيها الغربيين والإقليميين — سواء في التمويل أو في تنفيذ المشاريع. فهي موجودة في العراق منذ سنوات، وأرست علاقات حكومية متينة، وتتطلع الآن بعين انتهازية إلى توظيف هذه الأزمة نافذةً لتسريع اختراقها للقطاعات الكبرى. وكل شركة دولية تتأخر ستجد نفسها على الأرجح في موقع المقاول الفرعي للصينيين لا الشريك المستقل.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">قطاع الإسكان — سوق لا تنضب طلباتها</h3>
+<p>يعاني العراق من عجز يتجاوز ثلاثة ملايين وحدة سكنية، ومع امتلاكه أحد أعلى معدلات النمو السكاني في المنطقة، يزداد هذا الرقم ضخامةً كل عام. والطلب هنا بنيوي لا موسمي. فالتركيبة الشبابية، ومعدلات الزواج المرتفعة، والتمدّن المتسارع نحو المدن، كلها عوامل تضمن هذا السوق لعقود مقبلة. والتطوير العمراني حول بغداد والبصرة وأربيل يمضي بخطى متصاعدة، لكنه يفتقر إلى تمويل كافٍ. والفجوة بين العرض والطلب هي تحديداً الفضاء الذي يستطيع فيه رأس المال الأجنبي أن يؤدي دوراً محورياً.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">خلاصة: نافذة مفتوحة — لكنها لن تبقى كذلك إلى الأبد</h3>
+<p>الأزمة المالية في العراق حقيقية، لكنها مؤقتة. بنية البلاد التحتية في حاجة ماسة وعاجلة إلى الاستثمار، والحكومة مستعدة للتفاوض، والمشهد التنافسي لم يزدحم بعد. لكن الصينيين يُغلقون عقودهم بأسرع من الجميع. بالنسبة للشركات القادرة على تحمّل المخاطر القصيرة الأمد، والمتسلحة بشبكات محلية، والقادرة على اتخاذ قرارات سريعة — هذه اللحظة فرصة استراتيجية لا خطر ينبغي تفاديه.</p>
+<p style="margin-top:24px;font-size:0.85rem;color:var(--gray);">— رضا مير، لندن، ٢٥ مايو ٢٠٢٦</p>`
+    }
+  },
   art15: {
     tag: { en:"Political Analysis", ar:"تحليل سياسي" },
     date: { en:"14 May 2026 — Baghdad, Iraq", ar:"١٤ مايو ٢٠٢٦ — بغداد، العراق" },
@@ -1381,6 +1429,7 @@ function toggleMobileMenu() {
 
 
 const articlePageMap = {
+  art17: 'blog-iraq-financial-crisis.html',
   art1:  'blog-development-road.html',
   art3:  'blog-iraq-market-entry.html',
   art4:  'blog-water-nasiriyah.html',
