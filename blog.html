@@ -484,6 +484,20 @@
 <!-- ARTICLES -->
 <div class="blog-grid" id="blog-grid">
 
+  <!-- ARTICLE 19 - Latest Featured -->
+  <div class="article-card featured" data-cat="market" onclick="openModal('art19')">
+    <div class="article-visual" style="height:200px;overflow:hidden;">
+      <img src="iraq-us-summit-2.jpg" loading="lazy" alt="Iraqi PM Al-Zaidi and President Trump at the White House" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75);">
+    </div>
+    <span class="article-tag" data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</span>
+    <span class="article-date" data-en="18 July 2026 — London" data-ar="١٨ يوليو ٢٠٢٦ — لندن">18 July 2026 — London</span>
+    <h2 class="article-title" data-en="America's Bold Return to Iraq: 48 Deals and the Promise of a More Open Market" data-ar="عودة أمريكا القوية إلى العراق: ٤٨ اتفاقية ووعدٌ بسوقٍ أكثر انفتاحاً">America's Bold Return to Iraq: 48 Deals and the Promise of a More Open Market</h2>
+    <p class="article-excerpt" data-en="In a landmark week in Washington, Iraq signed 48 agreements with American companies worth more than $60 billion — with ExxonMobil, Chevron, Shell, Halliburton and others. Behind the signings lies a strategic redrawing of Iraq's energy map, and a clear signal to international investors." data-ar="في أسبوع تاريخي بواشنطن، وقّع العراق ٤٨ اتفاقية مع شركات أمريكية بقيمة تتجاوز ٦٠ مليار دولار — مع إكسون موبيل وشيفرون وشل وهاليبرتون وغيرها. وخلف هذه التوقيعات تكمن إعادة رسمٍ استراتيجية لخريطة الطاقة في العراق، وإشارة واضحة للمستثمرين الدوليين.">
+      In a landmark week in Washington, Iraq signed 48 agreements with American companies worth more than $60 billion — with ExxonMobil, Chevron, Shell, Halliburton and others. Behind the signings lies a strategic redrawing of Iraq's energy map, and a clear signal to international investors.
+    </p>
+    <a href="blog-iraq-us-deals.html" class="article-read" data-en="Read Analysis" data-ar="اقرأ التحليل" onclick="event.preventDefault();">Read Analysis</a>
+  </div>
+
   <!-- ARTICLE 18 - Latest Featured -->
   <div class="article-card featured" data-cat="market" onclick="openModal('art18')">
     <div class="article-visual" style="height:200px;overflow:hidden;">
@@ -1030,6 +1044,53 @@ const articles = {
     }
   }
   ,
+  art19: {
+    tag: { en:"Market Analysis", ar:"تحليل السوق" },
+    date: { en:"18 July 2026 — London", ar:"١٨ يوليو ٢٠٢٦ — لندن" },
+    title: { en:"America's Bold Return to Iraq: 48 Deals and the Promise of a More Open Market", ar:"عودة أمريكا القوية إلى العراق: ٤٨ اتفاقية ووعدٌ بسوقٍ أكثر انفتاحاً" },
+    body: {
+      en:`<img src="iraq-us-summit-2.jpg" loading="lazy" alt="Iraqi PM Al-Zaidi and President Trump at the White House, July 2026" style="width:100%;height:320px;object-fit:cover;margin-bottom:12px;display:block;filter:brightness(0.85);">
+<p style="font-size:0.8rem;color:var(--gray);margin-bottom:24px;font-style:italic;">Official White House photo by Daniel Torok (public domain).</p>
+<p>The past week marked one of the most consequential economic moments for Iraq in years. During Prime Minister Ali Al-Zaidi's visit to the United States, Baghdad and Washington signed <b>48 agreements, memoranda of understanding, and partnership declarations</b> between public and private-sector entities of both countries — the majority in oil and energy. For those of us who track Iraq's investment climate closely, the detail beneath the headlines matters far more than the summit itself.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">What Was Actually Signed</h3>
+<p>According to the Iraqi Prime Minister's media office and reporting by international agencies including AFP and Reuters, the agreements include cooperation and partnerships between Iraq's ministries of oil and electricity and major companies such as <b>ExxonMobil, Shell, Chevron, Halliburton, KBR, and GE Vernova</b>.</p>
+<p>At the US–Iraq business summit held at the US Chamber of Commerce in Washington, American energy, healthcare, and technology firms signed agreements and memoranda worth <b>more than US$60 billion</b>. Prime Minister Al-Zaidi described Iraq's new posture as an "open-door policy," telling the summit: "Everybody who has a project can come and talk to us. We will not make it difficult for anyone."</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">The Strategic Angle: A Route Beyond Hormuz</h3>
+<p>One of the most significant dimensions of these agreements is Chevron's investment in a pipeline that would <b>bypass the Strait of Hormuz</b>, creating a new export route for Iraqi oil — potentially carrying it to Syria's western coast on the Mediterranean.</p>
+<p>This matters enormously. Iraq's exports were hit hard during the recent Middle East conflict, partly due to the partial closure of the Strait of Hormuz, through which roughly 20% of the world's oil and gas typically flows. An alternative route reduces Iraq's vulnerability. The Chevron agreement also paves the way for the company's potential entry into the <b>West Qurna 2</b> and <b>Nassiriya</b> oilfields.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">Beyond Oil</h3>
+<p>The scope extends well beyond energy: technology and communications (including a Starlink agreement), finance, healthcare, education, real estate development, and food industries are all among the areas of cooperation. A deal to build an oil pipeline between Iraq and Syria was also signed.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">Why This Matters for the Investment Climate</h3>
+<p>The significance lies not merely in the numbers, but in the direction of travel. A government in Baghdad that is actively courting Western capital, offering security guarantees to energy firms, and tying its political legitimacy to economic delivery is a fundamentally different counterparty than the Iraq of even two years ago.</p>
+<p>The entry of major international firms operating to global standards can help improve transparency and the business environment — though the road ahead will be neither short nor without challenges. Iraq still faces structural difficulties in infrastructure and governance, and it is precisely this that makes international investment and expertise a decisive factor.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">The Window That Has Opened</h3>
+<p>As I noted in previous analyses, China remains the most agile player in the Iraqi market. Iraq's renewed closeness with the United States does not change that overnight, but it opens a parallel lane for American and Western firms — particularly in sectors where quality, standards, and technical depth are decisive. The firms that benefit will be those that move early, understand the ground, and can structure deals that survive shifting politics.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">Conclusion</h3>
+<p>The Washington summit was more than a diplomatic courtesy. It signals a government determined to reposition Iraq as a serious economic destination — and a competitive landscape that is about to become more crowded. For international investors with the right networks and the patience to navigate the security picture, this is a moment to prepare, not to wait.</p>
+<p style="margin-top:24px;font-size:0.85rem;color:var(--gray);">— Reza Mir, London, 18 July 2026</p>
+<p style="margin-top:16px;font-size:0.8rem;color:var(--gray);border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;">Sources: Media office of the Iraqi Prime Minister; Agence France-Presse (AFP); Reuters. Photograph: Official White House photo by Daniel Torok (public domain).</p>`,
+      ar:`<img src="iraq-us-summit-2.jpg" loading="lazy" alt="رئيس الوزراء العراقي الزيدي والرئيس ترامب في البيت الأبيض، يوليو ٢٠٢٦" style="width:100%;height:320px;object-fit:cover;margin-bottom:12px;display:block;filter:brightness(0.85);">
+<p style="font-size:0.8rem;color:var(--gray);margin-bottom:24px;font-style:italic;">صورة رسمية من البيت الأبيض بعدسة دانيال توروك (ملكية عامة).</p>
+<p>شهد الأسبوع الماضي واحدة من أهم اللحظات الاقتصادية للعراق منذ سنوات. فخلال زيارة رئيس الوزراء علي الزيدي إلى الولايات المتحدة، وقّعت بغداد وواشنطن <b>٤٨ اتفاقية ومذكرة تفاهم وإعلان شراكة</b> بين كيانات القطاعين العام والخاص في البلدين — معظمها في مجال النفط والطاقة. وبالنسبة لمن يتابع عن كثب مناخ الاستثمار في العراق، فإن التفاصيل تحت العناوين أهمّ بكثير من القمة نفسها.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">ما الذي وُقّع فعلاً</h3>
+<p>بحسب المكتب الإعلامي لرئيس الوزراء العراقي وتقارير وكالات دولية من بينها «فرانس برس» و«رويترز»، تشمل الاتفاقيات تعاوناً وشراكات بين وزارتَي النفط والكهرباء العراقيتين وشركات كبرى مثل <b>إكسون موبيل، وشل، وشيفرون، وهاليبرتون، وكي بي آر، وجنرال إلكتريك فرنوفا</b>.</p>
+<p>وفي القمة التجارية العراقية الأمريكية التي عُقدت في غرفة التجارة الأمريكية بواشنطن، وقّعت شركات أمريكية في مجالات الطاقة والصحة والتكنولوجيا اتفاقيات ومذكرات بقيمة <b>تتجاوز ٦٠ مليار دولار</b>. ووصف رئيس الوزراء الزيدي موقف العراق الجديد بأنه «سياسة الأبواب المفتوحة»، قائلاً للحضور: «كل من لديه مشروع يمكنه أن يأتي ويتحدث إلينا. لن نُصعّب الأمر على أحد.»</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">الزاوية الاستراتيجية: مسار يتجاوز هرمز</h3>
+<p>من أهم أبعاد هذه الاتفاقيات استثمار شيفرون في خط أنابيب <b>يتجاوز مضيق هرمز</b>، مما يوجد مساراً تصديرياً جديداً للنفط العراقي — يمكن أن ينقله إلى الساحل السوري الغربي على البحر المتوسط.</p>
+<p>ولهذا أهمية بالغة. فقد تضررت صادرات العراق بشدة خلال الصراع الأخير في الشرق الأوسط، جزئياً بسبب الإغلاق الجزئي لمضيق هرمز الذي يمرّ عبره نحو ٢٠٪ من نفط وغاز العالم. ومسارٌ بديل يقلّل من هشاشة وضع العراق. كما تمهّد اتفاقية شيفرون الطريق لدخولها المحتمل إلى حقلَي <b>غرب القرنة ٢</b> و<b>الناصرية</b> النفطيين.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">أبعد من النفط</h3>
+<p>يمتد النطاق إلى ما هو أبعد من الطاقة: التكنولوجيا والاتصالات (بما في ذلك اتفاقية مع ستارلينك)، والتمويل، والصحة، والتعليم، وتطوير العقارات، والصناعات الغذائية، جميعها ضمن مجالات التعاون. كما وُقّعت اتفاقية لبناء خط أنابيب نفط بين العراق وسوريا.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">لماذا يهمّ هذا لمناخ الاستثمار</h3>
+<p>الأهمية لا تكمن في الأرقام وحدها، بل في اتجاه المسار. فحكومة في بغداد تسعى بنشاط لاستقطاب رأس المال الغربي، وتقدّم ضمانات أمنية لشركات الطاقة، وتربط شرعيتها السياسية بالإنجاز الاقتصادي، هي طرفٌ مختلف جوهرياً عن عراق ما قبل عامين.</p>
+<p>ويمكن لدخول شركات دولية كبرى تعمل وفق معايير عالمية أن يساعد في تحسين الشفافية وبيئة الأعمال — وإن كان الطريق أمامنا لن يكون قصيراً ولا خالياً من التحديات. فلا يزال العراق يواجه صعوبات هيكلية في البنية التحتية والحوكمة، وهذا تحديداً ما يجعل الاستثمار والخبرة الدوليين عاملاً حاسماً.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">النافذة التي انفتحت</h3>
+<p>كما أشرتُ في تحليلات سابقة، تبقى الصين أكثر اللاعبين رشاقةً في السوق العراقية. والتقارب المتجدد بين العراق والولايات المتحدة لا يغيّر ذلك بين عشية وضحاها، لكنه يفتح مساراً موازياً للشركات الأمريكية والغربية — خصوصاً في القطاعات التي يكون فيها للجودة والمعايير والعمق التقني الكلمة الفصل. وستكون الشركات المستفيدة هي تلك التي تتحرك مبكراً، وتفهم أرض الواقع، وتستطيع هيكلة صفقات تصمد أمام تقلّبات السياسة.</p>
+<h3 style="margin:28px 0 12px;font-size:1.1rem;color:var(--gold);">خلاصة</h3>
+<p>كانت قمة واشنطن أكثر من مجاملة دبلوماسية. إنها تشير إلى حكومة عازمة على إعادة تموضع العراق كوجهة اقتصادية جادة — ومشهدٍ تنافسي على وشك أن يزداد ازدحاماً. وبالنسبة للمستثمرين الدوليين الذين يملكون الشبكات المناسبة والصبر للتعامل مع المشهد الأمني، فهذه لحظة للاستعداد، لا للانتظار.</p>
+<p style="margin-top:24px;font-size:0.85rem;color:var(--gray);">— رضا مير، لندن، ١٨ يوليو ٢٠٢٦</p>
+<p style="margin-top:16px;font-size:0.8rem;color:var(--gray);border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;">المصادر: المكتب الإعلامي لرئيس الوزراء العراقي؛ وكالة فرانس برس (AFP)؛ رويترز. الصورة: صورة رسمية من البيت الأبيض بعدسة دانيال توروك (ملكية عامة).</p>`
+    }
+  },
   art18: {
     tag: { en:"Market Analysis", ar:"تحليل السوق" },
     date: { en:"16 June 2026 — London", ar:"١٦ يونيو ٢٠٢٦ — لندن" },
@@ -1487,6 +1548,7 @@ function toggleMobileMenu() {
 
 
 const articlePageMap = {
+  art19: 'blog-iraq-us-deals.html',
   art18: 'blog-iraq-us-summit.html',
   art17: 'blog-iraq-financial-crisis.html',
   art1:  'blog-development-road.html',
