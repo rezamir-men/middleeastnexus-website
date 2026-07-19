@@ -1,74 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://middleeastnexus.co.uk/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-07-19</lastmod>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en-gb" href="https://middleeastnexus.co.uk/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://middleeastnexus.co.uk/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://middleeastnexus.co.uk/"/>
   </url>
-
   <url>
-    <loc>https://middleeastnexus.co.uk/blog.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://middleeastnexus.co.uk/blog</loc>
+    <lastmod>2026-07-19</lastmod>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://middleeastnexus.co.uk/iraq-logistics-market-entry.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-gb" href="https://middleeastnexus.co.uk/iraq-logistics-market-entry.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://middleeastnexus.co.uk/iraq-logistics-market-entry.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://middleeastnexus.co.uk/iraq-logistics-market-entry.html"/>
-  </url>
-
-  <url>
-    <loc>https://middleeastnexus.co.uk/gasoil-diesel-mazut-trading.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-gb" href="https://middleeastnexus.co.uk/gasoil-diesel-mazut-trading.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://middleeastnexus.co.uk/gasoil-diesel-mazut-trading.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://middleeastnexus.co.uk/gasoil-diesel-mazut-trading.html"/>
-  </url>
-
-  <url>
-    <loc>https://middleeastnexus.co.uk/project-nasiriyah-water-plant.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://middleeastnexus.co.uk/company-registration-iraq</loc>
+    <lastmod>2026-07-19</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en-gb" href="https://middleeastnexus.co.uk/project-nasiriyah-water-plant.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://middleeastnexus.co.uk/project-nasiriyah-water-plant.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://middleeastnexus.co.uk/project-nasiriyah-water-plant.html"/>
   </url>
-
-  <url><loc>https://middleeastnexus.co.uk/blog-iraq-us-summit.html</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-iraq-financial-crisis.html</loc><lastmod>2026-05-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-zaidi-government.html</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-development-road.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-iraq-market-entry.html</loc><lastmod>2026-02-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-water-nasiriyah.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-china-iraq.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-baghdad-metro.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-hidden-power-map.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-iraq-deadlock.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-zeidi.html</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-baghdad-breakfast.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-tehran-baghdad-1.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-tehran-baghdad-2.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-tehran-baghdad-3.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://middleeastnexus.co.uk/blog-tehran-baghdad-4.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url>
-    <loc>https://middleeastnexus.co.uk/blog-tehran-baghdad-5.html</loc>
-    <lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://middleeastnexus.co.uk/blog-tehran-baghdad-5-ar.html"/>
+    <loc>https://middleeastnexus.co.uk/province-baghdad</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://middleeastnexus.co.uk/province-basra</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://middleeastnexus.co.uk/province-najaf</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://middleeastnexus.co.uk/province-karbala</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://middleeastnexus.co.uk/province-mosul</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://middleeastnexus.co.uk/province-kirkuk</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://middleeastnexus.co.uk/province-erbil</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://middleeastnexus.co.uk/province-sulaymaniyah</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://middleeastnexus.co.uk/province-dhiqar</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://middleeastnexus.co.uk/province-maysan</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
