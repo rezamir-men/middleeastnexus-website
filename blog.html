@@ -1792,7 +1792,7 @@ textarea:focus{
 <div class="hero-metric"><strong>UK–Iraq</strong><span data-ar="استشارات عابرة للحدود" data-en="Cross-Border Advisory">Cross-Border Advisory</span></div>
 </div>
 <!-- FOUNDER JOURNAL -->
-<section class="founder-journal reveal-final" aria-labelledby="founder-journal-title">
+<section class="founder-journal reveal-final" aria-labelledby="founder-journal-title" id="founder-journal">
   <div class="founder-journal-shell">
     <div class="journal-head">
       <div>
@@ -1803,28 +1803,46 @@ textarea:focus{
       <p class="journal-intro" data-en="Twenty years of real stories from borders, negotiations, failures, risks and opportunities across Iraq." data-ar="عشرون عاماً من القصص الحقيقية عن الحدود والمفاوضات والإخفاقات والمخاطر والفرص في العراق.">Twenty years of real stories from borders, negotiations, failures, risks and opportunities across Iraq.</p>
     </div>
     <div class="journal-grid">
-      <a class="journal-card" href="#" onclick="openModal('art7'); return false;">
+      <a class="journal-card" href="from-tehran-to-baghdad-part-1.html">
         <span class="journal-episode">01</span>
         <span class="journal-status" data-en="Published" data-ar="منشور">Published</span>
         <h3 data-en="Leaving Tehran" data-ar="مغادرة طهران">Leaving Tehran</h3>
         <p data-en="The beginning of a journey into a country being rebuilt amid uncertainty." data-ar="بداية رحلة إلى بلد يعاد بناؤه وسط حالة من عدم اليقين.">The beginning of a journey into a country being rebuilt amid uncertainty.</p>
       </a>
-      <a class="journal-card" href="#art8" onclick="openModal('art8'); return false;">
+      <a class="journal-card" href="from-tehran-to-baghdad-part-2.html">
         <span class="journal-episode">02</span>
         <span class="journal-status" data-en="Published" data-ar="منشور">Published</span>
         <h3 data-en="First Night in Baghdad" data-ar="الليلة الأولى في بغداد">First Night in Baghdad</h3>
         <p data-en="A first encounter with the reality, tension and possibility of post-war Baghdad." data-ar="المواجهة الأولى مع واقع بغداد ما بعد الحرب وتوترها وفرصها.">A first encounter with the reality, tension and possibility of post-war Baghdad.</p>
       </a>
-      <a class="journal-card" href="#art12" onclick="openModal('art12'); return false;">
+      <a class="journal-card" href="from-tehran-to-baghdad-part-3.html">
         <span class="journal-episode">03</span>
         <span class="journal-status" data-en="Published" data-ar="منشور">Published</span>
         <h3 data-en="The First Contract" data-ar="العقد الأول">The First Contract</h3>
         <p data-en="What the first serious negotiation revealed about trust, risk and doing business in Iraq." data-ar="ما كشفته أول مفاوضات جادة عن الثقة والمخاطر والعمل التجاري في العراق.">What the first serious negotiation revealed about trust, risk and doing business in Iraq.</p>
       </a>
+      <a class="journal-card" href="from-tehran-to-baghdad-part-4.html">
+        <span class="journal-episode">04</span>
+        <span class="journal-status" data-en="Published" data-ar="منشور">Published</span>
+        <h3 data-en="Courage Under Fire" data-ar="شجاعة تحت النار">Courage Under Fire</h3>
+        <p data-en="Abduction, a checkpoint, and survival in a Baghdad gripped by insurgency." data-ar="اختطاف، ونقطة تفتيش، والنجاة في بغداد التي أنهكها التمرد.">Abduction, a checkpoint, and survival in a Baghdad gripped by insurgency.</p>
+      </a>
+      <a class="journal-card" href="from-tehran-to-baghdad-part-5.html">
+        <span class="journal-episode">05</span>
+        <span class="journal-status" data-en="Published" data-ar="منشور">Published</span>
+        <h3 data-en="A New Idea Takes Shape" data-ar="فكرة جديدة تتشكّل">A New Idea Takes Shape</h3>
+        <p data-en="Rebuilding, a multilingual website in 2004, and the idea that changed everything." data-ar="إعادة البناء، وموقع متعدد اللغات عام 2004، والفكرة التي غيّرت كل شيء.">Rebuilding, a multilingual website in 2004, and the idea that changed everything.</p>
+      </a>
+      <a class="journal-card" href="from-tehran-to-baghdad-part-6.html">
+        <span class="journal-episode">06</span>
+        <span class="journal-status" data-en="Published" data-ar="منشور">Published</span>
+        <h3 data-en="The Spark of an Idea" data-ar="شرارة فكرة">The Spark of an Idea</h3>
+        <p data-en="Leaving Tehran's shadow, and the spark in Baghdad of a Persian restaurant." data-ar="ترك ظلّ طهران، وشرارة فكرة مطعم إيراني في بغداد.">Leaving Tehran's shadow, and the spark in Baghdad of a Persian restaurant.</p>
+      </a>
     </div>
     <div class="journal-footer">
       <p class="journal-note" data-en="A personal founder narrative, presented separately from current market intelligence and verified research." data-ar="رواية شخصية للمؤسس، مقدمة بشكل منفصل عن استخبارات السوق الحالية والأبحاث الموثقة.">A personal founder narrative, presented separately from current market intelligence and verified research.</p>
-      <a class="journal-link" href="#" onclick="openModal('art7'); return false;" data-en="Explore the Journey" data-ar="استكشف الرحلة">Explore the Journey</a>
+      <a class="journal-link" href="from-tehran-to-baghdad-part-1.html" data-en="Start reading — Part I" data-ar="ابدأ القراءة — الجزء الأول">Start reading — Part I</a>
     </div>
   </div>
 </section>
@@ -3086,118 +3104,11 @@ const articles = {
     title: { en:"Baghdad Metro, Al-Faw Port and the New Iraq: A $150 Billion Pipeline", ar:"مترو بغداد وميناء الفاو والعراق الجديد: خط أنابيب بـ150 مليار دولار" },
     body: { en:`<p>Iraq's National Investment Commission is overseeing one of the most ambitious infrastructure pipelines in the Middle East. With $150 billion of projects targeted across agriculture, transportation, telecommunications, energy, entertainment and housing, the scale of opportunity is extraordinary.</p><h3>Flagship Projects</h3><p><strong>Baghdad Metro (DBOMFT):</strong> An international consortium has been selected to negotiate a design, build, finance, operate, maintain and transfer contract for the Baghdad metro — one of the largest public transport investments in the region's history.</p><p><strong>Najaf-Karbala Metro:</strong> A separate metro line linking the holy cities of Najaf and Karbala, announced as Investment Opportunity No. 2 of 2024.</p><p><strong>Al-Faw Grand Port:</strong> Being developed with UAE expertise, this deepwater port in Basra is designed to position Iraq as the region's premier trade gateway — the southern terminus of the Development Road.</p><p><strong>Bismayah New City:</strong> A major housing development in Baghdad representing one of the largest residential projects in the Arab world.</p><h3>The Construction Materials Implication</h3><p>Projects of this scale consume extraordinary volumes of cement, steel, glass, aggregates and specialist construction materials. For suppliers positioned with the right local partner, Iraq's $150 billion pipeline represents a multi-decade commercial opportunity.</p><p>Middle East Nexus is actively engaging with project developers across all of these major initiatives. Contact us to discuss how we can support your Iraq market entry.</p>`, ar:`<p>تُشرف هيئة الاستثمار الوطنية العراقية على واحد من أطموح خطوط البنية التحتية في الشرق الأوسط. مع استهداف 150 مليار دولار من المشاريع عبر قطاعات متعددة، الحجم الهائل للفرصة لا مثيل له.</p><h3>المشاريع الرائدة</h3><p><strong>مترو بغداد:</strong> تم اختيار اتحاد دولي للتفاوض على عقد تصميم وبناء وتمويل وتشغيل وصيانة ونقل ملكية.</p><p><strong>مترو النجف-كربلاء:</strong> خط مترو رابط بين المدينتين المقدستين.</p><p><strong>ميناء الفاو الكبير:</strong> ميناء المياه العميقة في البصرة، يُطوَّر ليكون البوابة التجارية الأولى في المنطقة.</p>` }
   },
-  art7: {
-    tag: { en:"Founder's Story", ar:"قصة المؤسس" },
-    date: { en:"2003 — Baghdad, Iraq", ar:"2003 — بغداد، العراق" },
-    title: { en:"From Tehran to Baghdad: A Tale of Building Amidst the Ruins (Part I)", ar:"من طهران إلى بغداد: حكاية البناء وسط الأنقاض (الجزء الأول)" },
-    body: { 
-      en:`<img src="reza-baghdad-1.jpg" loading="lazy" alt="Reza Mir in Iraq 2003" style="width:100%;max-height:320px;object-fit:cover;object-position:top;margin-bottom:28px;">
-<p>The year the United States invaded Iraq and Saddam's regime fell, I had just finished reading two impactful books: <strong>The Alchemist</strong> by Paulo Coelho and <strong>Gone with the Wind</strong> by Margaret Mitchell.</p>
-<p>From The Alchemist, I learned to pay close attention to the signs around me and follow them. But what truly captivated me was a profound dialogue in Gone with the Wind where Rhett Butler tells Scarlett:</p>
-<blockquote style="border-left:3px solid #C8A96E;padding:16px 24px;margin:24px 0;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#E2C99A;font-style:italic;">"There are two times when you can make a fortune: when a civilization is falling, and when a new one is being built."</blockquote>
-<p>This quote lit a spark in my mind. I decided to follow the signs and set off for Baghdad.</p>
-<p>In the first autumn after Saddam's regime fell, I arrived in Baghdad. The kindness and warmth of its people touched me deeply. I decided to stay and be a beacon of hope amidst the challenges.</p>
-<p>I purchased a small shop and returned to Tehran after twenty days to find an investor who could support my vision. The journey was tough, and the outlook in Iraq seemed bleak. But I did not lose hope.</p>
-<p>After months of meetings, I finally found an investor who entrusted me with <strong>$30,000</strong> in initial capital.</p>
-<p><em>And that was just the beginning of my story...</em></p>`,
-      ar:`<img src="reza-baghdad-1.jpg" loading="lazy" alt="رضا مير في العراق 2003" style="width:100%;max-height:320px;object-fit:cover;object-position:top;margin-bottom:28px;">
-<p>في العام الذي غزت فيه الولايات المتحدة العراق وسقط نظام صدام، كنت قد أنهيت للتو قراءة كتابين مؤثرين: <strong>الخيميائي</strong> لباولو كويلو و<strong>ذهب مع الريح</strong> لمارغريت ميتشيل.</p>
-<p>من الخيميائي تعلمت الانتباه إلى العلامات من حولي واتباعها. لكن ما أسر لبّي حقاً كان حواراً عميقاً في ذهب مع الريح حيث يقول ريت باتلر لسكارليت:</p>
-<blockquote style="border-left:3px solid #C8A96E;padding:16px 24px;margin:24px 0;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#E2C99A;font-style:italic;">"ثمة وقتان يمكنك فيهما صنع ثروة: حين تسقط حضارة، وحين تُبنى حضارة جديدة."</blockquote>
-<p>أشعل هذا الاقتباس شرارة في ذهني. قررت اتباع العلامات والتوجه إلى بغداد.</p>
-<p>في أول خريف بعد سقوط نظام صدام، وصلت إلى بغداد. لمست طيبة أهلها ودفء قلوبهم في أعماقي. قررت البقاء وأن أكون منارة أمل وسط التحديات.</p>
-<p>اشتريت دكاناً صغيراً وعدت إلى طهران بعد عشرين يوماً بحثاً عن مستثمر يدعم رؤيتي. كان الطريق شاقاً والآفاق في العراق تبدو قاتمة. لكنني لم أفقد الأمل.</p>
-<p>بعد أشهر من الاجتماعات، وجدت أخيراً مستثمراً أولاني ثقته بـ<strong>30,000 دولار</strong> كرأس مال أولي.</p>
-<p><em>وكان ذلك مجرد بداية قصتي...</em></p>`
-    }
-  }
-,
 
-  art8: {
-    tag: { en:"Founder's Story", ar:"قصة المؤسس" },
-    date: { en:"2003-2004 — Baghdad, Iraq", ar:"2003-2004 — بغداد، العراق" },
-    title: { en:"From Tehran to Baghdad: A Tale of Building Amidst the Ruins (Part II)", ar:"من طهران إلى بغداد: حكاية البناء وسط الأنقاض (الجزء الثاني)" },
-    body: {
-      en:`<img src="reza-baghdad-2.jpg" loading="lazy" alt="Reza Mir on rooftop Baghdad 2003" style="width:100%;object-fit:contain;margin-bottom:28px;display:block;">
-<p>With the <strong>$30,000 investment</strong> I received from my sponsor, I was able to equip the shop I had purchased. I made an agreement with an Iraqi partner to manage the store. According to our arrangement, without contributing to the initial capital, he would receive half of the store's profits.</p>
-<p>I was the only foreigner working in Baghdad's market, which was both a source of hope and a cause for concern. Foreigners were easy targets for terrorists, and another significant threat was the frequent kidnappings carried out by insurgent groups demanding ransom.</p>
-<p>However, instead of worrying about my own life, I was more concerned about my sponsor's capital. Anticipating the risk of being kidnapped, I gave my Iraqi partner written instructions that under no circumstances should any ransom be paid for my release, as the money did not belong to me.</p>
-<p>The team I built performed exceptionally well during the first year. With an initial investment of just $5,000 for the shop and $30,000 in funding, we managed to generate nearly <strong>half a million dollars in sales</strong>.</p>
-<p>Iraqis, having recently emerged from the oppressive walls of a ruthless dictatorship, had little familiarity with the outside world. This became a significant advantage for our team, as our store quickly became a central hub for fulfilling a variety of commercial demands.</p>
-<p>This incredible success made all the hardships and life-threatening challenges of living in Baghdad feel more bearable.</p>
-<p><em>To be continued…</em></p>
-<p style="margin-top:24px;font-size:0.85rem;color:var(--gray);">Author: Reza Mir</p>
-<p style="margin-top:16px;font-size:0.8rem;color:var(--gray);font-style:italic;">"Have you ever been in a situation where you had to choose between personal safety and financial responsibility?"</p>
-<p style="margin-top:12px;font-size:0.75rem;color:var(--gray);">#FromTehranToBaghdad #PersonalJourney #EntrepreneurshipInConflict #BaghdadStories #Resilience #MiddleEastExperience #OvercomingChallenges #Leadership #InspirationalJourney #CourageUnderFire</p>`,
-      ar:`<img src="reza-baghdad-2.jpg" loading="lazy" alt="Reza Mir on rooftop Baghdad 2003" style="width:100%;object-fit:contain;margin-bottom:28px;display:block;">
-<p>بفضل استثمار <strong>30,000 دولار</strong> الذي تلقيته من راعيي، تمكنت من تجهيز المتجر الذي اشتريته. وأبرمت اتفاقاً مع شريك عراقي لإدارة المتجر — دون أن يساهم في رأس المال الأولي، مقابل نصف الأرباح.</p>
-<p>كنت الأجنبي الوحيد العامل في سوق بغداد، وهو ما كان مصدر أمل وقلق في آنٍ معاً. فالأجانب كانوا أهدافاً سهلة للإرهابيين، وكان الاختطاف تهديداً دائماً من قبل الجماعات المسلحة.</p>
-<p>غير أنني، بدلاً من القلق على حياتي، كنت أكثر قلقاً على رأس مال راعيي. وتحسباً لخطر الاختطاف، أعطيت شريكي العراقي تعليمات خطية صريحة بألا يُدفع أي فدية لإطلاق سراحي تحت أي ظرف، لأن المال ليس ملكي.</p>
-<p>أبلى الفريق الذي بنيته بلاءً حسناً في السنة الأولى. ومن استثمار أولي بـ5,000 دولار للمتجر و30,000 دولار تمويلاً، تمكنا من تحقيق مبيعات تقارب <strong>نصف مليون دولار</strong>.</p>
-<p>كان العراقيون، وقد خرجوا للتو من سجن الديكتاتورية القمعية، قليلي الإلمام بالعالم الخارجي. وهذا ما أتاح لنا ميزة استثنائية، إذ سرعان ما أصبح متجرنا مركزاً رئيسياً لتلبية شتى المتطلبات التجارية.</p>
-<p>جعل هذا النجاح الباهر كل مشقات الحياة في بغداد وتحدياتها المميتة أكثر احتمالاً.</p>
-<p><em>يتبع…</em></p>`
-    }
-  }
-  ,
-  art12: {
-    tag: { en:"Founder's Story", ar:"قصة المؤسس" },
-    date: { en:"2004 — Baghdad, Iraq", ar:"2004 — بغداد، العراق" },
-    title: { en:"From Tehran to Baghdad: A Tale of Building Amidst the Ruins (Part III)", ar:"من طهران إلى بغداد: حكاية البناء وسط الأنقاض (الجزء الثالث)" },
-    body: {
-      en:`<img src="reza-baghdad-3.jpg" loading="lazy" alt="Reza Mir with Sheikh Saadoun in Baghdad" style="width:100%;height:300px;object-fit:cover;object-position:center top;margin-bottom:28px;display:block;filter:brightness(0.85);">
-<p>The decision to travel to Baghdad was anything but easy. My mother's tears and pleas, as she desperately tried to dissuade me from going to this blood-soaked city, echoed constantly in my mind. But my decision was made. I had left my family at the age of 14 and moved to Karaj. At the time, my first job was selling children's books — a job that I pursued alongside my studies and which laid the foundation for my future. Now, ten years after my first migration, I had reached a point where even my mother's tears couldn't change my mind. As the Alchemist said, I had to follow the signs of my life.</p>
-<p>In Baghdad, I lived in the home of a respected and prominent sheikh. Sheikh Saadoun, the leader of one of the largest tribes in the region, and his brother Abu Seif, a kind-hearted yet slightly lazy man who managed my shop, were my hosts. They gave me a large room and treated me like a member of their family.</p>
-<p>One of the first things that caught my attention in Iraq was the boundless generosity and kindness of its people. These were people who, under a warmongering and dictatorial regime, had endured four major wars in just three decades. Despite the deep scars etched onto their souls, they still had the strength to befriend me with nothing more than a simple, genuine smile, as though we had been friends for years. Those smiles, in their simplicity, carried untold stories of resilience and hope, which only deepened my respect and admiration for them.</p>
-<p>Out of concern for my safety, Sheikh Saadoun's family gave me a small pistol to protect myself in dangerous situations. It was my first experience with a firearm. I often carried the pistol with me, though I was always unsure whether I would be able to use it if the moment ever came. Until one dark night, the moment I had always feared finally arrived, and everything changed.</p>
-<p>During my first year in Baghdad, most of my time was spent getting to know the city and its surroundings. At that time, mobile networks were still underdeveloped, and the internet had only recently reached Baghdad. One summer day, after returning home from the shop, I decided to visit an internet café to catch up on the news. The café I usually frequented was closed for repairs. The manager suggested another café where I could go instead.</p>
-<p>I went to the new café and asked the owner for a computer. Barely half an hour had passed when suddenly, three armed men dressed in black stormed toward me. After a rough interrogation, I was arrested.</p>
-<p><em>To be continued…</em></p>
-<p style="margin-top:24px;font-size:0.85rem;color:var(--gray);">Author: Reza Mir</p>
-<p style="margin-top:16px;font-size:0.8rem;color:var(--gray);font-style:italic;">"How do you think the story will continue? Will the protagonist manage to overcome this crisis?"</p>
-<p style="margin-top:12px;font-size:0.75rem;color:var(--gray);">#FromTehranToBaghdad #PersonalJourney #EntrepreneurshipInConflict #BaghdadStories #Resilience #MiddleEastExperience #OvercomingChallenges #Leadership #InspirationalJourney #CourageUnderFire</p>`,
-      ar:`<img src="reza-baghdad-3.jpg" loading="lazy" alt="رضا مير مع الشيخ سعدون في بغداد" style="width:100%;height:300px;object-fit:cover;object-position:center top;margin-bottom:28px;display:block;filter:brightness(0.85);">
-<p>لم يكن قرار السفر إلى بغداد يسيراً بأي حال. دموع أمي وتوسلاتها، وهي تحاول بيأس إثنائي عن الذهاب إلى هذه المدينة المغسولة بالدماء، كانت تتردد في ذهني بلا انقطاع. لكن قراري كان قد اتُّخذ. لقد غادرت عائلتي في الرابعة عشرة من عمري وانتقلت إلى كرج، وكانت وظيفتي الأولى آنذاك بيع كتب الأطفال — عمل مارسته جنباً إلى جنب مع دراستي، وأرسى أسس مستقبلي. أما الآن، وبعد عشر سنوات من هجرتي الأولى، فقد بلغت نقطة لا تستطيع فيها حتى دموع أمي أن تثنيني. كما قال الخيميائي، كان عليّ أن أتبع علامات حياتي.</p>
-<p>في بغداد، أقمت في منزل شيخ محترم ومرموق. الشيخ سعدون، زعيم إحدى أكبر القبائل في المنطقة، وأخوه أبو سيف، الرجل الطيب القلب والكسول بعض الشيء الذي كان يدير متجري — كان هؤلاء مضيفيّ. أعطوني غرفة فسيحة وعاملوني كفرد من العائلة.</p>
-<p>من أول ما لفت نظري في العراق تلك السخاء اللامحدود وطيبة القلب التي يتحلى بها أهله. هؤلاء الناس الذين عانوا، في ظل نظام ديكتاتوري محارب، أربعة حروب كبرى في ثلاثة عقود فحسب. ورغم الندوب العميقة المحفورة في أرواحهم، كانوا لا يزالون يمتلكون القدرة على مصادقتي بمجرد ابتسامة صادقة بسيطة، كأننا أصدقاء منذ سنوات. تلك الابتسامات، في بساطتها، كانت تحمل حكايات لا تُحصى عن الصمود والأمل، مما زاد احترامي وإعجابي بهم.</p>
-<p>حرصاً على سلامتي، أعطتني عائلة الشيخ سعدون مسدساً صغيراً لأحمي به نفسي في المواقف الخطرة. كانت تلك تجربتي الأولى مع السلاح. كنت أحمل المسدس معي في أغلب الأحيان، وإن كنت دائماً في شك من قدرتي على استخدامه إن حانت اللحظة. حتى جاءت تلك الليلة المظلمة، فإذا باللحظة التي كنت دائماً أخشاها تحل، وتتغير كل الأمور.</p>
-<p>في سنتي الأولى ببغداد، قضيت معظم وقتي في التعرف على المدينة وما حولها. كانت شبكات الهاتف المحمول آنذاك لا تزال متخلفة، والإنترنت قد وصل إلى بغداد حديثاً. في يوم صيفي، بعد عودتي من المتجر، قررت زيارة مقهى إنترنت للاطلاع على الأخبار. كان المقهى الذي اعتدت ارتياده مغلقاً للإصلاح، فاقترح عليّ المدير مقهىً آخر.</p>
-<p>ذهبت إلى المقهى الجديد وطلبت من صاحبه جهاز حاسوب. ولم يمض نصف ساعة حتى اقتحم فجأة ثلاثة مسلحين يرتدون السواد. وبعد تحقيق قسري، اعتُقلت.</p>
-<p><em>يتبع…</em></p>
-<p style="margin-top:16px;font-size:0.8rem;color:var(--gray);font-style:italic;">"كيف تتوقع أن تستمر القصة؟ هل سيتمكن البطل من تجاوز هذه الأزمة؟"</p>
-<p style="margin-top:12px;font-size:0.75rem;color:var(--gray);">#FromTehranToBaghdad #PersonalJourney #EntrepreneurshipInConflict #BaghdadStories #Resilience #MiddleEastExperience #OvercomingChallenges #Leadership #InspirationalJourney #CourageUnderFire</p>`
-    }
-  }
-  ,
-  art13: {
-    tag: { en:"Founder's Story", ar:"قصة المؤسس" },
-    date: { en:"2004 — Baghdad, Iraq", ar:"2004 — بغداد، العراق" },
-    title: { en:"From Tehran to Baghdad: A Tale of Building Amidst the Ruins (Part IV)", ar:"من طهران إلى بغداد: حكاية البناء وسط الأنقاض (الجزء الرابع)" },
-    body: {
-      en:`<img src="reza-baghdad-4.jpg" loading="lazy" alt="Reza Mir in Baghdad's Al-Rasheed Street" style="width:100%;height:300px;object-fit:cover;object-position:center top;margin-bottom:28px;display:block;filter:brightness(0.85);">
-<p>Barely half an hour had passed since I entered the internet cafe when suddenly, a group of armed men stormed towards me. They slammed my head onto the keyboard, searched me violently, and dragged me away. An eerie silence filled the cafe. They forced me into a car. One of the armed men pressed his gun to my head and, in Arabic, said:</p>
-<p><em>"If you make a sound, I'll blow your brains out right here."</em></p>
-<p>The commander, who was sitting behind the wheel, broke the silence and began asking questions:<br><em>"Who are you spying for? Which country are you from?"</em></p>
-<p>Telling the truth was a significant risk. At that time, the war between Shia and Sunni factions in Iraq was at its peak. Given the Iranian regime's support for Shia militias, revealing my Iranian identity could have been a death sentence. Nevertheless, I told the truth:<br><em>"I'm Iranian."</em></p>
-<p>This answer only complicated the misunderstanding further, as the mispronunciation of my name (Razaq instead of Reza) had already placed me in a dangerous situation. Eventually, the commander contacted my host, Abu Saif, and realised they had made a mistake. Despite one of his men insisting on extorting money from me, the commander firmly said:<br><em>"He is our brother. This is not right."</em></p>
-<p>Half an hour later, they handed me over to my host.</p>
-<p>Surviving this ordeal felt like nothing short of a miracle. This experience taught me two invaluable lessons: First, even if I had been armed, I lacked the ability to use a weapon, so I decided to abandon it for good. Second, such dangers, no matter how likely they were to recur, did not shake my determination to continue on the path I had chosen.</p>
-<p><em>To be continued…</em></p>
-<p style="margin-top:24px;font-size:0.85rem;color:var(--gray);">Author: Reza Mir</p>
-<p style="margin-top:12px;font-size:0.75rem;color:var(--gray);">#FromTehranToBaghdad #PersonalJourney #EntrepreneurshipInConflict #BaghdadStories #Resilience #MiddleEastExperience #OvercomingChallenges #Leadership #InspirationalJourney #CourageUnderFire</p>`,
-      ar:`<img src="reza-baghdad-4.jpg" loading="lazy" alt="رضا مير في شارع الرشيد ببغداد" style="width:100%;height:300px;object-fit:cover;object-position:center top;margin-bottom:28px;display:block;filter:brightness(0.85);">
-<p>لم يمض نصف ساعة على دخولي مقهى الإنترنت حتى اقتحم فجأةً مجموعةٌ من المسلحين نحوي. دفعوا رأسي بعنف على لوحة المفاتيح، وفتّشوني بقسوة، ثم جرّوني بعيداً. خيّم صمتٌ مخيف على المقهى. أجبروني على ركوب سيارة، فضغط أحد المسلحين مسدسه على رأسي وقال بالعربية:</p>
-<p><em>"إن أصدرت أي صوت، أطير دماغك على الفور."</em></p>
-<p>كسر القائد، الجالس خلف المقود، الصمت وأخذ يوجّه إليّ الأسئلة:<br><em>"لمن تتجسس؟ من أي بلد أنت؟"</em></p>
-<p>كان الصدق مجازفةً بالغة. في تلك الأيام كانت الحرب بين الشيعة والسنة في العراق في أوجها. ونظراً لدعم النظام الإيراني للميليشيات الشيعية، كان الإفصاح عن هويتي الإيرانية قد يُعرّضني للإعدام. ومع ذلك، قلت الحقيقة:<br><em>"أنا إيراني."</em></p>
-<p>لم يزد هذا الجواب الأمر إلا تعقيداً، إذ كان النطق الخاطئ لاسمي (رزاق بدلاً من رضا) قد أوقعني في ورطة منذ البداية. في نهاية المطاف، اتصل القائد بمضيفي أبو سيف، فأدرك أنهم ارتكبوا خطأً. وعلى الرغم من إلحاح أحد رجاله بانتزاع مال مني، أجابه القائد بحزم:<br><em>"إنه أخونا. هذا غير لائق."</em></p>
-<p>بعد نصف ساعة، سلّموني إلى مضيفي.</p>
-<p>كانت النجاة من هذه المحنة لا تختلف كثيراً عن المعجزة. علّمتني هذه التجربة درسين لا يُقدَّران: أولاً، حتى لو كنت أحمل سلاحاً، فإنني لم أكن أملك القدرة على استخدامه، فقررت التخلي عنه نهائياً. وثانياً، هذه المخاطر، مهما تكررت، لم تزعزع عزمي على مواصلة الطريق الذي اخترته.</p>
-<p><em>يتبع…</em></p>
-<p style="margin-top:12px;font-size:0.75rem;color:var(--gray);">#FromTehranToBaghdad #PersonalJourney #EntrepreneurshipInConflict #BaghdadStories #Resilience #MiddleEastExperience #OvercomingChallenges #Leadership #InspirationalJourney #CourageUnderFire</p>`
-    }
-  }
-  ,
+
+
+
+
   art19: {
     tag: { en:"Market Analysis", ar:"تحليل السوق" },
     date: { en:"18 July 2026 — London", ar:"١٨ يوليو ٢٠٢٦ — لندن" },
@@ -3572,32 +3483,7 @@ const articles = {
     }
   },
 
-  art16: {
-    title: { en: "From Tehran to Baghdad: A Tale of Building Amidst the Ruins (Part V)", ar: "من طهران إلى بغداد: حكاية البناء وسط الأنقاض (الجزء الخامس)" },
-    tag: { en: "Founder's Story", ar: "قصة المؤسس" },
-    date: { en: "2004 — Baghdad", ar: "2004 — بغداد" },
-    body: {
-      en: `<img src="baghdad-theatre.jpg" loading="lazy" alt="Baghdad National Theatre" style="width:100%;height:320px;object-fit:cover;margin-bottom:28px;display:block;filter:brightness(0.8);">
-<p>Our team continued to work without pause, building something real in a city still finding its footing after years of war. The orders kept coming &#8212; marble stones, cast-iron vents, drinking water pipes. But the order that stayed with me was the one for 350 tractors, bound for the farmers of southern Iraq. Something about that felt different. These were for people who needed to feed their families, plant their fields, reclaim some normalcy from the chaos.</p>
-<p>My small operation had quietly earned a reputation. Customers trusted us. And in a market where trust was the rarest commodity of all, that meant everything.</p>
-<p>The biggest obstacle for traders at the time was not product sourcing or finance &#8212; it was the roads. Armed groups, checkpoints, unpredictable conditions. What paralysed most of my competitors became, for us, an opening. We moved fast. We delivered on time. We kept our word when others could not. That consistency was our edge.</p>
-<p>But something else was consuming my attention. I watched the news from Baghdad being absorbed by the outside world &#8212; distorted, incomplete, almost always frightening. The image being projected bore little resemblance to the Iraq I worked in every day: a country with enormous needs, enormous potential, and people who desperately wanted to rebuild.</p>
-<p>The distortion was not just unfair. It was commercially damaging. Foreign investors and traders were staying away from a market that, for all its risk, was genuinely open. The fear was manufactured, at least partly. I wanted to correct it.</p>
-<p>The idea was simple: a multilingual website offering accurate, ground-level information about Iraq to the outside world &#8212; in English, Arabic, and Persian. I brought in a friend to build it. A few months later, it was live. I hired two assistants to manage content and translations.</p>
-<p>We launched with real energy. But the conditions in Iraq were still too volatile, and over nearly two years of operation, the site never reached the audience it needed. I shut it down without fanfare.</p>
-<p>I did not stop. I kept meeting people &#8212; in Baghdad, in Basra, in the smaller cities &#8212; expanding my network, understanding what the market actually needed versus what it was being told it needed.</p>
-<p>And somewhere in those conversations, a new idea began to take shape. Not fully formed yet. But it was coming. And when it arrived, it would change the direction of everything that followed.</p>`,
-      ar: `<img src="baghdad-theatre.jpg" loading="lazy" alt="المسرح الوطني في بغداد" style="width:100%;height:320px;object-fit:cover;margin-bottom:28px;display:block;filter:brightness(0.8);">
-<p>واصل فريقنا العمل دون توقف، نبني شيئاً حقيقياً في مدينة لا تزال تبحث عن توازنها بعد سنوات من الحرب. الطلبات لم تنقطع — رخام وفتحات تهوية من الحديد الزهر وأنابيب مياه الشرب. غير أن الطلب الذي رسخ في ذاكرتي كان طلب ثلاثمائة وخمسين جراراً زراعياً، موجّهة إلى مزارعي جنوب العراق. كان في ذلك شيء مختلف.</p>
-<p>كانت عمليتي الصغيرة قد اكتسبت سمعة هادئة. الزبائن وثقوا بنا. وفي سوق كانت الثقة فيه أندر بضاعة على الإطلاق، كان ذلك يعني كل شيء.</p>
-<p>لم يكن أكبر عائق أمام التجار في تلك المرحلة يتعلق بتوفير البضائع أو التمويل — بل كانت الطرق. مجموعات مسلحة، ونقاط تفتيش، وأوضاع لا يمكن التنبؤ بها. ما أشلّ معظم منافسيّ صار بالنسبة لنا فرصة. كنا نتحرك بسرعة، ونسلّم في الوقت المحدد، ونفي بكلمتنا حين عجز الآخرون.</p>
-<p>لكن شيئاً آخر كان يشغل ذهني. كنت أراقب كيف يستقبل العالم الخارجي الأخبار القادمة من بغداد — مشوّهة، ومنقوصة، ومُرعبة في معظم الأحيان. الصورة المُروّجة لم تشبه العراق الذي كنت أعمل فيه يومياً.</p>
-<p>الفكرة كانت بسيطة: موقع إلكتروني متعدد اللغات يقدّم معلومات دقيقة وميدانية عن العراق للعالم الخارجي — بالإنجليزية والعربية والفارسية. استعنت بصديق لتطويره. بعد أشهر قليلة، كان جاهزاً. استأجرت مساعدين لإدارة المحتوى والترجمات.</p>
-<p>أطلقناه بحماس حقيقي. لكن الأوضاع في العراق كانت لا تزال متقلبة، وعلى مدى نحو عامين من العمل، لم يصل الموقع إلى الجمهور الذي كان يحتاجه. أغلقته دون ضجيج.</p>
-<p>لم أتوقف. واصلت لقاء الناس — في بغداد، وفي البصرة، وفي المدن الأصغر — أوسّع شبكتي، وأفهم ما يحتاجه السوق فعلاً مقابل ما كان يُقال له إنه يحتاجه.</p>
-<p>وفي خضمّ تلك المحادثات، بدأت فكرة جديدة تتشكّل. لم تكتمل بعد. لكنها كانت آتية. وحين تجلت، ستغيّر مسار كل ما تبعها.</p>`
-    }
-  },
+
 };
 
 let currentLang = 'en';
