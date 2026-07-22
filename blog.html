@@ -2542,10 +2542,12 @@ textarea:focus{
 </div>
 </div>
 <div class="lead-form-panel">
-<form action="contact.html" class="lead-form" method="get">
+<form action="https://formspree.io/f/xlgaogjo" class="lead-form" method="post">
+<input type="hidden" name="_subject" value="New enquiry from Middle East Nexus Journal">
+<input type="hidden" name="source" value="Journal page (blog.html)">
 <div>
 <label for="lead-name">Name</label>
-<input id="lead-name" name="name" placeholder="Your name" type="text"/>
+<input id="lead-name" name="name" placeholder="Your name" type="text" required/>
 </div>
 <div>
 <label for="lead-company">Company</label>
@@ -2553,7 +2555,7 @@ textarea:focus{
 </div>
 <div>
 <label for="lead-email">Email</label>
-<input id="lead-email" name="email" placeholder="you@company.com" type="email"/>
+<input id="lead-email" name="email" placeholder="you@company.com" type="email" required/>
 </div>
 <div>
 <label for="lead-service">Service Required</label>
@@ -2568,7 +2570,7 @@ textarea:focus{
 </div>
 <div class="full">
 <label for="lead-message">Project Brief</label>
-<textarea id="lead-message" name="message" placeholder="Tell us about your sector, target location, timeline and current stage."></textarea>
+<textarea id="lead-message" name="message" placeholder="Tell us about your sector, target location, timeline and current stage." required></textarea>
 </div>
 <button class="lead-submit" type="submit">Request Confidential Consultation</button>
 </form>
