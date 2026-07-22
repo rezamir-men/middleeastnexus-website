@@ -67,6 +67,7 @@ h1.at{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2.2rem;li
 [lang='ar'] .continue-reading{direction:rtl;}
 [lang='ar'] .cr-arrow{transform:scaleX(-1);display:inline-block;}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does a foreign company enter the Iraqi market?", "acceptedAnswer": {"@type": "Answer", "text": "Entry usually starts with a clear commercial objective, followed by market and stakeholder mapping, choosing between a branch, a local entity or a joint venture, and preparing the required legalised documentation. Many companies begin with a focused market assessment before committing to a full local presence."}}, {"@type": "Question", "name": "What are the biggest challenges when entering Iraq?", "acceptedAnswer": {"@type": "Answer", "text": "The most common challenges are navigating bureaucracy and documentation, finding reliable local partners, banking and payment compliance, and understanding regional differences between Federal Iraq and the Kurdistan Region. Local knowledge and proper due diligence address most of these."}}, {"@type": "Question", "name": "Is the Iraqi market open to foreign investment?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Iraq actively encourages foreign investment across energy, infrastructure, construction and services, supported by an investment law offering incentives. Recent reforms and international agreements have further opened the market, though sector-specific rules and practical local execution still require careful navigation."}}]}</script>
 </head>
 <body>
 <header class="top"><div class="top-inner">
@@ -80,12 +81,12 @@ h1.at{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2.2rem;li
 <nav class="crumb">
 <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a> ›
 <a href="blog.html" data-en="Journal" data-ar="المدوّنة">Journal</a> ›
-<span data-en="Investment" data-ar="الاستثمار">Investment</span>
+<a href="category-investment.html" data-en="Investment & Market Entry" data-ar="الاستثمار">Investment & Market Entry</a> › <span data-en="Investment" data-ar="الاستثمار">Investment</span>
 </nav>
 <main class="wrap">
 <div class="eyebrow" data-en="Investment" data-ar="الاستثمار">Investment</div>
 <h1 class="at"><span data-en="How to Enter the Iraqi Market in 2025: A Practical Guide for International Investors" data-ar="كيف تدخل السوق العراقية في 2025: دليل عملي للمستثمرين الدوليين">How to Enter the Iraqi Market in 2025: A Practical Guide for International Investors</span></h1>
-<div class="meta"><span data-en="February 2025" data-ar="فبراير 2025">February 2025</span> · <span data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</span></div>
+<div class="meta"><span data-en="February 2025" data-ar="فبراير 2025">February 2025</span> · <a href="author-reza-mir.html" style="color:var(--gold);text-decoration:none;" data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</a></div>
 <div class="hr"></div>
 <article class="body">
 <div class="en-only"><p>Iraq in 2025 is one of the Middle East's most significant — and most misunderstood — investment destinations. While headlines focus on security risks, sophisticated investors are quietly establishing positions in one of the world's largest construction booms. Here is what you need to know.</p><h3>The Legal Framework</h3><p>Iraq's Investment Law provides substantial incentives for foreign investors: a <strong>10-year tax holiday</strong>, import duty waivers on essential materials, and the ability to repatriate capital and profits. A 2009 amendment permits foreigners to own land for housing projects, with 50-year leases available in other sectors.</p><h3>The Reality on the Ground</h3><p>Success in Iraq depends on <strong>relationships, not contracts</strong>. Iraqi business culture places enormous weight on trust, personal connections and a demonstrated long-term commitment. Courts are ill-equipped to resolve commercial disputes — which is why choosing the right local partner is the single most important decision an international investor will make.</p><h3>Security and Operations</h3><p>The security situation has improved significantly since 2017. Commercial operations in Baghdad and the southern provinces proceed normally for established operators. Violence does not typically target international businesses, and most experienced operators work without incident.</p><h3>Why a Local Partner is Non-Negotiable</h3><p>Customs clearance, contractor relationships, government liaison and local procurement all require a partner with deep roots in the market. Middle East Nexus brings over 20 years of operational experience — the relationships, the knowledge, and the track record that international investors need.</p></div>
@@ -116,6 +117,37 @@ var b=document.getElementById('langBtn'); if(b) b.textContent=(l==='en'?'الع�
 try{localStorage.setItem('men_lang',l);}catch(e){}}
 function toggleLang(){var c=document.documentElement.getAttribute('lang')||'en';applyLang(c==='en'?'ar':'en');}
 (function(){var s='en';try{s=localStorage.getItem('men_lang')||'en';}catch(e){}if(s==='ar')applyLang('ar');})();
+</script>
+<!-- MEN conversion tracking -->
+<script>
+(function(){
+  function ev(name, params){
+    if (typeof gtag === 'function') { gtag('event', name, params || {}); }
+  }
+  function pageCtx(){
+    return { page_path: location.pathname, page_title: document.title };
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if(!a || !a.href) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('mailto:') === 0){
+      ev('contact_email_click', Object.assign({ method:'email' }, pageCtx()));
+    } else if (href.indexOf('tel:') === 0){
+      ev('contact_phone_click', Object.assign({ method:'phone' }, pageCtx()));
+    } else if (/wa\.me|api\.whatsapp\.com/.test(href)){
+      ev('contact_whatsapp_click', Object.assign({ method:'whatsapp' }, pageCtx()));
+    } else if (/linkedin\.com/.test(href)){
+      ev('social_linkedin_click', pageCtx());
+    }
+  }, true);
+  document.addEventListener('submit', function(e){
+    var f = e.target;
+    if (f && f.action && f.action.indexOf('formspree.io') !== -1){
+      ev('contact_form_submit', Object.assign({ method:'form' }, pageCtx()));
+    }
+  }, true);
+})();
 </script>
 </body>
 </html>

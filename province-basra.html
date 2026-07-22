@@ -1830,5 +1830,36 @@ document.querySelectorAll(".intel-tab").forEach(function(tab){
   });
 });
 </script>
+<!-- MEN conversion tracking -->
+<script>
+(function(){
+  function ev(name, params){
+    if (typeof gtag === 'function') { gtag('event', name, params || {}); }
+  }
+  function pageCtx(){
+    return { page_path: location.pathname, page_title: document.title };
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if(!a || !a.href) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('mailto:') === 0){
+      ev('contact_email_click', Object.assign({ method:'email' }, pageCtx()));
+    } else if (href.indexOf('tel:') === 0){
+      ev('contact_phone_click', Object.assign({ method:'phone' }, pageCtx()));
+    } else if (/wa\.me|api\.whatsapp\.com/.test(href)){
+      ev('contact_whatsapp_click', Object.assign({ method:'whatsapp' }, pageCtx()));
+    } else if (/linkedin\.com/.test(href)){
+      ev('social_linkedin_click', pageCtx());
+    }
+  }, true);
+  document.addEventListener('submit', function(e){
+    var f = e.target;
+    if (f && f.action && f.action.indexOf('formspree.io') !== -1){
+      ev('contact_form_submit', Object.assign({ method:'form' }, pageCtx()));
+    }
+  }, true);
+})();
+</script>
 </body>
 </html>

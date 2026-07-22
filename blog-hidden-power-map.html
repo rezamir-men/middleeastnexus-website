@@ -80,12 +80,12 @@ h1.at{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2.2rem;li
 <nav class="crumb">
 <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a> ›
 <a href="blog.html" data-en="Journal" data-ar="المدوّنة">Journal</a> ›
-<span data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</span>
+<a href="category-market-analysis.html" data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</a> › <span data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</span>
 </nav>
 <main class="wrap">
 <div class="eyebrow" data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</div>
 <h1 class="at"><span data-en="The Hidden Power Map of Iraq's Economy: Who Really Drives the Market?" data-ar="خريطة القوة الخفية لاقتصاد العراق: من يُحرّك السوق فعلاً؟">The Hidden Power Map of Iraq's Economy: Who Really Drives the Market?</span></h1>
-<div class="meta"><span data-en="April 2026 — Baghdad" data-ar="أبريل 2026 — بغداد">April 2026 — Baghdad</span> · <span data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</span></div>
+<div class="meta"><span data-en="April 2026 — Baghdad" data-ar="أبريل 2026 — بغداد">April 2026 — Baghdad</span> · <a href="author-reza-mir.html" style="color:var(--gold);text-decoration:none;" data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</a></div>
 <div class="hr"></div>
 <article class="body">
 <div class="en-only"><p>To enter the Iraqi market successfully, reading official reports is not enough. Ministries, central bank statistics, and public tender announcements are only the visible layer of this economy. Behind that layer lies a network of informal actors in whose hands the fate of many contracts, licenses, and investment opportunities is decided.</p>
@@ -160,5 +160,36 @@ h1.at{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2.2rem;li
 <p data-en="Middle East Nexus Ltd — Iraq market intelligence, infrastructure & trade advisory." data-ar="ميدل إيست نيكسوس — الاستشارات في استخبارات السوق العراقي والبنية التحتية والتجارة.">Middle East Nexus Ltd — Iraq market intelligence, infrastructure &amp; trade advisory.</p>
 <p style="margin-top:8px;"><a href="blog.html" data-en="← Back to Journal" data-ar="← العودة إلى المدوّنة">← Back to Journal</a></p>
 </footer>
+<!-- MEN conversion tracking -->
+<script>
+(function(){
+  function ev(name, params){
+    if (typeof gtag === 'function') { gtag('event', name, params || {}); }
+  }
+  function pageCtx(){
+    return { page_path: location.pathname, page_title: document.title };
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if(!a || !a.href) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('mailto:') === 0){
+      ev('contact_email_click', Object.assign({ method:'email' }, pageCtx()));
+    } else if (href.indexOf('tel:') === 0){
+      ev('contact_phone_click', Object.assign({ method:'phone' }, pageCtx()));
+    } else if (/wa\.me|api\.whatsapp\.com/.test(href)){
+      ev('contact_whatsapp_click', Object.assign({ method:'whatsapp' }, pageCtx()));
+    } else if (/linkedin\.com/.test(href)){
+      ev('social_linkedin_click', pageCtx());
+    }
+  }, true);
+  document.addEventListener('submit', function(e){
+    var f = e.target;
+    if (f && f.action && f.action.indexOf('formspree.io') !== -1){
+      ev('contact_form_submit', Object.assign({ method:'form' }, pageCtx()));
+    }
+  }, true);
+})();
+</script>
 </body>
 </html>

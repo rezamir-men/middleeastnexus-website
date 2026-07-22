@@ -80,12 +80,12 @@ h1.at{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2.2rem;li
 <nav class="crumb">
 <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a> ›
 <a href="blog.html" data-en="Journal" data-ar="المدوّنة">Journal</a> ›
-<span data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</span>
+<a href="category-political-analysis.html" data-en="Political Analysis" data-ar="التحليل السياسي">Political Analysis</a> › <span data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</span>
 </nav>
 <main class="wrap">
 <div class="eyebrow" data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</div>
 <h1 class="at"><span data-en="Iraq's Political Deadlock: The Failure of the Nation-Building Project" data-ar="المأزق السياسي في العراق؛ فشل مشروع بناء الدولة الوطنية">Iraq's Political Deadlock: The Failure of the Nation-Building Project</span></h1>
-<div class="meta"><span data-en="April 2026 — Baghdad" data-ar="أبريل 2026 — بغداد">April 2026 — Baghdad</span> · <span data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</span></div>
+<div class="meta"><span data-en="April 2026 — Baghdad" data-ar="أبريل 2026 — بغداد">April 2026 — Baghdad</span> · <a href="author-reza-mir.html" style="color:var(--gold);text-decoration:none;" data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</a></div>
 <div class="hr"></div>
 <article class="body">
 <div class="en-only"><p>The months-long delay in forming a government following Iraq's parliamentary elections is a sign of something far greater than a passing political crisis. This deadlock is a verdict rendered against more than two decades of efforts to build a modern nation-state in the heart of the oil-rich Middle East.</p>
@@ -126,6 +126,37 @@ var b=document.getElementById('langBtn'); if(b) b.textContent=(l==='en'?'الع�
 try{localStorage.setItem('men_lang',l);}catch(e){}}
 function toggleLang(){var c=document.documentElement.getAttribute('lang')||'en';applyLang(c==='en'?'ar':'en');}
 (function(){var s='en';try{s=localStorage.getItem('men_lang')||'en';}catch(e){}if(s==='ar')applyLang('ar');})();
+</script>
+<!-- MEN conversion tracking -->
+<script>
+(function(){
+  function ev(name, params){
+    if (typeof gtag === 'function') { gtag('event', name, params || {}); }
+  }
+  function pageCtx(){
+    return { page_path: location.pathname, page_title: document.title };
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if(!a || !a.href) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('mailto:') === 0){
+      ev('contact_email_click', Object.assign({ method:'email' }, pageCtx()));
+    } else if (href.indexOf('tel:') === 0){
+      ev('contact_phone_click', Object.assign({ method:'phone' }, pageCtx()));
+    } else if (/wa\.me|api\.whatsapp\.com/.test(href)){
+      ev('contact_whatsapp_click', Object.assign({ method:'whatsapp' }, pageCtx()));
+    } else if (/linkedin\.com/.test(href)){
+      ev('social_linkedin_click', pageCtx());
+    }
+  }, true);
+  document.addEventListener('submit', function(e){
+    var f = e.target;
+    if (f && f.action && f.action.indexOf('formspree.io') !== -1){
+      ev('contact_form_submit', Object.assign({ method:'form' }, pageCtx()));
+    }
+  }, true);
+})();
 </script>
 </body>
 </html>

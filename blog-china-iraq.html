@@ -80,12 +80,12 @@ h1.at{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2.2rem;li
 <nav class="crumb">
 <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a> ›
 <a href="blog.html" data-en="Journal" data-ar="المدوّنة">Journal</a> ›
-<span data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</span>
+<a href="category-market-analysis.html" data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</a> › <span data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</span>
 </nav>
 <main class="wrap">
 <div class="eyebrow" data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</div>
 <h1 class="at"><span data-en="China and Iraq: How Eastern Capital Is Reshaping Reconstruction" data-ar="الصين والعراق: كيف يُعيد رأس المال الشرقي تشكيل إعادة الإعمار">China and Iraq: How Eastern Capital Is Reshaping Reconstruction</span></h1>
-<div class="meta"><span data-en="December 2024" data-ar="ديسمبر 2024">December 2024</span> · <span data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</span></div>
+<div class="meta"><span data-en="December 2024" data-ar="ديسمبر 2024">December 2024</span> · <a href="author-reza-mir.html" style="color:var(--gold);text-decoration:none;" data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</a></div>
 <div class="hr"></div>
 <article class="body">
 <div class="en-only"><p>Chinese investment in Iraqi infrastructure has accelerated dramatically since 2017. From the <strong>$27 billion TotalEnergies energy deal</strong> (in which Chinese state entities hold significant stakes) to construction contracts across southern Iraq, eastern capital is becoming the defining force in Iraq's reconstruction economy.</p><h3>The Pattern of Chinese Engagement</h3><p>Chinese contractors and investors operate differently in Iraq than their Western counterparts. They move quickly, tolerate higher risk, and prioritise long-term market positioning over short-term returns. The Boland Payeh company — which holds the contract for the Tajiat Olympic Stadium — exemplifies the model of Iranian and regional contractors backed by Chinese financing.</p><h3>The Avik International Partnership</h3><p>Middle East Nexus has formalised a strategic partnership with <strong>Avik International, Beijing</strong> — three Chinese investors committed to 100% financial backing of our Iraq infrastructure and development projects. This partnership is not symbolic: it provides the capital backing that allows us to bid for and execute projects at a scale that was previously impossible for a UK-registered independent operator.</p><h3>What This Means for Our Clients</h3><p>For international companies and investors seeking to work in Iraq, our Chinese partnership provides something rare: a single counterparty that combines Western governance and local Iraqi expertise with Eastern capital. This is the combination the market requires.</p></div>
@@ -116,6 +116,37 @@ var b=document.getElementById('langBtn'); if(b) b.textContent=(l==='en'?'الع�
 try{localStorage.setItem('men_lang',l);}catch(e){}}
 function toggleLang(){var c=document.documentElement.getAttribute('lang')||'en';applyLang(c==='en'?'ar':'en');}
 (function(){var s='en';try{s=localStorage.getItem('men_lang')||'en';}catch(e){}if(s==='ar')applyLang('ar');})();
+</script>
+<!-- MEN conversion tracking -->
+<script>
+(function(){
+  function ev(name, params){
+    if (typeof gtag === 'function') { gtag('event', name, params || {}); }
+  }
+  function pageCtx(){
+    return { page_path: location.pathname, page_title: document.title };
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if(!a || !a.href) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('mailto:') === 0){
+      ev('contact_email_click', Object.assign({ method:'email' }, pageCtx()));
+    } else if (href.indexOf('tel:') === 0){
+      ev('contact_phone_click', Object.assign({ method:'phone' }, pageCtx()));
+    } else if (/wa\.me|api\.whatsapp\.com/.test(href)){
+      ev('contact_whatsapp_click', Object.assign({ method:'whatsapp' }, pageCtx()));
+    } else if (/linkedin\.com/.test(href)){
+      ev('social_linkedin_click', pageCtx());
+    }
+  }, true);
+  document.addEventListener('submit', function(e){
+    var f = e.target;
+    if (f && f.action && f.action.indexOf('formspree.io') !== -1){
+      ev('contact_form_submit', Object.assign({ method:'form' }, pageCtx()));
+    }
+  }, true);
+})();
 </script>
 </body>
 </html>

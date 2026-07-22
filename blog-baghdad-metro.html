@@ -80,12 +80,12 @@ h1.at{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2.2rem;li
 <nav class="crumb">
 <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a> ›
 <a href="blog.html" data-en="Journal" data-ar="المدوّنة">Journal</a> ›
-<span data-en="Infrastructure" data-ar="البنية التحتية">Infrastructure</span>
+<a href="category-infrastructure.html" data-en="Infrastructure & Projects" data-ar="البنية التحتية">Infrastructure & Projects</a> › <span data-en="Infrastructure" data-ar="البنية التحتية">Infrastructure</span>
 </nav>
 <main class="wrap">
 <div class="eyebrow" data-en="Infrastructure" data-ar="البنية التحتية">Infrastructure</div>
 <h1 class="at"><span data-en="Baghdad Metro, Al-Faw Port and the New Iraq: A $150 Billion Pipeline" data-ar="مترو بغداد وميناء الفاو والعراق الجديد: خط أنابيب بـ150 مليار دولار">Baghdad Metro, Al-Faw Port and the New Iraq: A $150 Billion Pipeline</span></h1>
-<div class="meta"><span data-en="November 2024" data-ar="نوفمبر 2024">November 2024</span> · <span data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</span></div>
+<div class="meta"><span data-en="November 2024" data-ar="نوفمبر 2024">November 2024</span> · <a href="author-reza-mir.html" style="color:var(--gold);text-decoration:none;" data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</a></div>
 <div class="hr"></div>
 <article class="body">
 <div class="en-only"><p>Iraq's National Investment Commission is overseeing one of the most ambitious infrastructure pipelines in the Middle East. With $150 billion of projects targeted across agriculture, transportation, telecommunications, energy, entertainment and housing, the scale of opportunity is extraordinary.</p><h3>Flagship Projects</h3><p><strong>Baghdad Metro (DBOMFT):</strong> An international consortium has been selected to negotiate a design, build, finance, operate, maintain and transfer contract for the Baghdad metro — one of the largest public transport investments in the region's history.</p><p><strong>Najaf-Karbala Metro:</strong> A separate metro line linking the holy cities of Najaf and Karbala, announced as Investment Opportunity No. 2 of 2024.</p><p><strong>Al-Faw Grand Port:</strong> Being developed with UAE expertise, this deepwater port in Basra is designed to position Iraq as the region's premier trade gateway — the southern terminus of the Development Road.</p><p><strong>Bismayah New City:</strong> A major housing development in Baghdad representing one of the largest residential projects in the Arab world.</p><h3>The Construction Materials Implication</h3><p>Projects of this scale consume extraordinary volumes of cement, steel, glass, aggregates and specialist construction materials. For suppliers positioned with the right local partner, Iraq's $150 billion pipeline represents a multi-decade commercial opportunity.</p><p>Middle East Nexus is actively engaging with project developers across all of these major initiatives. Contact us to discuss how we can support your Iraq market entry.</p></div>
@@ -116,6 +116,37 @@ var b=document.getElementById('langBtn'); if(b) b.textContent=(l==='en'?'الع�
 try{localStorage.setItem('men_lang',l);}catch(e){}}
 function toggleLang(){var c=document.documentElement.getAttribute('lang')||'en';applyLang(c==='en'?'ar':'en');}
 (function(){var s='en';try{s=localStorage.getItem('men_lang')||'en';}catch(e){}if(s==='ar')applyLang('ar');})();
+</script>
+<!-- MEN conversion tracking -->
+<script>
+(function(){
+  function ev(name, params){
+    if (typeof gtag === 'function') { gtag('event', name, params || {}); }
+  }
+  function pageCtx(){
+    return { page_path: location.pathname, page_title: document.title };
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if(!a || !a.href) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('mailto:') === 0){
+      ev('contact_email_click', Object.assign({ method:'email' }, pageCtx()));
+    } else if (href.indexOf('tel:') === 0){
+      ev('contact_phone_click', Object.assign({ method:'phone' }, pageCtx()));
+    } else if (/wa\.me|api\.whatsapp\.com/.test(href)){
+      ev('contact_whatsapp_click', Object.assign({ method:'whatsapp' }, pageCtx()));
+    } else if (/linkedin\.com/.test(href)){
+      ev('social_linkedin_click', pageCtx());
+    }
+  }, true);
+  document.addEventListener('submit', function(e){
+    var f = e.target;
+    if (f && f.action && f.action.indexOf('formspree.io') !== -1){
+      ev('contact_form_submit', Object.assign({ method:'form' }, pageCtx()));
+    }
+  }, true);
+})();
 </script>
 </body>
 </html>

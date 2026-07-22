@@ -80,12 +80,12 @@ h1.at{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2.2rem;li
 <nav class="crumb">
 <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a> ›
 <a href="blog.html" data-en="Journal" data-ar="المدوّنة">Journal</a> ›
-<span data-en="Infrastructure" data-ar="البنية التحتية">Infrastructure</span>
+<a href="category-infrastructure.html" data-en="Infrastructure & Projects" data-ar="البنية التحتية">Infrastructure & Projects</a> › <span data-en="Infrastructure" data-ar="البنية التحتية">Infrastructure</span>
 </nav>
 <main class="wrap">
 <div class="eyebrow" data-en="Infrastructure" data-ar="البنية التحتية">Infrastructure</div>
 <h1 class="at"><span data-en="Iraq's $17 Billion Development Road: The Trade Corridor That Will Reshape the Middle East" data-ar="طريق التنمية العراقي بـ17 مليار دولار: الممر التجاري الذي سيعيد تشكيل الشرق الأوسط">Iraq's $17 Billion Development Road: The Trade Corridor That Will Reshape the Middle East</span></h1>
-<div class="meta"><span data-en="April 2025" data-ar="أبريل 2025">April 2025</span> · <span data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</span></div>
+<div class="meta"><span data-en="April 2025" data-ar="أبريل 2025">April 2025</span> · <a href="author-reza-mir.html" style="color:var(--gold);text-decoration:none;" data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</a></div>
 <div class="hr"></div>
 <article class="body">
 <div class="en-only"><p>Iraq's Development Road is no longer a vision — it is an active construction project that will define the country's economic trajectory for the next generation. Stretching 1,200 kilometres from the Al-Faw Grand Port in Basra to the Faysh Khabur border crossing with Turkey, this dual railway and motorway corridor passes through 11 Iraqi provinces, connecting the Arabian Gulf to Europe via Turkey.</p><h3>The Numbers</h3><p>Total investment stands at <strong>$17 billion</strong>, with the World Bank approving <strong>$930 million</strong> in financing in June 2025 for railway modernisation alone. The project is expected to generate <strong>$4 billion annually</strong> once operational and create at least <strong>100,000 jobs</strong> across the corridor.</p><h3>What It Means for Materials Supply</h3><p>A project of this scale requires staggering volumes of cement, steel, aggregates and pre-fabricated components. Middle East Nexus, with its established supply networks and customs clearance expertise built over two decades of Iraq operations, is ideally placed to support contractors working along this corridor.</p><h3>Timeline</h3><p>Construction is planned in three phases, targeting completion in 2028, 2033 and 2050. The southern port and first corridor segment are the immediate priority, with multiple international contractors already mobilised on site.</p><p>For investors, logistics operators and construction material suppliers, the Development Road represents one of the defining infrastructure opportunities of the decade.</p></div>
@@ -116,6 +116,37 @@ var b=document.getElementById('langBtn'); if(b) b.textContent=(l==='en'?'الع�
 try{localStorage.setItem('men_lang',l);}catch(e){}}
 function toggleLang(){var c=document.documentElement.getAttribute('lang')||'en';applyLang(c==='en'?'ar':'en');}
 (function(){var s='en';try{s=localStorage.getItem('men_lang')||'en';}catch(e){}if(s==='ar')applyLang('ar');})();
+</script>
+<!-- MEN conversion tracking -->
+<script>
+(function(){
+  function ev(name, params){
+    if (typeof gtag === 'function') { gtag('event', name, params || {}); }
+  }
+  function pageCtx(){
+    return { page_path: location.pathname, page_title: document.title };
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if(!a || !a.href) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('mailto:') === 0){
+      ev('contact_email_click', Object.assign({ method:'email' }, pageCtx()));
+    } else if (href.indexOf('tel:') === 0){
+      ev('contact_phone_click', Object.assign({ method:'phone' }, pageCtx()));
+    } else if (/wa\.me|api\.whatsapp\.com/.test(href)){
+      ev('contact_whatsapp_click', Object.assign({ method:'whatsapp' }, pageCtx()));
+    } else if (/linkedin\.com/.test(href)){
+      ev('social_linkedin_click', pageCtx());
+    }
+  }, true);
+  document.addEventListener('submit', function(e){
+    var f = e.target;
+    if (f && f.action && f.action.indexOf('formspree.io') !== -1){
+      ev('contact_form_submit', Object.assign({ method:'form' }, pageCtx()));
+    }
+  }, true);
+})();
 </script>
 </body>
 </html>

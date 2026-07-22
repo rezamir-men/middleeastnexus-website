@@ -80,12 +80,12 @@ h1.at{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2.2rem;li
 <nav class="crumb">
 <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a> ›
 <a href="blog.html" data-en="Journal" data-ar="المدوّنة">Journal</a> ›
-<span data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</span>
+<a href="category-market-analysis.html" data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</a> › <span data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</span>
 </nav>
 <main class="wrap">
 <div class="eyebrow" data-en="Market Analysis" data-ar="تحليل السوق">Market Analysis</div>
 <h1 class="at"><span data-en="Iraq Construction Sector: 5% Growth in 2024 and a $162 Billion Budget" data-ar="قطاع البناء في العراق: نمو 5% في 2024 وميزانية 162 مليار دولار">Iraq Construction Sector: 5% Growth in 2024 and a $162 Billion Budget</span></h1>
-<div class="meta"><span data-en="March 2025" data-ar="مارس 2025">March 2025</span> · <span data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</span></div>
+<div class="meta"><span data-en="March 2025" data-ar="مارس 2025">March 2025</span> · <a href="author-reza-mir.html" style="color:var(--gold);text-decoration:none;" data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</a></div>
 <div class="hr"></div>
 <article class="body">
 <div class="en-only"><p>Iraq's construction sector grew by <strong>5% in real terms in 2024</strong>, supported by a government capital expenditure budget of <strong>IQD 211 trillion ($162 billion)</strong> — a 6% increase on the prior year. This sustained growth is underpinned by three structural drivers: energy infrastructure, water systems and housing.</p><h3>Sector Breakdown</h3><p>Of the total budget, <strong>$30.8 billion</strong> was directed to the energy sector, with the government targeting an increase in oil production from 5 million to 6 million barrels per day by 2030. Water infrastructure remains a national priority, with 100 new projects announced. Housing investment is accelerating, driven by a young population and rapid urbanisation.</p><h3>Forecast to 2028</h3><p>The Iraqi construction industry is expected to grow at an average annual rate of <strong>4.9% from 2025 to 2028</strong>, according to industry analysis. Renewable energy targets — 12 GW by 2030 — will create an additional construction wave in solar and wind infrastructure.</p><h3>The Supply Opportunity</h3><p>For cement, aggregate and material suppliers, a sustained multi-year construction boom creates exceptional commercial opportunities. Middle East Nexus provides the market access, regulatory knowledge and logistics infrastructure to connect international suppliers with Iraqi project developers.</p></div>
@@ -116,6 +116,37 @@ var b=document.getElementById('langBtn'); if(b) b.textContent=(l==='en'?'الع�
 try{localStorage.setItem('men_lang',l);}catch(e){}}
 function toggleLang(){var c=document.documentElement.getAttribute('lang')||'en';applyLang(c==='en'?'ar':'en');}
 (function(){var s='en';try{s=localStorage.getItem('men_lang')||'en';}catch(e){}if(s==='ar')applyLang('ar');})();
+</script>
+<!-- MEN conversion tracking -->
+<script>
+(function(){
+  function ev(name, params){
+    if (typeof gtag === 'function') { gtag('event', name, params || {}); }
+  }
+  function pageCtx(){
+    return { page_path: location.pathname, page_title: document.title };
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if(!a || !a.href) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('mailto:') === 0){
+      ev('contact_email_click', Object.assign({ method:'email' }, pageCtx()));
+    } else if (href.indexOf('tel:') === 0){
+      ev('contact_phone_click', Object.assign({ method:'phone' }, pageCtx()));
+    } else if (/wa\.me|api\.whatsapp\.com/.test(href)){
+      ev('contact_whatsapp_click', Object.assign({ method:'whatsapp' }, pageCtx()));
+    } else if (/linkedin\.com/.test(href)){
+      ev('social_linkedin_click', pageCtx());
+    }
+  }, true);
+  document.addEventListener('submit', function(e){
+    var f = e.target;
+    if (f && f.action && f.action.indexOf('formspree.io') !== -1){
+      ev('contact_form_submit', Object.assign({ method:'form' }, pageCtx()));
+    }
+  }, true);
+})();
 </script>
 </body>
 </html>

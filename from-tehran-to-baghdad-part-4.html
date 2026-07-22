@@ -83,13 +83,13 @@ h1.article-title{font-family:'Cormorant Garamond',serif;font-weight:500;font-siz
 <nav class="crumb">
 <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a> ›
 <a href="blog.html#founder-journal" data-en="Founder Journal" data-ar="مذكرات المؤسس">Founder Journal</a> ›
-<span data-en="Part IV" data-ar="الجزء الرابع">Part IV</span>
+<a href="category-founder-journal.html" data-en="Founder Journal" data-ar="مذكّرات المؤسس">Founder Journal</a> › <span data-en="Part IV" data-ar="الجزء الرابع">Part IV</span>
 </nav>
 
 <main class="wrap">
 <div class="series-eyebrow" data-en="From Tehran to Baghdad · Founder Journal" data-ar="من طهران إلى بغداد · مذكرات المؤسس">From Tehran to Baghdad · Founder Journal</div>
 <h1 class="article-title"><span data-en="From Tehran to Baghdad: A Tale of Building Amidst the Ruins (Part IV)" data-ar="من طهران إلى بغداد: حكاية البناء وسط الأنقاض (الجزء الرابع)">From Tehran to Baghdad: A Tale of Building Amidst the Ruins (Part IV)</span></h1>
-<div class="article-meta"><span data-en="2004 — Baghdad" data-ar="2004 — بغداد">2004 — Baghdad</span> · <span data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</span></div>
+<div class="article-meta"><span data-en="2004 — Baghdad" data-ar="2004 — بغداد">2004 — Baghdad</span> · <a href="author-reza-mir.html" style="color:var(--gold);text-decoration:none;" data-en="Reza Mir, Founder" data-ar="رضا مير، المؤسس">Reza Mir, Founder</a></div>
 <div class="article-hero-line"></div>
 
 <article class="article-body">
@@ -157,6 +157,37 @@ function toggleLang(){
   applyLang(cur==='en'?'ar':'en');
 }
 (function(){var s='en';try{s=localStorage.getItem('men_lang')||'en';}catch(e){}if(s==='ar')applyLang('ar');})();
+</script>
+<!-- MEN conversion tracking -->
+<script>
+(function(){
+  function ev(name, params){
+    if (typeof gtag === 'function') { gtag('event', name, params || {}); }
+  }
+  function pageCtx(){
+    return { page_path: location.pathname, page_title: document.title };
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if(!a || !a.href) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('mailto:') === 0){
+      ev('contact_email_click', Object.assign({ method:'email' }, pageCtx()));
+    } else if (href.indexOf('tel:') === 0){
+      ev('contact_phone_click', Object.assign({ method:'phone' }, pageCtx()));
+    } else if (/wa\.me|api\.whatsapp\.com/.test(href)){
+      ev('contact_whatsapp_click', Object.assign({ method:'whatsapp' }, pageCtx()));
+    } else if (/linkedin\.com/.test(href)){
+      ev('social_linkedin_click', pageCtx());
+    }
+  }, true);
+  document.addEventListener('submit', function(e){
+    var f = e.target;
+    if (f && f.action && f.action.indexOf('formspree.io') !== -1){
+      ev('contact_form_submit', Object.assign({ method:'form' }, pageCtx()));
+    }
+  }, true);
+})();
 </script>
 </body>
 </html>
