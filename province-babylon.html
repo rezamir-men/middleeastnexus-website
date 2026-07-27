@@ -1765,6 +1765,39 @@ h1,h2,h3,h4,section[id],[id]{scroll-margin-top:90px}
 }
 @media(max-width:520px){.men-why-facts,.men-dash-grid{grid-template-columns:1fr}}
 </style>
+<style>
+.men-heritage{max-width:1280px;margin:0 auto 40px;padding:0 60px}
+.men-heritage>.men-kicker{color:var(--gold);font-size:.66rem;letter-spacing:.32em;text-transform:uppercase;display:block;margin-bottom:6px}
+.men-heritage h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:10px}
+.men-heritage .men-her-intro{color:var(--gray);font-size:.9rem;line-height:1.7;max-width:760px;margin-bottom:24px}
+.men-her-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(200,169,110,.10)}
+.men-her{background:var(--dark);padding:26px 28px}
+.men-her h3{font-family:'Cormorant Garamond',serif;color:var(--white);font-size:1.3rem;font-weight:500;margin-bottom:6px}
+.men-her .men-her-tag{color:var(--gold-light);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;display:block}
+.men-her p{color:var(--gray);font-size:.88rem;line-height:1.65;margin:0}
+.men-her-lead{grid-column:1/-1;background:linear-gradient(135deg,rgba(200,169,110,.09),rgba(200,169,110,.02));border-left:3px solid var(--gold);padding:26px 30px}
+.men-her-lead p{color:#e8e2d5;font-family:'Cormorant Garamond',serif;font-size:1.2rem;line-height:1.5;font-weight:300}
+.men-heritage-src{font-size:.68rem;color:var(--gray);margin-top:12px;letter-spacing:.03em}
+[lang='ar'] .men-heritage{direction:rtl}
+[lang='ar'] .men-her,[lang='ar'] .men-her-lead{text-align:right}
+[lang='ar'] .men-her-lead{border-left:none;border-right:3px solid var(--gold)}
+@media(max-width:900px){.men-heritage{padding:0 24px}.men-her-grid{grid-template-columns:1fr}}
+</style>
+<style>
+.men-bab-gallery{max-width:1280px;margin:0 auto 50px;padding:0 60px}
+.men-bab-gallery>.men-kicker{color:var(--gold);font-size:.66rem;letter-spacing:.32em;text-transform:uppercase;display:block;margin-bottom:6px}
+.men-bab-gallery h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:22px}
+.men-bg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(200,169,110,.10)}
+.men-bg-grid figure{position:relative;margin:0;overflow:hidden;background:#0d0d0d;aspect-ratio:4/3}
+.men-bg-grid img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.95) contrast(1.02);transition:transform .5s}
+.men-bg-grid figure:hover img{transform:scale(1.05)}
+.men-bg-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 14px 12px;font-size:.74rem;line-height:1.4;color:#f5f0e8;background:linear-gradient(0deg,rgba(8,8,8,.92),transparent);z-index:2}
+.men-bg-src{font-size:.68rem;color:var(--gray);margin-top:12px;letter-spacing:.03em}
+[lang='ar'] .men-bab-gallery{direction:rtl}
+[lang='ar'] .men-bg-grid figcaption{text-align:right}
+@media(max-width:900px){.men-bab-gallery{padding:0 24px}.men-bg-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.men-bg-grid{grid-template-columns:1fr 1fr}}
+</style>
 </head>
 <body>
 <!-- TOP NAV -->
@@ -1888,6 +1921,49 @@ h1,h2,h3,h4,section[id],[id]{scroll-margin-top:90px}
 </section>
 
 <!-- RISK ASSESSMENT -->
+<!-- HERITAGE & CULTURAL ASSETS -->
+<section class="men-heritage" aria-label="Babylon heritage and cultural assets">
+<span class="men-kicker" data-en="Heritage &amp; cultural assets" data-ar="التراث والمقومات الثقافية">Heritage &amp; cultural assets</span>
+<h2 data-en="Beyond archaeology" data-ar="ما وراء الآثار">Beyond archaeology</h2>
+<p class="men-her-intro" data-en="Babylon is more than an archaeological destination. It pairs UNESCO World Heritage with one of Iraq's strongest agricultural economies, an expanding industrial base and direct access to Baghdad — positioning the governorate for both cultural-heritage tourism and industrial investment. The sites below are genuine assets for hospitality, tourism-infrastructure and conservation-linked investment." data-ar="بابل أكثر من مجرد وجهة أثرية. فهي تجمع بين تراث اليونسكو العالمي وواحد من أقوى الاقتصادات الزراعية في العراق وقاعدة صناعية متوسعة ووصول مباشر إلى بغداد — مما يؤهل المحافظة للسياحة الثقافية والاستثمار الصناعي معاً. والمواقع أدناه أصول حقيقية لاستثمارات الضيافة والبنية السياحية والصيانة.">Babylon is more than an archaeological destination. It pairs UNESCO World Heritage with one of Iraq's strongest agricultural economies, an expanding industrial base and direct access to Baghdad — positioning the governorate for both cultural-heritage tourism and industrial investment. The sites below are genuine assets for hospitality, tourism-infrastructure and conservation-linked investment.</p>
+<div class="men-her-grid">
+<div class="men-her">
+<span class="men-her-tag" data-en="UNESCO World Heritage" data-ar="تراث عالمي">UNESCO World Heritage</span>
+<h3 data-en="Ancient City of Babylon" data-ar="مدينة بابل الأثرية">Ancient City of Babylon</h3>
+<p data-en="Capital of the Neo-Babylonian Empire under Nebuchadnezzar II and inscribed on the UNESCO World Heritage list in 2019. The site includes palace remains, the Processional Way and reconstructed elements associated with the Ishtar Gate. Notably, about 85% of the site remains unexcavated — a long-horizon asset for heritage tourism and conservation partnerships." data-ar="عاصمة الإمبراطورية البابلية الحديثة في عهد نبوخذ نصر الثاني، وأُدرجت على قائمة التراث العالمي لليونسكو عام 2019. يضم الموقع بقايا القصور وطريق المواكب وعناصر مرتبطة ببوابة عشتار. واللافت أن نحو 85% من الموقع لم يُنقّب بعد — وهو أصل طويل الأمد لسياحة التراث وشراكات الصيانة.">Capital of the Neo-Babylonian Empire under Nebuchadnezzar II and inscribed on the UNESCO World Heritage list in 2019. The site includes palace remains, the Processional Way and reconstructed elements associated with the Ishtar Gate. Notably, about 85% of the site remains unexcavated — a long-horizon asset for heritage tourism and conservation partnerships.</p>
+</div>
+<div class="men-her">
+<span class="men-her-tag" data-en="Ziggurat · near Hillah" data-ar="زيقورة · قرب الحلة">Ziggurat · near Hillah</span>
+<h3 data-en="Borsippa (Birs Nimrud)" data-ar="بورسبا (برس نمرود)">Borsippa (Birs Nimrud)</h3>
+<p data-en="One of Iraq's most striking surviving ziggurats, about 18 km from Babylon. Popular tradition has long linked it to the Tower of Babel, though modern scholarship identifies it as a temple to the god Nabu. Either way, its dramatic form makes it a natural second stop on any Babylon heritage route." data-ar="من أبرز الزيقورات الباقية في العراق، على بُعد نحو 18 كم من بابل. وقد ربطتها الثقافة الشعبية طويلاً ببرج بابل، رغم أن البحث الحديث يعدّها معبداً للإله نابو. وفي كل الأحوال، يجعل شكلها المهيب منها محطة ثانية طبيعية في أي مسار تراثي لبابل.">One of Iraq's most striking surviving ziggurats, about 18 km from Babylon. Popular tradition has long linked it to the Tower of Babel, though modern scholarship identifies it as a temple to the god Nabu. Either way, its dramatic form makes it a natural second stop on any Babylon heritage route.</p>
+</div>
+<div class="men-her">
+<span class="men-her-tag" data-en="Sumerian city" data-ar="مدينة سومرية">Sumerian city</span>
+<h3 data-en="Kish" data-ar="كيش">Kish</h3>
+<p data-en="One of the oldest cities of Sumer, about 15 km east of Babylon, repeatedly named in ancient Mesopotamian texts. A site for specialist archaeological and cultural tourism that broadens the province's heritage offer beyond Babylon itself." data-ar="من أقدم مدن سومر، على بُعد نحو 15 كم شرق بابل، ورد ذكرها مراراً في النصوص الرافدينية القديمة. موقع للسياحة الأثرية والثقافية المتخصصة يوسّع عرض المحافظة التراثي إلى ما وراء بابل نفسها.">One of the oldest cities of Sumer, about 15 km east of Babylon, repeatedly named in ancient Mesopotamian texts. A site for specialist archaeological and cultural tourism that broadens the province's heritage offer beyond Babylon itself.</p>
+</div>
+<div class="men-her">
+<span class="men-her-tag" data-en="Religious tourism · Al-Kifl" data-ar="سياحة دينية · الكفل">Religious tourism · Al-Kifl</span>
+<h3 data-en="Tomb of Ezekiel, Al-Kifl" data-ar="مقام ذي الكفل">Tomb of Ezekiel, Al-Kifl</h3>
+<p data-en="A shrine in the town of Al-Kifl venerated by both Jewish and Muslim tradition, set within a historic quarter. It points to a distinct religious- and cultural-tourism stream alongside the province's ancient sites — relevant to hospitality and visitor-services investment." data-ar="مقام في بلدة الكفل يُبجّل في التقليدين اليهودي والإسلامي، ضمن حي تاريخي. ويشير إلى مسار سياحة دينية وثقافية متميز إلى جانب المواقع الأثرية — ذو صلة باستثمار الضيافة وخدمات الزوار.">A shrine in the town of Al-Kifl venerated by both Jewish and Muslim tradition, set within a historic quarter. It points to a distinct religious- and cultural-tourism stream alongside the province's ancient sites — relevant to hospitality and visitor-services investment.</p>
+</div>
+<div class="men-her-lead">
+<p data-en="For investors, heritage here is not a museum piece — it is under-developed tourism infrastructure: hotels, visitor services, transport and conservation-linked projects around some of the most recognised names in the ancient world." data-ar="بالنسبة للمستثمرين، التراث هنا ليس قطعة متحفية — بل بنية سياحية غير مطوّرة: فنادق وخدمات زوار ونقل ومشاريع مرتبطة بالصيانة حول بعض أشهر الأسماء في العالم القديم.">For investors, heritage here is not a museum piece — it is under-developed tourism infrastructure: hotels, visitor services, transport and conservation-linked projects around some of the most recognised names in the ancient world.</p>
+</div>
+</div>
+<p class="men-heritage-src" data-en="Heritage details from UNESCO and public archaeological sources. Site interpretations (e.g. the Tower of Babel association) reflect popular tradition, not settled scholarship." data-ar="تفاصيل التراث من اليونسكو ومصادر أثرية عامة. بعض التفسيرات (مثل ارتباط برج بابل) تعكس التقليد الشعبي وليس إجماعاً علمياً.">Heritage details from UNESCO and public archaeological sources. Site interpretations (e.g. the Tower of Babel association) reflect popular tradition, not settled scholarship.</p>
+</section>
+<!-- BABYLON HERITAGE GALLERY -->
+<section class="men-bab-gallery" aria-label="Babylon heritage gallery">
+<span class="men-kicker" data-en="Babylon in view" data-ar="بابل بالصورة">Babylon in view</span>
+<h2 data-en="The ancient city today" data-ar="المدينة الأثرية اليوم">The ancient city today</h2>
+<div class="men-bg-grid">
+<figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ishtar%20Gate%20at%20Babylon.jpg" alt="The reconstructed Ishtar Gate at Babylon, Iraq" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none'"/><figcaption data-en="The reconstructed Ishtar Gate at Babylon" data-ar="بوابة عشتار المُعاد بناؤها في بابل">The reconstructed Ishtar Gate at Babylon</figcaption></figure>
+<figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lion%20of%20Babylon%20Statue%20at%20Babylon%2C%20Iraq%2C%20reign%20of%20king%20Nebuchadnezzar%20II%2C%206th%20century%20BC.jpg" alt="The Lion of Babylon statue at the archaeological site" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none'"/><figcaption data-en="The Lion of Babylon — symbol of the ancient city" data-ar="أسد بابل — رمز المدينة الأثرية">The Lion of Babylon — symbol of the ancient city</figcaption></figure>
+<figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ruins%20of%20Babylon%2C%20Mesopotamia%2C%20Iraq.jpg" alt="Ruins of the ancient city of Babylon" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none'"/><figcaption data-en="The excavated ruins of ancient Babylon" data-ar="أطلال بابل القديمة المكتشفة">The excavated ruins of ancient Babylon</figcaption></figure>
+</div>
+<p class="men-bg-src" data-en="Images: Wikimedia Commons (Babylon, Iraq), used under their respective free licences." data-ar="الصور: ويكيميديا كومونز (بابل، العراق)، مستخدمة وفق رخصها الحرة.">Images: Wikimedia Commons (Babylon, Iraq), used under their respective free licences.</p>
+</section>
 <section class="men-risk" aria-label="Babylon operating risk assessment">
 <span class="men-kicker" data-en="Operating risk snapshot" data-ar="لمحة عن مخاطر التشغيل">Operating risk snapshot</span>
 <h2 data-en="Babylon risk assessment" data-ar="تقييم مخاطر بابل">Babylon risk assessment</h2>
