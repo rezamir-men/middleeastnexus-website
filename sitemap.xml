@@ -262,7 +262,12 @@
   </url>
   <url>
     <loc>https://middleeastnexus.co.uk/uk-iraq-trade.html</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-07-28</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://middleeastnexus.co.uk/iraq-construction-sector.html</loc>
+    <lastmod>2026-07-28</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
