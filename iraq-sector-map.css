@@ -1,0 +1,56 @@
+/* Middle East Nexus — Interactive Iraq Sector Map */
+.men-map-shell{--map-gold:#c8a96e;--map-ink:#0a0a0a;--map-panel:#111;--map-soft:#9a958c;max-width:1080px;margin:30px auto 0;font-family:'Inter',sans-serif}
+.men-map-toolbar{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:18px}
+.men-map-heading h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.45rem,3vw,2rem);font-weight:500;line-height:1.15;margin:0 0 7px;color:#f5f1e8}
+.men-map-heading p{margin:0;color:#a9a39a;font-size:.88rem;line-height:1.65;max-width:700px}
+.men-map-language{display:flex;border:1px solid rgba(200,169,110,.28);border-radius:999px;padding:3px;flex:0 0 auto}
+.men-map-language button{border:0;background:transparent;color:#aaa49b;padding:6px 10px;border-radius:999px;font:600 .68rem/1 'Inter',sans-serif;cursor:pointer}
+.men-map-language button.is-active{background:#c8a96e;color:#0a0a0a}
+.men-map-filters{display:flex;gap:8px;overflow-x:auto;padding:2px 1px 12px;scrollbar-width:thin;scrollbar-color:rgba(200,169,110,.35) transparent}
+.men-map-filter{border:1px solid rgba(200,169,110,.26);background:#111;color:#c7c0b5;border-radius:999px;padding:10px 15px;white-space:nowrap;font:500 .76rem/1 'Inter',sans-serif;cursor:pointer;transition:.2s ease}
+.men-map-filter:hover,.men-map-filter:focus-visible{border-color:#c8a96e;color:#f5f1e8;outline:none}
+.men-map-filter.is-active{background:var(--sector-colour,#c8a96e);border-color:var(--sector-colour,#c8a96e);color:#0a0a0a;font-weight:700}
+.men-map-layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(290px,.72fr);gap:16px;align-items:stretch}
+.men-map-canvas{position:relative;min-height:640px;border:1px solid rgba(200,169,110,.2);border-radius:12px;overflow:hidden;background:radial-gradient(circle at 66% 28%,rgba(200,169,110,.12),transparent 32%),linear-gradient(145deg,#10100f,#080808);isolation:isolate}
+.men-map-canvas:before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(200,169,110,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(200,169,110,.025) 1px,transparent 1px);background-size:34px 34px;pointer-events:none}
+.men-map-svg{position:absolute;inset:4% 4% 5%;width:92%;height:91%;filter:drop-shadow(0 24px 38px rgba(0,0,0,.5))}
+.men-map-country{fill:rgba(200,169,110,.085);stroke:rgba(226,201,154,.68);stroke-width:2.2;vector-effect:non-scaling-stroke}
+.men-map-country-inner{fill:none;stroke:rgba(200,169,110,.10);stroke-width:1;vector-effect:non-scaling-stroke}
+.men-map-river{fill:none;stroke:rgba(99,169,197,.34);stroke-width:3;stroke-linecap:round;stroke-dasharray:7 7;vector-effect:non-scaling-stroke}
+.men-map-marker{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);z-index:3;border:0;background:transparent;padding:0;cursor:pointer;color:#f5f1e8;transition:opacity .2s ease,filter .2s ease,transform .2s ease}
+.men-map-marker-dot{position:relative;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--marker-colour,#c8a96e);border:3px solid rgba(10,10,10,.78);box-shadow:0 0 0 1px rgba(245,241,232,.35),0 0 calc(8px + var(--score,2)*5px) color-mix(in srgb,var(--marker-colour,#c8a96e) 72%,transparent);transition:.2s ease}
+.men-map-marker-dot:after{content:'';width:5px;height:5px;border-radius:50%;background:#0a0a0a;opacity:.72}
+.men-map-marker-label{position:absolute;left:50%;bottom:34px;transform:translateX(-50%) translateY(4px);background:rgba(10,10,10,.94);border:1px solid rgba(200,169,110,.3);color:#f5f1e8;padding:6px 9px;border-radius:5px;font-size:.66rem;line-height:1;white-space:nowrap;opacity:0;pointer-events:none;transition:.18s ease;box-shadow:0 8px 22px rgba(0,0,0,.35)}
+.men-map-marker:hover,.men-map-marker:focus-visible,.men-map-marker.is-selected{z-index:8;filter:none;outline:none;transform:translate(-50%,-50%) scale(1.12)}
+.men-map-marker:hover .men-map-marker-label,.men-map-marker:focus-visible .men-map-marker-label,.men-map-marker.is-selected .men-map-marker-label{opacity:1;transform:translateX(-50%) translateY(0)}
+.men-map-marker.is-selected .men-map-marker-dot{box-shadow:0 0 0 5px color-mix(in srgb,var(--marker-colour,#c8a96e) 22%,transparent),0 0 28px var(--marker-colour,#c8a96e)}
+.men-map-marker.is-low{opacity:.2;filter:saturate(.25)}
+.men-map-marker.is-medium{opacity:.62}
+.men-map-marker.is-high{opacity:1}
+.men-map-legend{position:absolute;left:18px;bottom:16px;z-index:4;display:flex;gap:14px;align-items:center;background:rgba(10,10,10,.78);border:1px solid rgba(200,169,110,.14);padding:8px 11px;border-radius:6px;color:#9f998f;font-size:.62rem;backdrop-filter:blur(6px)}
+.men-map-legend span{display:flex;align-items:center;gap:5px}.men-map-legend i{display:block;border-radius:50%;background:var(--legend,#c8a96e)}
+.men-map-legend .l3{width:10px;height:10px}.men-map-legend .l2{width:8px;height:8px;opacity:.65}.men-map-legend .l1{width:7px;height:7px;opacity:.25}
+.men-map-detail{border:1px solid rgba(200,169,110,.2);border-radius:12px;background:linear-gradient(155deg,rgba(200,169,110,.07),rgba(17,17,17,.98) 32%);padding:26px;display:flex;flex-direction:column;min-height:640px}
+.men-map-detail-kicker{color:var(--detail-colour,#c8a96e);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:12px}
+.men-map-detail h4{font-family:'Cormorant Garamond',serif;color:#f5f1e8;font-size:2rem;font-weight:500;line-height:1;margin:0 0 12px}
+.men-map-priority{display:inline-flex;align-items:center;gap:8px;color:#d8d1c6;font-size:.73rem;margin-bottom:18px}.men-map-priority:before{content:'';width:8px;height:8px;border-radius:50%;background:var(--detail-colour,#c8a96e);box-shadow:0 0 12px var(--detail-colour,#c8a96e)}
+.men-map-detail-desc{color:#aaa49b;font-size:.9rem;line-height:1.75;margin:0 0 19px}
+.men-map-strengths{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px}
+.men-map-strength{border:1px solid rgba(200,169,110,.2);padding:6px 9px;border-radius:999px;color:#bcb5aa;font-size:.67rem}.men-map-strength.is-focus{border-color:var(--detail-colour,#c8a96e);color:var(--detail-colour,#c8a96e)}
+.men-map-opportunities{border-top:1px solid rgba(200,169,110,.14);padding-top:18px;margin-bottom:22px}
+.men-map-opportunities h5{margin:0 0 11px;color:#e4ddd1;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.men-map-opportunities ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}.men-map-opportunities li{position:relative;padding-left:17px;color:#aaa49b;font-size:.8rem;line-height:1.55}.men-map-opportunities li:before{content:'→';position:absolute;left:0;color:var(--detail-colour,#c8a96e)}
+[dir='rtl'] .men-map-opportunities li{padding-left:0;padding-right:17px}[dir='rtl'] .men-map-opportunities li:before{left:auto;right:0;content:'←'}
+.men-map-actions{display:grid;gap:9px;margin-top:auto}.men-map-actions a{display:flex;align-items:center;justify-content:space-between;text-decoration:none;padding:12px 14px;border-radius:6px;font-size:.76rem;font-weight:600}.men-map-actions .primary{background:var(--detail-colour,#c8a96e);color:#0a0a0a}.men-map-actions .secondary{border:1px solid rgba(200,169,110,.25);color:#c8a96e}.men-map-actions a:hover{transform:translateY(-1px)}
+.men-map-ranking{margin-top:16px;border:1px solid rgba(200,169,110,.16);border-radius:10px;overflow:hidden;background:#0c0c0c}
+.men-map-ranking-head{display:flex;justify-content:space-between;align-items:center;padding:14px 17px;border-bottom:1px solid rgba(200,169,110,.12)}
+.men-map-ranking-head strong{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:#f5f1e8}.men-map-ranking-head span{font-size:.65rem;color:#8f8980}
+.men-map-ranking-list{display:grid;grid-template-columns:repeat(3,1fr)}
+.men-map-rank-item{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 15px;color:#b8b1a6;text-decoration:none;font-size:.72rem;border-right:1px solid rgba(200,169,110,.08);border-bottom:1px solid rgba(200,169,110,.08)}
+.men-map-rank-item:hover{background:rgba(200,169,110,.06);color:#f5f1e8}.men-map-rank-item b{font-weight:500}.men-map-rank-item i{width:7px;height:7px;border-radius:50%;background:var(--rank-colour,#c8a96e);box-shadow:0 0 calc(var(--rank-score,1)*4px) var(--rank-colour,#c8a96e)}
+.men-map-note{display:flex;justify-content:space-between;gap:18px;margin-top:12px;color:#77736d;font-size:.61rem;line-height:1.55}.men-map-note a{color:#9f947e;text-decoration:none}.men-map-note a:hover{color:#c8a96e}
+.men-map-link-band{max-width:1080px;margin:30px auto;padding:0 6vw}.men-map-link-band a{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 21px;border:1px solid rgba(200,169,110,.25);border-radius:8px;background:linear-gradient(135deg,rgba(200,169,110,.09),rgba(200,169,110,.02));color:#f5f1e8;text-decoration:none}.men-map-link-band strong{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500}.men-map-link-band span{color:#c8a96e;font-size:.78rem;white-space:nowrap}
+[dir='rtl'] .men-map-shell{text-align:right}.men-map-shell[dir='rtl'] .men-map-detail,.men-map-shell[dir='rtl'] .men-map-heading{text-align:right}
+@media(max-width:850px){.men-map-layout{grid-template-columns:1fr}.men-map-canvas{min-height:570px}.men-map-detail{min-height:auto}.men-map-ranking-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.men-map-toolbar{align-items:flex-start}.men-map-heading p{font-size:.8rem}.men-map-canvas{min-height:510px}.men-map-svg{inset:5% 0 6%;width:100%;height:89%}.men-map-marker-dot{width:23px;height:23px;border-width:2px}.men-map-marker-label{bottom:29px;font-size:.6rem}.men-map-detail{padding:21px}.men-map-ranking-list{grid-template-columns:1fr 1fr}.men-map-rank-item{padding:11px;font-size:.66rem}.men-map-note{flex-direction:column;gap:4px}.men-map-link-band a{align-items:flex-start;flex-direction:column}.men-map-link-band span{white-space:normal}}
+@media(prefers-reduced-motion:reduce){.men-map-marker,.men-map-marker-dot,.men-map-filter,.men-map-actions a{transition:none}}

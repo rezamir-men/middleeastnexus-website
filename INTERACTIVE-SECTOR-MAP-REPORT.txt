@@ -1,0 +1,22 @@
+MIDDLE EAST NEXUS — INTERACTIVE IRAQ SECTOR MAP
+Date: 2026-07-29
+
+DELIVERABLES
+- New standalone page: iraq-sector-map.html
+- Reusable assets: iraq-sector-map.css and iraq-sector-map.js
+- Full interactive map embedded in iraq-sectors.html
+- Map CTA added to all five sector pillar pages
+- Map link added to home, blog and governorate guide footers
+- Sitemap updated from 60 to 61 URLs
+
+FUNCTIONS
+- Five sector filters plus all-sector view
+- 19 clickable governorates
+- English/Arabic map interface
+- Sector opportunity strength and sorted governorate ranking
+- Direct links to every governorate guide and all five sector guides
+- Keyboard-accessible buttons and responsive mobile layout
+- No external JavaScript library or API dependency
+
+NOTE
+- Marker positions are indicative and the visual is not a legal administrative-boundary reference.
