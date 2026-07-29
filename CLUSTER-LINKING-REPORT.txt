@@ -1,0 +1,83 @@
+MIDDLE EAST NEXUS — INTERNAL LINKING & TOPIC CLUSTER REBUILD
+Date: 2026-07-29
+
+COMPLETENESS
+- HTML files in repository: 70
+- URLs in sitemap.xml: 60
+- Sitemap URLs with missing files: 0
+- Extra HTML files not listed in sitemap: 10
+
+REBUILD
+- Legacy pages rebuilt with tailored cluster navigation: 34
+- Hub/pillar pages given reciprocal supporting-content links: 6
+- Total HTML pages modified: 40
+- sitemap.xml lastmod updated for modified sitemap URLs.
+
+VALIDATION
+- Broken internal .html links after rebuild: 0
+- All 34 legacy pages link to the Hub: True
+- All 34 legacy pages link to at least one relevant pillar: True
+- All six Hub/pillar reciprocal clusters validated: True
+
+INLINK IMPROVEMENT TO CORE CLUSTER
+- iraq-sectors.html: 38 → 72 internal linking pages
+- iraq-construction-sector.html: 34 → 64 internal linking pages
+- iraq-water-sector.html: 29 → 45 internal linking pages
+- iraq-energy-sector.html: 28 → 51 internal linking pages
+- iraq-logistics-sector.html: 29 → 61 internal linking pages
+- iraq-healthcare-sector.html: 26 → 38 internal linking pages
+
+EXTRA / DUPLICATE HTML FILES NOT IN SITEMAP (left untouched to avoid deleting content):
+- blog-tehran-baghdad-1.html
+- blog-tehran-baghdad-2.html
+- blog-tehran-baghdad-3.html
+- blog-tehran-baghdad-4.html
+- blog-tehran-baghdad-5-ar.html
+- blog-tehran-baghdad-5.html
+- blog-zaidi-government-ar.html
+- blog-zaidi-pm-ar.html
+- category-market-analysis 2.html
+- province-erbil 2.html
+
+MODIFIED FILES:
+- author-reza-mir.html
+- blog-baghdad-breakfast.html
+- blog-baghdad-metro.html
+- blog-china-iraq.html
+- blog-construction-sector.html
+- blog-development-road.html
+- blog-hidden-power-map.html
+- blog-iraq-deadlock.html
+- blog-iraq-financial-crisis.html
+- blog-iraq-governorates-guide.html
+- blog-iraq-us-deals.html
+- blog-iraq-us-summit.html
+- blog-water-nasiriyah.html
+- blog-zaidi-government.html
+- blog-zeidi.html
+- blog.html
+- category-founder-journal.html
+- category-infrastructure.html
+- category-investment.html
+- category-market-analysis.html
+- category-political-analysis.html
+- company-registration-iraq.html
+- from-tehran-to-baghdad-part-1.html
+- from-tehran-to-baghdad-part-2.html
+- from-tehran-to-baghdad-part-3.html
+- from-tehran-to-baghdad-part-4.html
+- from-tehran-to-baghdad-part-5.html
+- from-tehran-to-baghdad-part-6.html
+- from-tehran-to-baghdad-part-7.html
+- gasoil-diesel-mazut-trading.html
+- index.html
+- iraq-construction-sector.html
+- iraq-energy-sector.html
+- iraq-healthcare-sector.html
+- iraq-logistics-market-entry.html
+- iraq-logistics-sector.html
+- iraq-sectors.html
+- iraq-water-sector.html
+- project-nasiriyah-water-plant.html
+- sitemap.xml
+- uk-iraq-trade.html

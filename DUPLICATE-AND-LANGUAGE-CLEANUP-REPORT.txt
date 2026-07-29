@@ -1,0 +1,40 @@
+MIDDLE EAST NEXUS — DUPLICATE & LANGUAGE CLEANUP
+Date: 2026-07-29
+
+DELETED CONFIRMED DUPLICATES
+- category-market-analysis 2.html
+- province-erbil 2.html
+
+FROM TEHRAN TO BAGHDAD
+- The five old English filenames were redirect aliases, not separate articles.
+- Their redirects now point directly to the current Part 1–5 canonical article pages.
+- The old Arabic Part 5 alias now points to Part 5 with ?lang=ar.
+- blog.html now uses the current Part 1–5 filenames instead of the old aliases.
+
+ALI AL-ZAIDI ARTICLES
+- There are two genuinely different articles:
+  1. blog-zeidi.html — profile and appointment as prime-minister-designate.
+  2. blog-zaidi-government.html — the later government-formation article.
+- Both canonical pages contain full English and Arabic article text.
+- blog-zaidi-pm-ar.html now redirects to blog-zeidi.html?lang=ar.
+- blog-zaidi-government-ar.html now redirects to blog-zaidi-government.html?lang=ar.
+- The previous Arabic share mapping for the government article was incorrect and has been fixed.
+
+VALIDATION
+- Sitemap URLs: 60
+- Missing sitemap files: 0
+- Broken internal HTML links: 0
+- blog.html canonical article mapping validated: True
+- Old alias filenames still referenced by blog.html: 0
+
+AL-ZAIDI CONTENT CHECK
+- blog-zeidi.html
+  Title: Nobody's First Choice, Everyone's Acceptable Option: Who Is Ali al-Zeidi? | Middle East Nexus
+  English text characters: 9045
+  Arabic text characters: 5817
+  Canonical: https://middleeastnexus.co.uk/blog-zeidi.html
+- blog-zaidi-government.html
+  Title: From Designate to Prime Minister: The Seventeen Days That Shaped Iraq | Middle East Nexus
+  English text characters: 4376
+  Arabic text characters: 3410
+  Canonical: https://middleeastnexus.co.uk/blog-zaidi-government.html

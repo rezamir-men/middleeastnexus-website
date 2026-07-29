@@ -1,0 +1,8 @@
+DELETE THESE TWO OBSOLETE DUPLICATE FILES FROM THE GITHUB REPOSITORY:
+
+1. category-market-analysis 2.html
+2. province-erbil 2.html
+
+They have been removed from the clean full-site ZIP.
+Uploading replacement files through GitHub does not automatically delete old files,
+so delete these two repository files manually once.
