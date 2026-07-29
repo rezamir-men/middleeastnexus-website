@@ -1,0 +1,12 @@
+FINAL FILES
+
+Upload all three files to the same public directory on GitHub Pages:
+
+- iraq-energy-sector.html
+- iraq-sectors.html
+- iraq-energy-sector.jpg
+
+The image path used by the page is:
+https://middleeastnexus.co.uk/iraq-energy-sector.jpg
+
+After upload, hard-refresh the Energy page (Cmd+Shift+R on Mac / Ctrl+F5 on Windows).
