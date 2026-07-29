@@ -1,12 +1,10 @@
-FINAL FILES
+UPLOAD ALL THREE FILES TO THE SAME ROOT DIRECTORY:
 
-Upload all three files to the same public directory on GitHub Pages:
-
-- iraq-energy-sector.html
+- iraq-logistics-sector.html
+- iraq-logistics-sector.jpg
 - iraq-sectors.html
-- iraq-energy-sector.jpg
 
-The image path used by the page is:
-https://middleeastnexus.co.uk/iraq-energy-sector.jpg
+Then open:
+https://middleeastnexus.co.uk/iraq-logistics-sector.html?v=20260729-1
 
-After upload, hard-refresh the Energy page (Cmd+Shift+R on Mac / Ctrl+F5 on Windows).
+The image is Public Domain. Attribution is already included in the page caption.
