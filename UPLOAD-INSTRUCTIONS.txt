@@ -1,17 +1,28 @@
-HEALTHCARE SECTOR RELEASE
+HEALTHCARE + LOGISTICS SECTOR RELEASE (corrected)
 
-Upload the contents of this ZIP to the website root.
+WHAT CHANGED vs the previous zip:
+- FIXED: iraq-sectors.html had a broken/duplicate "Coming soon" Healthcare
+  card (unbalanced <span>/</a> tags). Removed. Hub tags now balanced.
+- ADDED: iraq-logistics-sector.html (was linked by the Hub but missing from
+  the previous zip -> would have been a 404). Now included.
+- FIXED: logistics og:image pointed to a non-existent basra-alfaw-port.jpg;
+  repointed to baghdad-tigris-aerial.jpg (already on the site).
 
-Core new files:
-- iraq-healthcare-sector.html
-- iraq-healthcare-sector.jpg
+UPLOAD the contents of this ZIP to the website root (overwrite existing).
 
-Updated:
-- iraq-sectors.html (Healthcare activated)
-- sitemap.xml (Healthcare URL added)
-- 19 province pages (Healthcare added to Related sector guides)
+New/updated files:
+- iraq-healthcare-sector.html      (new sector page)
+- iraq-healthcare-sector.jpg       (its OG image)
+- iraq-logistics-sector.html       (new sector page)
+- iraq-sectors.html                (Hub: Healthcare + Logistics both live, bug fixed)
+- sitemap.xml                      (60 URLs; healthcare + logistics included)
+- 18 province pages                (Related sector guides incl. Healthcare + Logistics)
 
-After upload:
-1. Open https://middleeastnexus.co.uk/iraq-healthcare-sector.html?v=20260729
-2. Submit sitemap.xml in Search Console
-3. Use URL Inspection for the Healthcare page and Request Indexing
+AFTER UPLOAD:
+1. Cloudflare -> Caching -> Purge Everything
+2. Open and check both pages load:
+   https://middleeastnexus.co.uk/iraq-healthcare-sector.html
+   https://middleeastnexus.co.uk/iraq-logistics-sector.html
+   https://middleeastnexus.co.uk/iraq-sectors.html  (no broken card)
+3. Search Console -> submit sitemap.xml
+4. URL Inspection -> Request Indexing for the two new pages
