@@ -70,9 +70,60 @@ h1.at{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2.2rem;li
 
 h1,h2,h3,h4,section[id],[id]{scroll-margin-top:90px}
 @media(max-width:600px){h1,h2,h3,h4,section[id],[id]{scroll-margin-top:76px}}
+
+/* INTERNAL LINKING & SECTOR NAVIGATION — 2026-07-29 */
+.body a.inline-link{
+  color:var(--gold);
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
+.body a.inline-link:hover{color:var(--white);}
+.sector-guides{
+  margin:42px 0 12px;
+  padding:28px;
+  border:1px solid rgba(200,169,110,.28);
+  border-radius:12px;
+  background:linear-gradient(180deg,rgba(200,169,110,.075),rgba(200,169,110,.025));
+}
+.sector-guides h2{
+  margin:0 0 8px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.55rem;
+  color:var(--white);
+}
+.sector-guides-intro{margin:0 0 20px;color:var(--gray);font-size:.94rem;}
+.sector-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.sector-card{
+  display:block;padding:16px;border:1px solid rgba(200,169,110,.2);
+  border-radius:8px;background:rgba(0,0,0,.18);color:var(--white);
+  text-decoration:none;transition:transform .2s,border-color .2s,background .2s;
+}
+.sector-card:hover{transform:translateY(-2px);border-color:var(--gold);background:rgba(200,169,110,.08);}
+.sector-card strong{display:block;margin-bottom:4px;color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.08rem;}
+.sector-card span{display:block;color:#c9c2b7;font-size:.78rem;line-height:1.55;}
+.sector-card.sector-wide{grid-column:1/-1;}
+.market-entry-links{
+  margin:28px 0 10px;padding:24px 26px;border-left:2px solid var(--gold);
+  background:rgba(200,169,110,.045);
+}
+.market-entry-links h3{margin:0 0 12px;font-family:'Cormorant Garamond',serif;font-size:1.28rem;color:var(--white);}
+.market-entry-links ul{margin:0 0 0 20px;}
+.market-entry-links li{margin:8px 0;}
+.market-entry-links a{color:var(--gold);text-decoration:none;}
+.market-entry-links a:hover{text-decoration:underline;}
+.footer-sector-links{margin-top:10px;line-height:1.9;}
+.footer-sector-links a{margin:0 4px;}
+[lang='ar'] .market-entry-links{border-left:0;border-right:2px solid var(--gold);}
+[lang='ar'] .sector-card{text-align:right;}
+@media(max-width:600px){
+  .sector-guides{padding:22px 18px;}
+  .sector-grid{grid-template-columns:1fr;}
+  .sector-card.sector-wide{grid-column:auto;}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does a foreign company enter the Iraqi market?", "acceptedAnswer": {"@type": "Answer", "text": "Entry usually starts with a clear commercial objective, followed by market and stakeholder mapping, choosing between a branch, a local entity or a joint venture, and preparing the required legalised documentation. Many companies begin with a focused market assessment before committing to a full local presence."}}, {"@type": "Question", "name": "What are the biggest challenges when entering Iraq?", "acceptedAnswer": {"@type": "Answer", "text": "The most common challenges are navigating bureaucracy and documentation, finding reliable local partners, banking and payment compliance, and understanding regional differences between Federal Iraq and the Kurdistan Region. Local knowledge and proper due diligence address most of these."}}, {"@type": "Question", "name": "Is the Iraqi market open to foreign investment?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Iraq actively encourages foreign investment across energy, infrastructure, construction and services, supported by an investment law offering incentives. Recent reforms and international agreements have further opened the market, though sector-specific rules and practical local execution still require careful navigation."}}]}</script>
-</head>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Iraq Priority Sector Guides", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Iraq Construction & Housing Sector", "url": "https://middleeastnexus.co.uk/iraq-construction-sector.html"}, {"@type": "ListItem", "position": 2, "name": "Iraq Water & Wastewater Sector", "url": "https://middleeastnexus.co.uk/iraq-water-sector.html"}, {"@type": "ListItem", "position": 3, "name": "Iraq Energy Sector", "url": "https://middleeastnexus.co.uk/iraq-energy-sector.html"}, {"@type": "ListItem", "position": 4, "name": "Iraq Logistics & Transport Sector", "url": "https://middleeastnexus.co.uk/iraq-logistics-sector.html"}, {"@type": "ListItem", "position": 5, "name": "Iraq Healthcare Sector", "url": "https://middleeastnexus.co.uk/iraq-healthcare-sector.html"}]}</script></head>
 <body>
 <header class="top"><div class="top-inner">
 <a class="brand" href="index.html">Middle East Nexus</a>
@@ -93,9 +144,103 @@ h1,h2,h3,h4,section[id],[id]{scroll-margin-top:90px}
 <div class="meta"><span data-ar="نُشر أولاً في فبراير 2025 · حُدّث في يوليو 2026" data-en="Originally published February 2025 · Updated July 2026">Originally published February 2025 · Updated July 2026</span> · <a data-ar="رضا مير، المؤسس" data-en="Reza Mir, Founder" href="author-reza-mir.html" style="color:var(--gold);text-decoration:none;">Reza Mir, Founder</a></div>
 <div class="hr"></div>
 <article class="body">
-<div class="en-only"><p>Iraq is one of the Middle East's most significant — and most misunderstood — investment destinations. While headlines focus on security risks, sophisticated investors are quietly establishing positions in one of the world's largest construction booms. Here is what you need to know.</p><h3>The Legal Framework</h3><p>Iraq's Investment Law provides substantial incentives for foreign investors: a <strong>10-year tax holiday</strong>, import duty waivers on essential materials, and the ability to repatriate capital and profits. A 2009 amendment permits foreigners to own land for housing projects, with 50-year leases available in other sectors.</p><h3>The Reality on the Ground</h3><p>Success in Iraq depends on <strong>relationships, not contracts</strong>. Iraqi business culture places enormous weight on trust, personal connections and a demonstrated long-term commitment. Courts are ill-equipped to resolve commercial disputes — which is why choosing the right local partner is the single most important decision an international investor will make.</p><h3>Security and Operations</h3><p>The security situation has improved significantly since 2017. Commercial operations in Baghdad and the southern provinces proceed normally for established operators. Violence does not typically target international businesses, and most experienced operators work without incident.</p><h3>Why a Local Partner is Non-Negotiable</h3><p>Customs clearance, contractor relationships, government liaison and local procurement all require a partner with deep roots in the market. Middle East Nexus brings over 20 years of operational experience — the relationships, the knowledge, and the track record that international investors need.</p></div>
-<div class="ar-only" dir="rtl"><p>العراق هو أحد أبرز وجهات الاستثمار — والأكثر سوء فهم — في الشرق الأوسط. بينما تركّز العناوين على المخاطر الأمنية، يعمل المستثمرون المتمرسون بهدوء على تأسيس مواقعهم في واحدة من أكبر طفرات البناء في العالم.</p><h3>الإطار القانوني</h3><p>يوفر قانون الاستثمار العراقي حوافز جوهرية: <strong>إعفاء ضريبي لمدة 10 سنوات</strong>، وإعفاء من رسوم استيراد المواد الأساسية، وحرية إعادة رأس المال والأرباح.</p><h3>الواقع الميداني</h3><p>النجاح في العراق يعتمد على <strong>العلاقات لا العقود</strong>. الثقافة التجارية العراقية تُعلي من شأن الثقة والروابط الشخصية والالتزام طويل الأمد. اختيار الشريك المحلي الصحيح هو القرار الأهم الذي سيتخذه أي مستثمر دولي.</p></div>
-</article>
+<div class="en-only"><p>
+Iraq is one of the Middle East's most significant — and most misunderstood —
+investment destinations. While headlines focus on security risks, sophisticated investors
+are quietly establishing positions across the country's
+<a class="inline-link" href="iraq-sectors.html">priority business sectors</a>,
+including one of the world's largest
+<a class="inline-link" href="iraq-construction-sector.html">construction and housing markets</a>.
+Here is what you need to know.
+</p><h3>The Legal Framework</h3><p>
+<a class="inline-link" href="company-registration-iraq.html">Iraq's investment and company-registration framework</a>
+provides substantial incentives for foreign investors: a <strong>10-year tax holiday</strong>,
+import duty waivers on essential materials, and the ability to repatriate capital and profits.
+A 2009 amendment permits foreigners to own land for housing projects, with 50-year leases available in other sectors.
+</p><h3>The Reality on the Ground</h3><p>
+Success in Iraq depends on <strong>relationships, not contracts</strong>. Iraqi business culture places enormous
+weight on trust, personal connections and a demonstrated long-term commitment. Courts are ill-equipped to resolve
+commercial disputes — which is why choosing the right local partner and carrying out proper
+<a class="inline-link" href="iraq-logistics-market-entry.html">market-entry due diligence</a>
+are among the most important decisions an international investor will make.
+</p><h3>Security and Operations</h3><p>
+The security situation has improved significantly since 2017. Commercial operations in
+<a class="inline-link" href="province-baghdad.html">Baghdad</a> and the southern provinces,
+including <a class="inline-link" href="province-basra.html">Basra</a>, proceed normally for established operators.
+Violence does not typically target international businesses, and most experienced operators work without incident.
+</p><h3>Why a Local Partner is Non-Negotiable</h3><p>
+<a class="inline-link" href="iraq-logistics-sector.html">Customs clearance and logistics</a>,
+contractor relationships, government liaison and local procurement all require a partner with deep roots in the market.
+Middle East Nexus brings over 20 years of operational experience — the relationships, the knowledge, and the track record
+that international investors need.
+</p></div>
+<div class="ar-only" dir="rtl"><p>
+العراق هو أحد أبرز وجهات الاستثمار — والأكثر سوء فهم — في الشرق الأوسط.
+وبينما تركّز العناوين على المخاطر الأمنية، يعمل المستثمرون المتمرسون بهدوء
+على تأسيس مواقعهم في <a class="inline-link" href="iraq-sectors.html">القطاعات الاقتصادية ذات الأولوية</a>،
+ومن بينها <a class="inline-link" href="iraq-construction-sector.html">سوق الإنشاءات والإسكان</a>
+الذي يُعد من أكبر أسواق المنطقة.
+</p><h3>الإطار القانوني</h3><p>
+يوفر <a class="inline-link" href="company-registration-iraq.html">إطار الاستثمار وتسجيل الشركات في العراق</a>
+حوافز جوهرية للمستثمرين الأجانب، منها <strong>إعفاء ضريبي لمدة 10 سنوات</strong>،
+وإعفاء من رسوم استيراد المواد الأساسية، وحرية إعادة رأس المال والأرباح.
+</p><h3>الواقع الميداني</h3><p>
+النجاح في العراق يعتمد على <strong>العلاقات لا العقود</strong>. الثقافة التجارية العراقية تُعلي من شأن الثقة
+والروابط الشخصية والالتزام طويل الأمد. لذلك فإن اختيار الشريك المحلي الصحيح وإجراء
+<a class="inline-link" href="iraq-logistics-market-entry.html">العناية الواجبة قبل دخول السوق</a>
+من أهم القرارات التي يتخذها المستثمر الدولي.
+</p><h3 class="added-ar-section">الأمن والعمليات</h3><p class="added-ar-section">
+تحسّن الوضع الأمني بصورة ملحوظة منذ عام 2017. وتستمر العمليات التجارية في
+<a class="inline-link" href="province-baghdad.html">بغداد</a> والمحافظات الجنوبية،
+ومنها <a class="inline-link" href="province-basra.html">البصرة</a>، بصورة طبيعية بالنسبة للشركات ذات الخبرة والحضور المحلي.
+</p><h3 class="added-ar-section">لماذا الشريك المحلي مهم؟</h3><p class="added-ar-section">
+تتطلب <a class="inline-link" href="iraq-logistics-sector.html">الخدمات اللوجستية والتخليص الجمركي</a>،
+والعلاقات مع المقاولين، والتنسيق الحكومي والمشتريات المحلية، شريكاً يمتلك جذوراً عميقة ومعرفة حقيقية بالسوق.
+وتوفر ميدل إيست نيكسوس خبرة تشغيلية تتجاوز عشرين عاماً في العراق.
+</p></div>
+</article><section aria-labelledby="sector-guides-heading" class="sector-guides">
+<h2 data-ar="استكشف القطاعات الخمسة ذات الأولوية في العراق" data-en="Explore Iraq's Five Priority Sectors" id="sector-guides-heading">
+      Explore Iraq's Five Priority Sectors
+  </h2>
+<p class="sector-guides-intro" data-ar="استخدم أدلة القطاعات لمقارنة الطلب والمشترين ومسارات المشاريع ونماذج التعاقد ومتطلبات دخول السوق." data-en="Use these sector guides to compare demand, buyers, project routes, procurement models and market-entry requirements.">
+     Use these sector guides to compare demand, buyers, project routes, procurement models and market-entry requirements.
+  </p>
+<div class="sector-grid">
+<a class="sector-card" href="iraq-construction-sector.html">
+<strong data-ar="الإنشاءات والإسكان" data-en="Construction &amp; Housing">Construction &amp; Housing</strong>
+<span data-ar="الإسكان والبنية التحتية والفنادق والتطوير التجاري وإعادة الإعمار." data-en="Housing, infrastructure, hotels, commercial development and reconstruction.">Housing, infrastructure, hotels, commercial development and reconstruction.</span>
+</a>
+<a class="sector-card" href="iraq-water-sector.html">
+<strong data-ar="المياه والصرف الصحي" data-en="Water &amp; Wastewater">Water &amp; Wastewater</strong>
+<span data-ar="التحلية والمعالجة والشبكات وتقليل الفاقد والمياه الصناعية." data-en="Desalination, treatment, networks, leakage reduction and industrial water.">Desalination, treatment, networks, leakage reduction and industrial water.</span>
+</a>
+<a class="sector-card" href="iraq-energy-sector.html">
+<strong data-ar="الطاقة" data-en="Energy">Energy</strong>
+<span data-ar="النفط والغاز والتكرير وتوليد الكهرباء والشبكات والطاقة المتجددة." data-en="Oil, gas, refining, power generation, grids and renewable energy.">Oil, gas, refining, power generation, grids and renewable energy.</span>
+</a>
+<a class="sector-card" href="iraq-logistics-sector.html">
+<strong data-ar="الخدمات اللوجستية والنقل" data-en="Logistics &amp; Transport">Logistics &amp; Transport</strong>
+<span data-ar="الموانئ والسكك والطرق والجمارك والمخازن وطريق التنمية." data-en="Ports, rail, roads, customs, warehousing and the Development Road.">Ports, rail, roads, customs, warehousing and the Development Road.</span>
+</a>
+<a class="sector-card" href="iraq-healthcare-sector.html">
+<strong data-ar="الرعاية الصحية" data-en="Healthcare">Healthcare</strong>
+<span data-ar="المستشفيات والمعدات الطبية والأدوية والتشخيص والصحة الرقمية." data-en="Hospitals, medical equipment, pharmaceuticals, diagnostics and digital health.">Hospitals, medical equipment, pharmaceuticals, diagnostics and digital health.</span>
+</a>
+<a class="sector-card sector-wide" href="iraq-sectors.html">
+<strong data-ar="عرض بوابة قطاعات العراق" data-en="View the Iraq Sectors Hub">View the Iraq Sectors Hub</strong>
+<span data-ar="قارن بين القطاعات الخمسة وانتقل إلى أدلة المحافظات ذات الصلة." data-en="Compare all five sectors and navigate to relevant governorate guides.">Compare all five sectors and navigate to relevant governorate guides.</span>
+</a>
+</div>
+</section><section aria-labelledby="market-entry-links-heading" class="market-entry-links">
+<h3 data-ar="خطط لدخولك إلى السوق العراقية" data-en="Plan Your Iraq Market Entry" id="market-entry-links-heading">Plan Your Iraq Market Entry</h3>
+<ul>
+<li><a data-ar="تسجيل شركة في العراق" data-en="Company registration in Iraq" href="company-registration-iraq.html">Company registration in Iraq</a></li>
+<li><a data-ar="الخدمات اللوجستية ودعم دخول السوق" data-en="Logistics and market-entry support" href="iraq-logistics-market-entry.html">Logistics and market-entry support</a></li>
+<li><a data-ar="دليل الاستثمار في بغداد" data-en="Baghdad investment guide" href="province-baghdad.html">Baghdad investment guide</a></li>
+<li><a data-ar="دليل الاستثمار في البصرة" data-en="Basra investment guide" href="province-basra.html">Basra investment guide</a></li>
+<li><a data-ar="فرص التجارة بين المملكة المتحدة والعراق" data-en="UK–Iraq trade opportunities" href="uk-iraq-trade.html">UK–Iraq trade opportunities</a></li>
+</ul>
+</section>
 <nav aria-label="Continue reading" class="continue-reading">
 <h3 data-ar="تابع القراءة" data-en="Continue Reading">Continue Reading</h3>
 <a data-ar="الصين والعراق: رأس المال الشرقي" data-en="China and Iraq: Eastern Capital" href="blog-china-iraq.html"><span class="cr-arrow">→</span> China and Iraq: Eastern Capital</a>
@@ -104,7 +249,7 @@ h1,h2,h3,h4,section[id],[id]{scroll-margin-top:90px}
 <a data-ar="تسجيل شركة في العراق" data-en="Company Registration in Iraq" href="company-registration-iraq.html"><span class="cr-arrow">→</span> Company Registration in Iraq</a>
 <a data-ar="الخدمات اللوجستية ودخول السوق" data-en="Iraq Logistics &amp; Market Entry" href="iraq-logistics-market-entry.html"><span class="cr-arrow">→</span> Iraq Logistics &amp; Market Entry</a>
 <a data-ar="دليل محافظة البصرة" data-en="Basra Province Guide" href="province-basra.html"><span class="cr-arrow">→</span> Basra Province Guide</a>
-</nav>
+<a data-ar="بوابة قطاعات الأعمال في العراق" data-en="Iraq Business Sectors Hub" href="iraq-sectors.html"><span class="cr-arrow">→</span> Iraq Business Sectors Hub</a></nav>
 <div class="bridge">
 <p data-ar="تتنقّل في السوق العراقي؟ ميدل إيست نيكسوس يحوّل تحليلاً كهذا إلى نتائج على أرض الواقع." data-en="Navigating Iraq's market? Middle East Nexus turns analysis like this into on-the-ground results.">Navigating Iraq's market? Middle East Nexus turns analysis like this into on-the-ground results.</p>
 <a data-ar="تحدّث إلى خبير العراق ←" data-en="Talk to an Iraq Expert →" href="index.html#contact">Talk to an Iraq Expert →</a>
@@ -113,7 +258,14 @@ h1,h2,h3,h4,section[id],[id]{scroll-margin-top:90px}
 <footer class="foot">
 <p data-ar="ميدل إيست نيكسوس — الاستشارات في استخبارات السوق العراقي والبنية التحتية والتجارة." data-en="Middle East Nexus Ltd — Iraq market intelligence, infrastructure &amp; trade advisory.">Middle East Nexus Ltd — Iraq market intelligence, infrastructure &amp; trade advisory.</p>
 <p style="margin-top:8px;"><a data-ar="← العودة إلى المدوّنة" data-en="← Back to Journal" href="blog.html">← Back to Journal</a></p>
-</footer>
+<p class="footer-sector-links">
+<a data-ar="قطاعات العراق" data-en="Iraq Sectors" href="iraq-sectors.html">Iraq Sectors</a> ·
+  <a data-ar="الإنشاءات" data-en="Construction" href="iraq-construction-sector.html">Construction</a> ·
+  <a data-ar="المياه" data-en="Water" href="iraq-water-sector.html">Water</a> ·
+  <a data-ar="الطاقة" data-en="Energy" href="iraq-energy-sector.html">Energy</a> ·
+  <a data-ar="اللوجستيات" data-en="Logistics" href="iraq-logistics-sector.html">Logistics</a> ·
+  <a data-ar="الرعاية الصحية" data-en="Healthcare" href="iraq-healthcare-sector.html">Healthcare</a>
+</p></footer>
 <script>
 function applyLang(l){document.documentElement.setAttribute('lang',l);
 document.querySelectorAll('[data-en]').forEach(function(el){var t=el.getAttribute('data-'+l);if(t!==null)el.innerHTML=t;});
