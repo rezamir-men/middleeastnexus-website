@@ -101,6 +101,15 @@ h2.sh{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.5
 .foot a{color:var(--gold);text-decoration:none;}
 h2,h3,[id]{scroll-margin-top:90px;}
 @media(max-width:640px){.stat-grid{grid-template-columns:1fr 1fr;}.drivers,.two-col{grid-template-columns:1fr;}.top-nav a:not(.nav-cta){display:none;}}
+
+.related-sector-guides{max-width:1080px;margin:52px auto;padding:0 6vw;}
+.related-sector-guides .rsg-box{background:linear-gradient(135deg,rgba(200,169,110,.08),rgba(200,169,110,.02));border:1px solid rgba(200,169,110,.2);border-radius:9px;padding:26px 28px;}
+.related-sector-guides h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.45rem,3vw,2rem);margin:0 0 10px;color:var(--white,#f5f1e8);}
+.related-sector-guides p{color:var(--gray,#9a958c);margin:0 0 17px;line-height:1.7;}
+.related-sector-guides .rsg-links{display:flex;flex-wrap:wrap;gap:10px;}
+.related-sector-guides .rsg-links a{display:inline-block;border:1px solid rgba(200,169,110,.3);border-radius:5px;padding:9px 14px;text-decoration:none;color:var(--gold,#c8a96e);font-size:.84rem;}
+.related-sector-guides .rsg-links a:hover{background:rgba(200,169,110,.08);}
+
 </style>
 </head>
 <body>
@@ -187,49 +196,6 @@ h2,h3,[id]{scroll-margin-top:90px;}
 <div class="men-note">These demand drivers provide a useful framework, but every opportunity still requires project-level commercial and regulatory assessment.</div>
 </section>
 
-<!-- MAJOR NATIONAL WATER PROJECTS -->
-<section class="sec">
-<span class="kicker">Major national water projects</span>
-<h2 class="sh">The projects defining the market</h2>
-<p class="lead" style="margin-bottom:20px;">A selection of the flagship water schemes shaping demand across Iraq. Figures are drawn from public reporting and are indicative — status and values shift, and each needs its own verification.</p>
-<div class="men-table-wrap">
-<table class="men-table">
-<thead><tr><th>Project</th><th>Governorate</th><th>Scale</th><th>Status</th></tr></thead>
-<tbody>
-<tr><td class="gov">Al-Faw Seawater Desalination</td><td>Basra</td><td>~$2.42bn · ~1M m³/day · +300MW power &amp; network to 11 cities</td><td>EPC awarded (PowerChina); delivery phase</td></tr>
-<tr><td class="gov">Shatt Al-Arab Desalination</td><td>Basra</td><td>~5,000 m³/hour</td><td>Approved 2025</td></tr>
-<tr><td class="gov">Al-Faw &amp; Al-Seeba Plant</td><td>Basra</td><td>~3,000 m³/hour</td><td>Approved 2025</td></tr>
-<tr><td class="gov">Abu Floos Desalination</td><td>Basra</td><td>~3,000 m³/hour</td><td>Approved 2025</td></tr>
-<tr><td class="gov">Safwan Desalination</td><td>Basra</td><td>~1,000 m³/hour</td><td>Approved 2025</td></tr>
-<tr><td class="gov">Hartha Water Treatment</td><td>Basra</td><td>Designed ~360,000 m³/day</td><td>Operating below capacity; network works ongoing</td></tr>
-</tbody>
-</table>
-</div>
-<p class="src">Sources: <a href="https://guest.meed.com/focus-shifts-to-delivery-of-iraq-utilities-expansion/" rel="noopener">MEED Projects</a> and public reporting (2025–2026). Indicative — confirm current status before reliance.</p>
-</section>
-
-<!-- TECHNOLOGY OPPORTUNITIES -->
-<section class="sec">
-<span class="kicker">Technology opportunities</span>
-<h2 class="sh">Which technologies Iraq needs most</h2>
-<p class="lead" style="margin-bottom:20px;">A directional read on where demand is strongest, to help technology and equipment companies see where their offer fits.</p>
-<div class="men-table-wrap">
-<table class="men-table">
-<thead><tr><th>Technology</th><th>Iraq demand</th></tr></thead>
-<tbody>
-<tr><td class="gov">Reverse osmosis &amp; desalination</td><td class="opp">Very high — the core of the national response to salinity</td></tr>
-<tr><td class="gov">Water &amp; wastewater treatment</td><td class="opp">Very high — municipal supply and sewage across the country</td></tr>
-<tr><td class="gov">Leak detection &amp; network rehabilitation</td><td class="opp">High — up to 45% of water lost in Basra to old pipes</td></tr>
-<tr><td class="gov">SCADA &amp; control systems</td><td class="opp">High — plant automation and network monitoring</td></tr>
-<tr><td class="gov">Smart metering</td><td class="opp">High — reducing loss and improving billing</td></tr>
-<tr><td class="gov">Sludge treatment</td><td class="opp">Medium–High — a gap as treatment capacity expands</td></tr>
-<tr><td class="gov">UV &amp; advanced disinfection</td><td class="opp">Medium — quality improvement in treatment</td></tr>
-</tbody>
-</table>
-</div>
-<div class="men-note">This lets companies with a specific product see exactly where their technology fits Iraqi demand.</div>
-</section>
-
 <!-- OPPORTUNITY MAP BY GOVERNORATE -->
 <section class="sec">
 <span class="kicker">Opportunity map by governorate</span>
@@ -262,8 +228,6 @@ h2,h3,[id]{scroll-margin-top:90px;}
 <li>State-owned companies and public utilities operating plants and networks.</li>
 <li>The National Investment Commission and provincial commissions, for investment-licence projects.</li>
 <li>Financing vehicles such as the Iraqi–Chinese Fund and other bilateral mechanisms.</li>
-<li>The Baghdad Mayoralty (Amanat Baghdad) and other major city administrations.</li>
-<li>The General Directorate of Water and the General Directorate of Sewerage.</li>
 <li>International organisations and donors funding water and sanitation programmes.</li>
 </ul>
 <div class="men-note">Water sits between several ministries and provincial bodies — mapping the real decision-maker for each project is exactly where local knowledge earns its value.</div>
@@ -350,25 +314,24 @@ h2,h3,[id]{scroll-margin-top:90px;}
 </div>
 </section>
 
-<!-- RELATED READING -->
-<section class="sec">
-<span class="kicker">Related reading</span>
-<h2 class="sh">Go deeper</h2>
-<div class="related">
-<a href="uk-iraq-trade.html">UK–Iraq Trade</a>
-<a href="iraq-construction-sector.html">Construction Sector</a>
-<a href="blog-iraq-governorates-guide.html">Iraq Investment Guide</a>
-<a href="province-basra.html">Basra brief</a>
-<a href="province-dhiqar.html">Dhi Qar brief</a>
-</div>
-</section>
-
 <!-- CTA -->
 <section class="sec">
 <div class="cta-band">
 <h2>Entering Iraq's water market?</h2>
 <p>Whether you supply technology, deliver EPC projects, or provide engineering and operations, we can help you find the right projects, partners and route in. Start with a conversation.</p>
 <a class="btn btn-gold" href="index.html#contact">Talk to an Iraq expert →</a>
+</div>
+</section>
+
+
+<section class="related-sector-guides" aria-labelledby="related-sector-guides-heading">
+<div class="rsg-box">
+<h2 id="related-sector-guides-heading">Related sector guides</h2>
+<p>Continue across the other Iraq sector guides to compare demand, buyers, procurement routes and market-entry requirements.</p>
+<div class="rsg-links">
+<a href="iraq-construction-sector.html">Construction & Housing →</a><a href="iraq-energy-sector.html">Energy →</a><a href="iraq-logistics-sector.html">Logistics & Transport →</a>
+<a href="iraq-sectors.html">All Iraq sectors →</a>
+</div>
 </div>
 </section>
 

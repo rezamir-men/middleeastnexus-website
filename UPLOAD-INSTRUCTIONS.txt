@@ -1,10 +1,11 @@
-UPLOAD ALL THREE FILES TO THE SAME ROOT DIRECTORY:
+INTERNAL LINKING RELEASE
 
-- iraq-logistics-sector.html
-- iraq-logistics-sector.jpg
-- iraq-sectors.html
+Upload the contents of this ZIP to the website root, replacing files with the same names.
 
-Then open:
-https://middleeastnexus.co.uk/iraq-logistics-sector.html?v=20260729-1
+Updated:
+- Iraq Sectors Hub: Logistics activated and linked
+- Four sector pillar pages: cross-linked to one another and to the Hub
+- 19 governorate pages: each now has a Related sector guides block
+- sitemap.xml: central sector URLs checked/added
 
-The image is Public Domain. Attribution is already included in the page caption.
+Do not upload the enclosing folder itself; upload its contents.
