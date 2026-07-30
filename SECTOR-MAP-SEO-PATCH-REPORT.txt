@@ -1,0 +1,8 @@
+SECTOR MAP SEO PATCH — 2026-07-30
+
+- Added a direct crawlable link from iraq-sectors.html to iraq-sector-map.html.
+- Added five static sector links and nineteen static governorate links to the map page.
+- Added ItemList structured data for all 24 linked guides.
+- Preserved the interactive JavaScript map.
+- Updated sitemap lastmod for the Hub and map page.
+- Sitemap remains at 61 URLs.
