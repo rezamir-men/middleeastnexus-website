@@ -1,16 +1,13 @@
-SECTOR CROSS-LINKING FIX
+UPLOAD THESE FIVE HTML FILES TO THE ROOT OF THE GITHUB REPOSITORY.
 
-Problem fixed: the four earlier sector pages (Construction, Water, Energy,
-Logistics) did not link to the Healthcare sector page, because Healthcare
-was built last. All five sector pages now link to each other symmetrically.
+They replace the old redirect-only files.
 
-Upload these 4 files to the site root (overwrite existing):
-- iraq-construction-sector.html
-- iraq-water-sector.html
-- iraq-energy-sector.html
-- iraq-logistics-sector.html
+Purpose:
+- The old .html URL will redirect once to the extensionless legacy URL.
+- The extensionless legacy URL will return a normal 200 page.
+- The page content is the same as the current canonical article.
+- rel=canonical points to the current /from-tehran-to-baghdad-part-X URL.
+- No JavaScript redirect, meta refresh, or noindex remains.
 
-(iraq-healthcare-sector.html already links to all four — no change needed.)
-
-After upload: Cloudflare -> Purge Everything.
-No sitemap change needed (no new URLs).
+Do not add these five legacy URLs to sitemap.xml.
+Do not change the current canonical article filenames.
