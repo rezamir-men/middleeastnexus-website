@@ -1,0 +1,11 @@
+MIDDLE EAST NEXUS — FINAL TWO TEXT FIXES
+Date: 2026-07-30
+
+Homepage typo replacements made: 2
+Blog outdated map-text replacements made: 1
+Sitemap lastmod updated for: /, blog
+
+Upload these three files to the repository root and replace the files with the same names:
+- index.html
+- blog.html
+- sitemap.xml
