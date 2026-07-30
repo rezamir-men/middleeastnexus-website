@@ -1,11 +1,23 @@
-MIDDLE EAST NEXUS — FINAL TWO TEXT FIXES
+MIDDLE EAST NEXUS — DUHOK REGIONAL TRANSIT OPPORTUNITY UPDATE
 Date: 2026-07-30
 
-Homepage typo replacements made: 2
-Blog outdated map-text replacements made: 1
-Sitemap lastmod updated for: /, blog
-
-Upload these three files to the repository root and replace the files with the same names:
-- index.html
-- blog.html
+Upload and replace:
+- province-duhok.html
 - sitemap.xml
+
+Added:
+- Dedicated Regional Transit tab
+- Duhok Dry Port and inland-container opportunity
+- Ibrahim Khalil / TIR Türkiye–Iraq–GCC corridor opportunity
+- Customs digitalisation and cargo-visibility opportunity
+- Bonded warehousing, cold-chain and distribution opportunity
+- Fleet, yard and border-support services
+- Public–private border-facilitation opportunity
+- Careful Development Road interface wording
+- Türkiye, Iran and GCC regional-connectivity context
+- Five supporting source entries
+- Updated metadata, FAQ, structured data and sitemap lastmod
+
+Important editorial safeguard:
+The page does not claim that Duhok is on a final official Development Road alignment.
+It presents Duhok as a complementary northern logistics interface unless authorities confirm otherwise.
