@@ -1,0 +1,72 @@
+MIDDLE EAST NEXUS — IRAQ BORDER TRADE CORRIDORS
+Date: 2026-08-01
+
+NEW INDEXABLE HUB
+- /iraq-border-trade-corridors
+- Commercial matrix covering 12 border governorates and 6 neighbouring countries.
+- Corridor analysis for Türkiye–Europe, Iran–Central Asia, Jordan–Aqaba,
+  Saudi Arabia–GCC, Kuwait and Syria–Mediterranean routes.
+- Operating-status safeguards distinguish active, restricted/special-status,
+  developing and potential routes.
+- Contextual consultation link and GA4-compatible lead attribution included.
+
+UPDATED GOVERNORATE PAGES
+- province-duhok.html
+- province-erbil.html
+- province-sulaymaniyah.html
+- province-halabja.html
+- province-diyala.html
+- province-wasit.html
+- province-maysan.html
+- province-basra.html
+- province-muthanna.html
+- province-najaf.html
+- province-anbar.html
+- province-mosul.html
+
+Each page now contains unique Cross-Border Trade & Transit Potential content,
+not a repeated generic template. Every section identifies the neighbouring
+market, practical gateway, direct commercial opportunities, onward access,
+operating limitations and a context-specific consultation path.
+
+INTERNAL LINKING
+- All 12 border governorate pages link to the corridor hub.
+- The hub links back to all 12 governorate pages.
+- The Iraq Governorates Guide and Iraq Logistics Sector guide link to the hub.
+
+SEO
+- New canonical URL: https://middleeastnexus.co.uk/iraq-border-trade-corridors
+- sitemap.xml now contains 63 unique indexable URLs.
+- The hub is included once with lastmod 2026-08-01.
+- All modified pages retain extensionless canonical URLs.
+- All 12 governorate pages now have concise, page-specific titles and descriptions.
+- Visible review dates and Article dateModified values agree on 2026-08-01.
+- Border status is clearly labelled as time-sensitive and subject to live confirmation.
+
+CONVERSION
+- The commercial offer is now a defined Cross-Border Route Assessment.
+- Route CTAs preselect the correct governorate, Logistics & Transport sector,
+  route-assessment support need and opportunity form mode.
+- The assessment scope covers route options, customs documentation, stakeholder
+  needs, compliance risks and recommended next steps.
+
+FINAL VALIDATION
+- 72 HTML files parsed without errors.
+- 190 JSON-LD blocks parsed successfully.
+- No broken internal links or duplicate element IDs detected.
+- sitemap.xml contains 63 URLs and 63 unique locations.
+- The 12 route-to-form mappings passed governorate, sector and service checks.
+- Highest pairwise corridor-copy similarity was 32.4%, supporting distinct,
+  governorate-specific content rather than scaled near-duplicate pages.
+
+NEW SHARED ASSET
+- border-trade.css
+
+UPLOAD
+Upload the full contents of this ZIP to the GitHub repository root and replace
+files when prompted. No additional GitHub files need to be deleted.
+
+AFTER DEPLOYMENT
+1. Re-submit https://middleeastnexus.co.uk/sitemap.xml in Google Search Console.
+2. Inspect https://middleeastnexus.co.uk/iraq-border-trade-corridors.
+3. Request indexing for the new hub URL only after the live page loads correctly.

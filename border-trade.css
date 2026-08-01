@@ -1,0 +1,32 @@
+:root{--bt-gold:#c8a96e;--bt-ink:#0a0a0a;--bt-paper:#f5f1e8;--bt-muted:#9a958c;--bt-line:rgba(200,169,110,.2)}
+.border-trade{max-width:1180px;margin:64px auto;padding:0 6vw;color:var(--white,var(--bt-paper))}
+.border-trade__shell{position:relative;overflow:hidden;border:1px solid var(--bt-line);border-radius:18px;background:radial-gradient(circle at 92% 6%,rgba(200,169,110,.16),transparent 28%),linear-gradient(145deg,#111,#090909);padding:clamp(26px,5vw,58px)}
+.border-trade__shell:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.018),transparent)}
+.border-trade__kicker{display:block;color:var(--bt-gold);font-size:.69rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:12px}
+.border-trade h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.4vw,3.35rem);font-weight:400;line-height:1.05;margin:0 0 16px;color:var(--white,var(--bt-paper))}
+.border-trade__intro{max-width:820px;color:#d8d2c6;font-size:.98rem;line-height:1.8;margin:0 0 26px}
+.border-trade__verified{display:inline-flex;margin:0 0 4px;padding:6px 10px;border:1px solid rgba(143,201,167,.36);border-radius:999px;color:#9fd2b3;background:rgba(143,201,167,.06);font-size:.65rem;letter-spacing:.08em;text-transform:uppercase}
+.border-trade__facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:26px 0}
+.border-trade__fact{border:1px solid var(--bt-line);border-radius:10px;padding:18px;background:rgba(255,255,255,.022)}
+.border-trade__fact strong{display:block;color:var(--bt-gold);font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;margin-bottom:4px}
+.border-trade__fact span{color:#c8c1b5;font-size:.78rem;line-height:1.5}
+.border-trade__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:25px}
+.border-trade__card{border:1px solid rgba(200,169,110,.16);border-radius:12px;padding:22px;background:rgba(255,255,255,.025)}
+.border-trade__card h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;margin:10px 0 9px;color:var(--white,var(--bt-paper))}
+.border-trade__card p{color:#c9c2b7;font-size:.9rem;line-height:1.72;margin:0}
+.border-trade__status{display:inline-flex;align-items:center;gap:7px;border:1px solid currentColor;border-radius:999px;padding:5px 9px;font-size:.62rem;letter-spacing:.11em;text-transform:uppercase}
+.border-trade__status:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.border-trade__status--active{color:#8fc9a7}.border-trade__status--limited{color:#e0b77b}.border-trade__status--developing{color:#91acd1}
+.border-trade__markets{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0}
+.border-trade__markets span,.border-trade__markets a{display:inline-block;border:1px solid rgba(200,169,110,.24);border-radius:999px;padding:7px 11px;color:#d8d2c6;text-decoration:none;font-size:.72rem}
+.border-trade__markets a:hover{border-color:var(--bt-gold);color:var(--bt-gold)}
+.border-trade__note{margin-top:24px;padding:16px 18px;border-left:2px solid var(--bt-gold);background:rgba(200,169,110,.055);color:#bdb6aa;font-size:.79rem;line-height:1.7}
+.border-trade__actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.border-trade__actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 17px;border:1px solid var(--bt-gold);border-radius:5px;color:var(--bt-gold);text-decoration:none;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
+.border-trade__actions a:first-child{background:var(--bt-gold);color:#090909}
+.border-trade__actions a:hover{filter:brightness(1.08)}
+.corridor-mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:25px 0 0}
+.corridor-mini div{position:relative;padding:17px 15px;border-top:1px solid var(--bt-gold);background:rgba(255,255,255,.018)}
+.corridor-mini small{display:block;color:var(--bt-gold);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+.corridor-mini strong{display:block;font-size:.83rem;line-height:1.45;font-weight:500;color:#eee8dc}
+@media(max-width:760px){.border-trade{margin:44px auto;padding:0 18px}.border-trade__shell{padding:25px 20px}.border-trade__facts,.border-trade__grid,.corridor-mini{grid-template-columns:1fr}.border-trade__actions{display:grid}.border-trade__actions a{width:100%}}

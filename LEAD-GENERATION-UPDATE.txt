@@ -9,6 +9,8 @@ IMPLEMENTED
 - First-touch landing page, referrer and UTM attribution retained during the visit.
 - Qualified business fields: company, country, sector, governorate, support need and timeline.
 - Opportunity mode adds an optional project / opportunity title.
+- Border-corridor links automatically preselect the matching governorate,
+  Logistics & Transport and Cross-Border Route Assessment.
 - Existing verified Formspree endpoint retained for delivery.
 - Thank-you page at /thank-you, excluded from indexing.
 
@@ -39,4 +41,5 @@ NEW FILES
 
 UPLOAD
 Upload the full contents of this ZIP to the repository root, replacing existing
-files. Keep the two obsolete GitHub deletions listed in DELETE-FROM-GITHUB.txt.
+files. The previously identified obsolete duplicate HTML files are already absent
+from this clean package; no further deletion is required.
