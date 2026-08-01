@@ -6,6 +6,13 @@
   var ATTRIBUTION_KEY = "men_lead_attribution";
   var PENDING_LEAD_KEY = "men_pending_lead";
   var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+  var COMMERCIAL_SERVICES = {
+    "iraq-market-entry-consulting": "Iraq Market Entry Consulting",
+    "iraq-partner-identification-due-diligence": "Iraq Partner Identification & Due Diligence",
+    "iraq-tender-project-support": "Iraq Tender & Project Support",
+    "iraq-epc-epcf-project-support": "Iraq EPC & EPCF Project Support",
+    "iraq-customs-logistics-support": "Iraq Customs & Logistics Support"
+  };
 
   function track(name, params) {
     if (typeof window.gtag === "function") {
@@ -73,7 +80,12 @@
       "uk-iraq-trade": "UK–Iraq trade",
       "company-registration-iraq": "Company registration in Iraq",
       "gasoil-diesel-mazut-trading": "Iraq fuel trading",
-      "project-nasiriyah-water-plant": "Nasiriyah water infrastructure"
+      "project-nasiriyah-water-plant": "Nasiriyah water infrastructure",
+      "iraq-market-entry-consulting": "Iraq market entry",
+      "iraq-partner-identification-due-diligence": "Iraqi partner selection",
+      "iraq-tender-project-support": "Iraq tender and project support",
+      "iraq-epc-epcf-project-support": "Iraq EPC and EPCF projects",
+      "iraq-customs-logistics-support": "Iraq customs and logistics"
     };
 
     if (slug.indexOf("province-") === 0) {
@@ -210,8 +222,14 @@
     if (/partner-verification|partner-identification|due-diligence/i.test(value)) {
       return "Partner Identification & Due Diligence";
     }
-    if (/tender-identification|tender-support/i.test(value)) {
+    if (/tender-identification|tender(?:-project)?-support/i.test(value)) {
       return "Tender & Project Support";
+    }
+    if (/epc-epcf|epcf-project|epc-project/i.test(value)) {
+      return "EPC / EPCF Project Support";
+    }
+    if (/customs-logistics-support/i.test(value)) {
+      return "Logistics & Customs";
     }
     if (/project-intelligence|commercial-opportunity|construction-mandate|opportunity-assessment/i.test(value)) {
       return "Project / Opportunity Assessment";
@@ -226,6 +244,33 @@
       return "Market Entry Strategy";
     }
     return "";
+  }
+
+  function initCommercialServiceTracking() {
+    var context = pageContext();
+    if (COMMERCIAL_SERVICES[context.slug]) {
+      track("service_view", {
+        service_name: COMMERCIAL_SERVICES[context.slug],
+        service_slug: context.slug,
+        page_type: "commercial_service"
+      });
+    }
+
+    document.addEventListener("click", function (event) {
+      var link = event.target.closest ? event.target.closest("a[href]") : null;
+      if (!link) return;
+      var url;
+      try { url = new URL(link.href, window.location.href); } catch (error) { return; }
+      if (url.origin !== window.location.origin) return;
+      var serviceSlug = cleanSlug(url.pathname);
+      if (!COMMERCIAL_SERVICES[serviceSlug]) return;
+      track("service_click", {
+        service_name: COMMERCIAL_SERVICES[serviceSlug],
+        service_slug: serviceSlug,
+        lead_source_path: canonicalPath(),
+        link_url: url.href
+      });
+    }, true);
   }
 
   function initConsultationLinkTracking() {
@@ -405,6 +450,7 @@
   function init() {
     captureAttribution();
     initConsultationLinkTracking();
+    initCommercialServiceTracking();
     initLeadBar();
     initConsultationForm();
     initThankYou();
