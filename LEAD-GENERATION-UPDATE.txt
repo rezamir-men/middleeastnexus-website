@@ -1,0 +1,42 @@
+MIDDLE EAST NEXUS — PHASE 1 LEAD GENERATION
+Date: 2026-08-01
+
+IMPLEMENTED
+- Fixed bottom conversion bar on all 61 canonical site pages.
+- Two clear actions only: Request a Consultation and Discuss an Opportunity.
+- One smart form at /consultation.
+- Context passed automatically from the originating page through URL parameters.
+- First-touch landing page, referrer and UTM attribution retained during the visit.
+- Qualified business fields: company, country, sector, governorate, support need and timeline.
+- Opportunity mode adds an optional project / opportunity title.
+- Existing verified Formspree endpoint retained for delivery.
+- Thank-you page at /thank-you, excluded from indexing.
+
+GA4 EVENTS
+- consultation_click
+- opportunity_click
+- form_start
+- form_submit
+- form_error
+- generate_lead
+
+generate_lead fires only after Formspree confirms a successful form response.
+Reloading or directly opening /thank-you does not create another lead event.
+Mark generate_lead as a Key Event in GA4.
+
+SEO / URL SAFEGUARDS
+- Existing extensionless canonical strategy retained.
+- Existing .html-to-extensionless redirect behaviour left unchanged.
+- /consultation added to sitemap.xml.
+- /thank-you intentionally omitted from sitemap.xml and marked noindex,follow.
+- Sitemap lastmod updated to 2026-08-01 for all modified canonical pages.
+
+NEW FILES
+- consultation.html
+- thank-you.html
+- lead-generation.css
+- lead-generation.js
+
+UPLOAD
+Upload the full contents of this ZIP to the repository root, replacing existing
+files. Keep the two obsolete GitHub deletions listed in DELETE-FROM-GITHUB.txt.
