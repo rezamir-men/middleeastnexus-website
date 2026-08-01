@@ -178,24 +178,34 @@
     if (/energy|fuel|gasoil|diesel|mazut/i.test(value)) return "Energy, Oil & Gas";
     if (/construction|housing|real-estate|hotel/i.test(value)) return "Construction & Real Estate";
     if (/water|nasiriyah/i.test(value)) return "Water & Wastewater";
-    if (/logistics|transport|faw|port/i.test(value)) return "Logistics & Transport";
+    if (/logistics|transport|faw|\bports?\b|border|corridor|route|-(iran|turkey|turkiye|syria|saudi|kuwait|jordan)-(trade|opportunity)/i.test(value)) return "Logistics & Transport";
     if (/health/i.test(value)) return "Healthcare";
     if (/registration/i.test(value)) return "Company Registration";
     return "";
   }
 
   function inferGovernorate(interest) {
-    var match = String(interest || "").match(/^province-(.+)$/i);
-    if (!match) return "";
+    var value = String(interest || "").toLowerCase().replace(/^province-/, "");
     var map = {
       "anbar": "Al Anbar", "babylon": "Babylon", "baghdad": "Baghdad", "basra": "Basra",
       "dhiqar": "Dhi Qar", "diyala": "Diyala", "duhok": "Duhok", "erbil": "Erbil",
       "halabja": "Halabja", "karbala": "Karbala", "kirkuk": "Kirkuk", "maysan": "Maysan",
-      "mosul": "Mosul / Nineveh", "muthanna": "Al Muthanna", "najaf": "Najaf",
+      "mosul": "Mosul / Nineveh", "nineveh": "Mosul / Nineveh", "muthanna": "Al Muthanna", "najaf": "Najaf",
       "qadisiyyah": "Al-Qadisiyyah", "salahaldin": "Salah al-Din",
       "sulaymaniyah": "Sulaymaniyah", "wasit": "Wasit"
     };
-    return map[match[1].toLowerCase()] || "";
+    var slug = Object.keys(map).find(function (key) {
+      return value === key || value.indexOf(key + "-") === 0;
+    });
+    return slug ? map[slug] : "";
+  }
+
+  function inferSupport(interest) {
+    var value = String(interest || "");
+    if (/logistics|border|corridor|route|-(iran|turkey|turkiye|syria|saudi|kuwait|jordan)-(trade|opportunity)/i.test(value)) {
+      return "Cross-Border Route Assessment";
+    }
+    return "";
   }
 
   function interestLabel(interest) {
@@ -260,6 +270,7 @@
     var sourceLabel = document.querySelector("[data-source-context]");
     var sector = inferSector(interest);
     var governorate = inferGovernorate(interest);
+    var support = inferSupport(interest);
     var started = false;
 
     setFormType(form, params.get("type"));
@@ -273,6 +284,10 @@
     if (governorate) {
       var governorateSelect = form.querySelector('[name="target_governorate"]');
       if (governorateSelect) governorateSelect.value = governorate;
+    }
+    if (support) {
+      var supportSelect = form.querySelector('[name="support_required"]');
+      if (supportSelect) supportSelect.value = support;
     }
 
     document.querySelectorAll("[data-type-choice]").forEach(function (button) {
