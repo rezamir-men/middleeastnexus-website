@@ -68,6 +68,8 @@
       "iraq-logistics-sector": "Iraq logistics & transport",
       "iraq-healthcare-sector": "Iraq healthcare",
       "iraq-sectors": "Iraq business sectors",
+      "iraq-business-encyclopedia": "Iraq Business Encyclopedia",
+      "research-methodology": "Iraq intelligence research standards",
       "uk-iraq-trade": "UK–Iraq trade",
       "company-registration-iraq": "Company registration in Iraq",
       "gasoil-diesel-mazut-trading": "Iraq fuel trading",
@@ -202,6 +204,9 @@
 
   function inferSupport(interest) {
     var value = String(interest || "");
+    if (/iraq-business-encyclopedia|research-methodology/i.test(value)) {
+      return "Market Entry Strategy";
+    }
     if (/logistics|border|corridor|route|-(iran|turkey|turkiye|syria|saudi|kuwait|jordan)-(trade|opportunity)/i.test(value)) {
       return "Cross-Border Route Assessment";
     }
