@@ -207,10 +207,42 @@
     if (/iraq-business-encyclopedia|research-methodology/i.test(value)) {
       return "Market Entry Strategy";
     }
+    if (/partner-verification|partner-identification|due-diligence/i.test(value)) {
+      return "Partner Identification & Due Diligence";
+    }
+    if (/tender-identification|tender-support/i.test(value)) {
+      return "Tender & Project Support";
+    }
+    if (/project-intelligence|commercial-opportunity|construction-mandate|opportunity-assessment/i.test(value)) {
+      return "Project / Opportunity Assessment";
+    }
+    if (/stakeholder-engagement|government-relations|negotiation/i.test(value)) {
+      return "Stakeholder Engagement & Negotiation";
+    }
     if (/logistics|border|corridor|route|-(iran|turkey|turkiye|syria|saudi|kuwait|jordan)-(trade|opportunity)/i.test(value)) {
       return "Cross-Border Route Assessment";
     }
+    if (/market-entry|market-intelligence|governorates-investment|executive-market-report/i.test(value)) {
+      return "Market Entry Strategy";
+    }
     return "";
+  }
+
+  function initConsultationLinkTracking() {
+    document.addEventListener("click", function (event) {
+      var link = event.target.closest ? event.target.closest('a[href*="consultation"]') : null;
+      if (!link || link.hasAttribute("data-men-lead-type")) return;
+      var url;
+      try { url = new URL(link.href, window.location.href); } catch (error) { return; }
+      if (url.pathname.replace(/\.html$/i, "").replace(/\/$/, "") !== "/consultation") return;
+      var type = url.searchParams.get("type") === "opportunity" ? "opportunity" : "consultation";
+      track(type === "opportunity" ? "opportunity_click" : "consultation_click", {
+        lead_type: type,
+        interest: url.searchParams.get("interest") || pageContext().slug,
+        lead_source_path: canonicalPath(),
+        link_url: url.href
+      });
+    }, true);
   }
 
   function interestLabel(interest) {
@@ -372,6 +404,7 @@
 
   function init() {
     captureAttribution();
+    initConsultationLinkTracking();
     initLeadBar();
     initConsultationForm();
     initThankYou();
