@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function loadAnalytics(){
+    if (window.__menAnalyticsLoaded) return;
+    window.__menAnalyticsLoaded = true;
+    var tag = document.createElement('script');
+    tag.async = true;
+    tag.src = 'https://www.googletagmanager.com/gtag/js?id=G-6Y3N9GSJM4';
+    document.head.appendChild(tag);
+    gtag('js', new Date());
+    gtag('config', 'G-6Y3N9GSJM4');
+  }
+</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="#0A0F1A" name="theme-color"/>
@@ -25,10 +38,10 @@
 <meta content="Middle East Nexus — Iraq market intelligence and commercial entry consultancy" property="og:image:alt"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Middle East Nexus Ltd — Iraq Market Intelligence" name="twitter:title"/>
+<meta content="Middle East Nexus Ltd — Iraq Market Intelligence &amp; Commercial Entry" name="twitter:title"/>
 <meta content="UK-registered Iraq market intelligence consultancy. Assess opportunities, identify credible counterparties, enter with confidence." name="twitter:description"/>
 <meta content="https://middleeastnexus.co.uk/og-image.jpg" name="twitter:image"/>
-<title>Iraq Market Entry &amp; Intelligence | Middle East Nexus</title>
+<title>Iraq Market Intelligence &amp; Commercial Entry | Middle East Nexus Ltd</title>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":["Organization","ProfessionalService"],"name":"Middle East Nexus Ltd","legalName":"Middle East Nexus Ltd","identifier":"15259014","description":"UK-registered consultancy providing Iraq market intelligence, partner screening and practical market-entry support for international companies.","url":"https://middleeastnexus.co.uk","logo":"https://middleeastnexus.co.uk/logo-v2.png","email":"info@middleeastnexus.co.uk","telephone":"+44-7306-325727","foundingDate":"2023-11-03","founder":{"@type":"Person","name":"Reza Mir","jobTitle":"Founder & Managing Director","description":"Iraq-related commercial experience since 2003."},"address":{"@type":"PostalAddress","addressCountry":"GB","addressLocality":"London"},"areaServed":["Iraq","Iraqi Kurdistan","United Kingdom","Middle East"],"knowsAbout":["Iraq market entry","Iraq market intelligence","partner identification","commercial due diligence","governorate intelligence","sector briefings","investment facilitation"],"serviceType":["Market Entry & Strategy","Partner Identification & Opportunity Screening","Commercial Coordination"],"sameAs":["https://www.linkedin.com/in/reza-mir-a26953ab"]}</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -245,6 +258,21 @@
   .cta-alt { margin-top:26px; text-align:center; font-size:0.9rem; color:var(--gray); }
   .cta-alt a { color:var(--gold); }
 
+  /* ---------- COOKIE CHOICE ---------- */
+  .cookie-choice {
+    position:fixed; z-index:200; left:20px; right:20px; bottom:20px;
+    max-width:760px; margin:0 auto; padding:18px 20px;
+    background:var(--navy3); border:1px solid var(--line); border-radius:4px;
+    box-shadow:0 16px 50px rgba(0,0,0,.35); display:none;
+    align-items:center; justify-content:space-between; gap:20px;
+  }
+  .cookie-choice.show { display:flex; }
+  .cookie-copy { color:var(--gray); font-size:.82rem; line-height:1.55; }
+  .cookie-copy strong { display:block; color:var(--white); font-weight:500; margin-bottom:3px; }
+  .cookie-actions { display:flex; gap:8px; flex-shrink:0; }
+  .cookie-btn { border:1px solid var(--line); background:none; color:var(--white); padding:9px 13px; cursor:pointer; border-radius:3px; }
+  .cookie-btn.accept { border-color:var(--gold); background:var(--gold); color:var(--navy); }
+
   /* ---------- FOOTER ---------- */
   .footer { padding:60px 0 34px; border-top:1px solid var(--line); }
   .footer-top { display:flex; justify-content:space-between; align-items:flex-start; gap:40px; flex-wrap:wrap; margin-bottom:44px; }
@@ -296,6 +324,7 @@
     .svc:first-child { border-top:none; }
     .method-grid { grid-template-columns:1fr; }
     .hero h1 { font-size:2.5rem; }
+    .cookie-choice { align-items:flex-start; flex-direction:column; }
   }
   @media (max-width:460px) {
     .logo-nav-sub { display:none; }
@@ -315,8 +344,6 @@
     html { scroll-behavior:auto; }
   }
 </style>
-<link rel="stylesheet" href="/privacy-consent.css">
-<script defer src="/privacy-consent.js"></script>
 </head>
 <body>
 
@@ -555,10 +582,10 @@
         </div>
         <div class="footer-col">
           <h4 data-ar="الشؤون القانونية" data-en="Legal">Legal</h4>
-          <a href="/privacy-policy" data-men-policy-link="/privacy-policy" data-ar="سياسة الخصوصية" data-en="Privacy Policy">Privacy Policy</a>
-          <a href="/cookie-policy" data-men-policy-link="/cookie-policy" data-ar="سياسة ملفات الارتباط" data-en="Cookie Policy">Cookie Policy</a>
-          <a href="/terms-of-use" data-men-policy-link="/terms-of-use" data-ar="شروط الاستخدام" data-en="Terms of Use">Terms of Use</a>
-          <a href="/anti-bribery-policy" data-men-policy-link="/anti-bribery-policy" data-ar="سياسة مكافحة الرشوة" data-en="Anti-Bribery Policy">Anti-Bribery Policy</a>
+          <a href="privacy-policy" data-ar="سياسة الخصوصية" data-en="Privacy Policy">Privacy Policy</a>
+          <a href="cookie-policy" data-ar="سياسة ملفات الارتباط" data-en="Cookie Policy">Cookie Policy</a>
+          <a href="terms-of-use" data-ar="شروط الاستخدام" data-en="Terms of Use">Terms of Use</a>
+          <a href="anti-bribery-policy" data-ar="سياسة مكافحة الرشوة" data-en="Anti-Bribery Policy">Anti-Bribery Policy</a>
         </div>
       </div>
     </div>
@@ -568,6 +595,17 @@
     </div>
   </div>
 </footer>
+
+<div aria-label="Analytics cookie choice" aria-live="polite" class="cookie-choice" id="cookieChoice" role="dialog">
+  <div class="cookie-copy">
+    <strong data-ar="خيار التحليلات" data-en="Analytics choice">Analytics choice</strong>
+    <span data-ar="نستخدم Google Analytics الاختياري لفهم استخدام الموقع. يمكنك القبول أو الرفض؛ ولن يؤثر الرفض على استخدام الموقع." data-en="We use optional Google Analytics to understand how the site is used. You can accept or decline; declining will not affect access to the site.">We use optional Google Analytics to understand how the site is used. You can accept or decline; declining will not affect access to the site.</span>
+  </div>
+  <div class="cookie-actions">
+    <button class="cookie-btn" data-ar="رفض" data-en="Decline" id="declineAnalytics" type="button">Decline</button>
+    <button class="cookie-btn accept" data-ar="قبول" data-en="Accept" id="acceptAnalytics" type="button">Accept</button>
+  </div>
+</div>
 
 <script>
   let currentLang = 'en';
@@ -614,6 +652,21 @@
   document.addEventListener('DOMContentLoaded', () => {
     const q = new URLSearchParams(location.search);
     if (q.get('lang') === 'ar') setLang('ar');
+
+    const choice = localStorage.getItem('men_analytics_choice');
+    const panel = document.getElementById('cookieChoice');
+    if (choice === 'accepted') loadAnalytics();
+    if (!choice) panel.classList.add('show');
+
+    document.getElementById('acceptAnalytics').addEventListener('click', () => {
+      localStorage.setItem('men_analytics_choice', 'accepted');
+      panel.classList.remove('show');
+      loadAnalytics();
+    });
+    document.getElementById('declineAnalytics').addEventListener('click', () => {
+      localStorage.setItem('men_analytics_choice', 'declined');
+      panel.classList.remove('show');
+    });
   });
 </script>
 
