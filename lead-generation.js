@@ -341,6 +341,61 @@
     status.focus();
   }
 
+  function isFormspreeForm(form) {
+    return Boolean(form && form.action && form.action.indexOf("formspree.io") !== -1);
+  }
+
+  function showSpamProtectionStatus(form, message) {
+    var status = form.querySelector("[data-form-status]");
+    if (!status) return;
+    status.textContent = message;
+    status.classList.add("is-error");
+    status.hidden = false;
+    status.focus();
+  }
+
+  function initFormSpamProtection() {
+    var forms = Array.prototype.slice.call(document.querySelectorAll('form[action*="formspree.io"]'));
+    if (!forms.length) return;
+
+    forms.forEach(function (form) {
+      form.dataset.menLoadedAt = String(Date.now());
+    });
+
+    document.addEventListener("submit", function (event) {
+      var form = event.target;
+      if (!isFormspreeForm(form)) return;
+
+      var elapsed = Date.now() - Number(form.dataset.menLoadedAt || Date.now());
+      var trap = form.querySelector('[name="_gotcha"]');
+      var messageField = form.querySelector('[name="message"]');
+      var message = messageField ? String(messageField.value || "") : "";
+      var shortenedUrl = /(?:https?:\/\/)?(?:bit\.ly|is\.gd|tinyurl\.com|t\.co|rb\.gy|cutt\.ly|shorturl\.at|tiny\.one|rebrand\.ly)\//i;
+      var blocked = Boolean(trap && trap.value.trim()) || elapsed < 3000 || shortenedUrl.test(message);
+
+      if (blocked) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        showSpamProtectionStatus(
+          form,
+          shortenedUrl.test(message)
+            ? "For security, please replace shortened links with the full website address."
+            : "Please wait a moment, review the form and submit it again."
+        );
+        return;
+      }
+
+      var timingField = form.querySelector('[name="form_elapsed_seconds"]');
+      if (!timingField) {
+        timingField = document.createElement("input");
+        timingField.type = "hidden";
+        timingField.name = "form_elapsed_seconds";
+        form.appendChild(timingField);
+      }
+      timingField.value = String(Math.max(3, Math.round(elapsed / 1000)));
+    }, true);
+  }
+
   function initConsultationForm() {
     var form = document.querySelector("#men-consultation-form");
     if (!form) return;
@@ -449,6 +504,7 @@
 
   function init() {
     captureAttribution();
+    initFormSpamProtection();
     initConsultationLinkTracking();
     initCommercialServiceTracking();
     initLeadBar();
