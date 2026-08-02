@@ -188,7 +188,13 @@
   </url>
   <url>
     <loc>https://middleeastnexus.co.uk/from-tehran-to-baghdad-part-7</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://middleeastnexus.co.uk/from-tehran-to-baghdad-part-8</loc>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
