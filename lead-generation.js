@@ -15,7 +15,9 @@
   };
 
   function track(name, params) {
-    if (typeof window.gtag === "function") {
+    var analyticsAllowed = false;
+    try { analyticsAllowed = window.localStorage.getItem("men_analytics_choice") === "accepted"; } catch (error) { analyticsAllowed = false; }
+    if (analyticsAllowed && typeof window.gtag === "function") {
       window.gtag("event", name, params || {});
     }
   }
