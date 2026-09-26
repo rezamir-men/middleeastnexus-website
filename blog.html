@@ -2259,6 +2259,19 @@ h1,h2,h3,h4,section[id],[id]{scroll-margin-top:90px}
 </div>
 <!-- ARTICLES -->
 <div aria-label="All Iraq market intelligence articles" class="blog-grid" id="blog-grid">
+<!-- ARTICLE 20 - Latest Featured -->
+<div class="article-card featured" data-cat="market" onclick="location.href='blog-zaidi-hariri'" style="cursor:pointer">
+<div class="article-visual" style="height:200px;overflow:hidden;">
+<img alt="Iraqi PM Ali al-Zaidi and former Lebanese PM Rafic Hariri" loading="lazy" onerror="this.style.display='none'" src="zaidi-hariri-cover.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 22%;filter:brightness(0.8);"/>
+</div>
+<span class="article-tag" data-ar="تحليل سياسي" data-en="Political Analysis">Political Analysis</span>
+<span class="article-date" data-ar="٢٦ سبتمبر ٢٠٢٦ — لندن" data-en="26 September 2026 — London">26 September 2026 — London</span><div class="card-meta"><span class="meta-pill">9 MIN READ</span><span class="meta-pill">EXPERT ANALYSIS</span></div>
+<h2 class="article-title" data-ar="هل يصبح الزيدي رفيق حريري العراق؟ رئيس وزراء بين واشنطن و«الأخ الأكبر»" data-en="Will al-Zaidi Become Iraq’s Rafic Hariri? A Prime Minister Between Washington and “Big Brother”">Will al-Zaidi Become Iraq’s Rafic Hariri? A Prime Minister Between Washington and “Big Brother”</h2>
+<p class="article-excerpt" data-ar="رئيس وزراء قادم من عالم الأعمال يقول إنه سيمضي في حصر السلاح «حتى إذا كلّفه ذلك حياته»، مدّ يده إلى الشرايين المالية للفصائل وأغلق أجواء العراق أمام الرحلات الإيرانية. بعد واحد وعشرين عاماً على بيروت، يصعب تجاهل أوجه الشبه مع رفيق الحريري — ويصعب كذلك تجاهل فارق حاسم واحد." data-en="A businessman prime minister who says he will press on with disarmament “even if it costs me my life” has gone after the militias’ money and closed Iraq’s skies to Iranian flights. Twenty-one years after Beirut, the parallels with Rafic Hariri are hard to ignore — and so is one decisive difference.">
+      A businessman prime minister who says he will press on with disarmament “even if it costs me my life” has gone after the militias’ money and closed Iraq’s skies to Iranian flights. Twenty-one years after Beirut, the parallels with Rafic Hariri are hard to ignore — and so is one decisive difference.
+    </p>
+<a class="article-read" data-ar="اقرأ التحليل" data-en="Read Analysis" href="blog-zaidi-hariri" onclick="event.preventDefault();">Read Full Analysis</a>
+</div>
 <!-- ARTICLE 19 - Latest Featured -->
 <div class="article-card featured" data-cat="market" onclick="location.href='blog-iraq-us-deals'" style="cursor:pointer">
 <div class="article-visual" style="height:200px;overflow:hidden;">
@@ -3169,6 +3182,7 @@ function toggleMobileMenu() {
 
 
 const articlePageMap = {
+  art20: 'blog-zaidi-hariri',
   art19: 'blog-iraq-us-deals',
   art18: 'blog-iraq-us-summit',
   art17: 'blog-iraq-financial-crisis',
@@ -3190,6 +3204,7 @@ const articlePageMap = {
 };
 
 const articlePageMapAr = {
+  art20: 'blog-zaidi-hariri?lang=ar',
   art11: 'blog-zeidi?lang=ar',
   art15: 'blog-zaidi-government?lang=ar',
 };

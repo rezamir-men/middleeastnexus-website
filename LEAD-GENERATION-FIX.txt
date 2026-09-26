@@ -1,0 +1,49 @@
+MIDDLE EAST NEXUS — LEAD GENERATION SCRIPT RESTORED
+Date: 2026-09-26
+
+PROBLEM
+- lead-generation.js in the repository contained only the text
+  "Unsupported Media Type" (22 bytes) — a failed upload.
+- The file is loaded by 81 pages, so the bottom conversion bar, the smart
+  consultation form (context, preselection, AJAX submit) and all GA4 lead
+  events were not running anywhere on the site.
+
+FIX
+- lead-generation.js rebuilt from lead-generation.css, consultation.html,
+  ar/consultation.html, thank-you.html and LEAD-GENERATION-UPDATE.txt.
+
+WHAT IT DOES
+- Fixed bottom bar on content pages: "Request a Consultation" and
+  "Discuss an Opportunity", with the page topic as context.
+  English or Arabic, following the page's EN/AR toggle.
+  Arabic buttons go to /ar/consultation.
+- The bar is NOT shown on: consultation pages, thank-you page, pages that
+  already have their own sticky CTA (blog.html), or any page whose <body>
+  has data-men-no-leadbar.
+- First-touch attribution (landing page, referrer, UTM) kept for the visit.
+- /consultation reads ?type, ?interest, ?source:
+  consultation / opportunity switch, context chip, hidden fields,
+  sector / governorate / support preselection (border corridors,
+  tender, EPC, partner search, customs, company registration, sectors).
+- Formspree submit via AJAX; honeypot and too-fast (< 2.5 s) spam checks;
+  clear error message on failure; native POST fallback on old browsers.
+- /thank-you?lang=ar is shown in Arabic.
+
+GA4 EVENTS
+- consultation_click, opportunity_click (bar and every consultation link)
+- form_start, form_submit, form_error
+- generate_lead — fired once on /thank-you, only after Formspree confirmed
+  success. Reloading or opening /thank-you directly does not fire it.
+
+TESTED (local, headless Chromium)
+- Bar EN + AR, links and context; no bar on blog.html.
+- Opportunity mode, attribution and UTM carried into the form.
+- Basra border route and tender preselection; Arabic Maysan preselection.
+- Successful submit -> thank-you -> one generate_lead; reload -> none.
+- Formspree error -> Arabic error message shown, no redirect.
+- No JavaScript errors.
+
+UPLOAD
+Upload all files in this ZIP to the repository root, replacing existing
+files. Then hard-refresh a page (or purge the Cloudflare cache) to confirm
+the bottom bar appears.
